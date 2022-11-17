@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@500&family=Roboto:wght@300&display=swap');
+
+body {
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Noto Serif Oriya', serif;
+}
+
+.header-bg {
+    background-color: rgb(31, 80, 31);
+    padding: 15px 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+.nav-link {
+    color: black;
+}

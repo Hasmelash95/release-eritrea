@@ -3,6 +3,8 @@
 body {
     color: black; 
     font-family: 'Roboto', sans-serif;
+    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1668786888/Release%20Eritrea/pexels-lelani-badenhorst-6790317_zkml7v.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 h1 {
@@ -10,7 +12,7 @@ h1 {
 }
 
 .header-bg {
-    background-color: rgb(31, 80, 31);
+    background-color: rgba(31, 80, 31, 0.9);
     padding: 15px 10px;
 }
 
@@ -21,4 +23,12 @@ h1 {
 
 .nav-link {
     color: black;
+} 
+
+li a:hover {
+    color:rgba(31, 80, 31, 0.9)
+}
+
+footer {
+    background-color: #ffd700;
 }

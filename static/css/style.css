@@ -1,24 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@500&family=Roboto:wght@300&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+ }
+
 body {
     color: black; 
     font-family: 'Roboto', sans-serif;
-    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1668786888/Release%20Eritrea/pexels-lelani-badenhorst-6790317_zkml7v.jpg') no-repeat center center;
-    background-size: cover;
 }
 
 h1 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
-.header-bg {
-    background-color: rgba(31, 80, 31, 0.9);
-    padding: 15px 10px;
+header {
+    background-color: rgb(183 207 215);
 }
 
 .logo a {
     text-decoration: none;
-    color: #ffd700;
+}
+
+h1 img { 
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    outline: 2px solid #fff;
 }
 
 .nav-link {
@@ -26,9 +35,9 @@ h1 {
 } 
 
 .nav-link:hover {
-    color: rgb(31, 80, 31)
+    color: rgb(135, 164, 173);
 }
 
 footer {
-    background-color: #ffd700;
+    background-color: rgb(135, 164, 173);
 }

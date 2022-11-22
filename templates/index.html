@@ -15,7 +15,7 @@
     <header class='row container-fluid header-bg'>
         <h1 class='col display-4 logo'><a href='/' aria-label='Link to the landing page'><img src='https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg' alt="release eritrea logo"></a></h1>
         <div class='col justify-content-xs-end text-center'>
-            <span><a href='#'>Sign In</a> | </span><span><a href='#'>Sign Up</a></span>
+            <span><a href='/accounts/login'>Sign In</a> | </span><span><a href='/accounts/signup'>Sign Up</a></span>
         </div>
     </header>
     <nav>
@@ -32,7 +32,7 @@
        {% for article in object_list %}
            <p>PRESS RELEASES</p>
        
-           <p>Author: {{ article.author }}</p>
+           <p>Author: {{ article.author.all }}</p>
            <p>{{ article.title}} </p>
            <p> {{ article.excerpt }}</p>
        

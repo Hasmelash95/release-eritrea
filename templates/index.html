@@ -26,7 +26,14 @@
     <section>
        <p>WHAT WE DO?</p>
     </section>
-       <p>PRESS RELEASES</p>
+       {% for article in object_list %}
+           <p>PRESS RELEASES</p>
+       
+           <p>Author: {{ article.author }}</p>
+           <p>{{ article.title}} </p>
+           <p> {{ article.excerpt }}</p>
+       
+       {% endfor %}
     </section>
     <section>
 

@@ -40,4 +40,9 @@ h1 img {
 
 footer {
     background-color: rgb(135, 164, 173);
+    text-align: center;
+}
+
+.copyright {
+    margin: 10px auto;
 }

@@ -2,6 +2,22 @@
 {% load static %}
 
 {% block content %}
+<nav class="row">
+    <h1 class="col logo"><a href="/" aria-label="Link to the landing page"><img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo"></a></h1>
+    <div class="col user-sign">
+        {% if user.is_authenticated %}
+            <span>Hello {{ user }}!</span> <span><a href="{% url 'account_logout' %}">Logout</a></span>
+        {% else %}
+            <span><a href="{% url 'account_login' %}">Sign In</a> | </span><span><a href="{% url 'account_signup' %}">Sign Up</a></span>
+        {% endif %}
+    </div>  
+    <ul class="col nav nav-pills">
+        <li class="nav-item"><a class="nav-link active" href="/"><strong>Home</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><strong>Donate</strong></a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact"><strong>Contact Us</strong></a></li>
+    </ul>
+</nav>
     <section class="row hero-image"> 
         HELLO CAN ANYONE HEAR ME
     </section>

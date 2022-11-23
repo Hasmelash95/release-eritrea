@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('press.urls'), name='press_urls'),
     path('', views.home_page, name='home_page'),
     path('accounts/', include('allauth.urls')),
+    path('contact/', views.contact, name='contact'),
 ]

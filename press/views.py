@@ -14,5 +14,6 @@ def home_page(request):
     return render(request, 'index.html')
 
 
-def contact_us(request):
+def contact(request):
     return render(request, 'contact.html')
+

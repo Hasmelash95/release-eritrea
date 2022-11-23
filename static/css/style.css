@@ -7,11 +7,12 @@
  }
 
 body {
-    color: black; 
+    color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1, 
+h2 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
@@ -24,8 +25,8 @@ header {
 }
 
 h1 img { 
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     outline: 2px solid #fff;
 }
@@ -39,7 +40,7 @@ h1 img {
 }
 
 footer {
-    background-color: rgb(135, 164, 173);
+    background-color: rgb(164, 189, 196);
     text-align: center;
 }
 

@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <header class="row container-fluid header-bg">
+    <header class="row container-fluid">
         <h1 class="col display-4 logo"><a href="/" aria-label="Link to the landing page"><img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo"></a></h1>
         <div class="col justify-content-xs-end text-center">
             {% if user.is_authenticated %}
@@ -24,7 +24,7 @@
         </div>
     </header>
     <nav>
-        <ul class="nav justify-content-end">
+        <ul class="nav nav-pills justify-content-center">
             <li class="nav-item"><a class="nav-link active" href="/"><strong>Home</strong></a></li>
             <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
             <li class="nav-item"><a class="nav-link" href="#"><strong>Donate</strong></a></li>

@@ -1,5 +1,4 @@
-from django.shortcuts import render, HttpResponse
-from django.template import loader
+from django.shortcuts import render
 from django.views import generic
 from .models import Article
 
@@ -12,5 +11,4 @@ class ArticleList(generic.ListView):
 
 
 def home_page(request):
-    first_template = loader.get_template('index.html')
-    return HttpResponse(first_template.render())
+    return render(request, 'index.html')

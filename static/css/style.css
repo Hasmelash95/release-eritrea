@@ -9,20 +9,18 @@
 body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 
 h1, 
 h2 {
     font-family: 'Noto Serif Oriya', serif;
+    font-size: 1.5rem;
 }
 
-header {
-    background-color: rgb(183 207 215);
-    width: 100%;
-}
-
-.logo a {
-    text-decoration: none;
+.user-sign {
+    margin: 20px;
+    font-size: 1.2rem;
 }
 
 h1 img { 
@@ -34,6 +32,8 @@ h1 img {
 
 .nav-link {
     color: black;
+    margin-top: 10px;
+    font-size: 1.2rem;
 } 
 
 .hero-image {

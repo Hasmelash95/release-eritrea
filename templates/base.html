@@ -15,7 +15,7 @@
 <body>
     <nav class="row">
         <h1 class="col logo"><a href="/" aria-label="Link to the landing page"><img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo"></a></h1>
-        <div class="col">
+        <div class="col user-sign">
             {% if user.is_authenticated %}
                 <span>Hello {{ user }}!</span> <span><a href="{% url 'account_logout' %}">Logout</a></span>
             {% else %}

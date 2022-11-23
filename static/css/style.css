@@ -18,6 +18,7 @@ h2 {
 
 header {
     background-color: rgb(183 207 215);
+    width: 100%;
 }
 
 .logo a {
@@ -34,6 +35,12 @@ h1 img {
 .nav-link {
     color: black;
 } 
+
+.hero-image {
+    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669216378/pexels-pixabay-54333_rxsaew.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+}
 
 .nav-link:hover {
     color: rgb(135, 164, 173);

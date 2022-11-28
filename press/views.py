@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Article
 from .forms import CommentForm
 
@@ -22,6 +23,7 @@ class ArticleDetail(View):
             {
                 "article": article,
                 "comments": comments,
+                "commented": False,
                 "comment_form": CommentForm()     
             }
         )
@@ -35,6 +37,7 @@ class ArticleDetail(View):
             {
                 "article": article,
                 "comments": comments,
+                "commented": True,
                 "comment_form": CommentForm()     
             }
         )  
@@ -43,10 +46,13 @@ class ArticleDetail(View):
         if comment_form.is_valid():
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
-            comment.post = post
+            comment.article = article
             comment.save()
         else:
             comment_form = CommentForm()
+
+        return HttpResponseRedirect(reverse('article-detail', args=[slug]))
+
 
 def home_page(request):
     return render(request, 'index.html')

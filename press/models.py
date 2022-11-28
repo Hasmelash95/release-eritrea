@@ -24,7 +24,7 @@ class Article(models.Model):
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name='comments')
-    author = models.ManyToManyField(User, related_name='comments_author')
+    name = models.CharField(max_length=80, default='')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -34,4 +34,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return self.author
+        return self.name

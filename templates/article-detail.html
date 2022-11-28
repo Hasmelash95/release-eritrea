@@ -29,9 +29,9 @@
 <h3> Comments:</h3>
 
 {% for comment in comments %}
- <p>{{ comment.author.all }}</p>
+ <p>{{ comment.name }}</p>
  <p>{{ comment.created_on }}</p>
- <p> {{ comment.body}} </p>
+ <p> {{ comment.content }} </p>
 
  {% endfor %}
  {% if commented %}

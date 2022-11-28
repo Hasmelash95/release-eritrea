@@ -12,12 +12,6 @@ class ArticleList(generic.ListView):
     paginate_by = 3
 
 
-class ArticlePost(View):
-    def post(self, request):
-        if request.user.is_staff:
-            article_form = ArticleForm(data=request.POST)
-
-
 class ArticleDetail(View):
 
     def get(self, request, slug, *args, **kwargs):

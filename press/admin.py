@@ -10,8 +10,8 @@ class ArticleAdmin(SummernoteModelAdmin):
 
 
 @admin.register(Comment)
-class CommentAdmin(SummernoteModelAdmin):
+class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'approved')
-    summernote_fields = ('content')
+    
 
 

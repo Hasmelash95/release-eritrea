@@ -13,14 +13,14 @@ class ArticleList(generic.ListView):
 class ArticleDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        article = get_object_or_404(queryset, slug=slug)
-        comment = article.comment.filter(approved=True).order_by('created_on')
+        article = get_object_or_404(Article, slug=slug)
+        comments = article.comments.filter(approved=True).order_by('created_on')
         return render(
             request,
             "article-detail.html",
             {
                 "article": article,
-                "comment": comment       
+                "comments": comments       
             }
         )
 

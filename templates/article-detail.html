@@ -19,7 +19,7 @@
     </ul>
 </nav>
 
-<h2> {{ article.title </h2>
+<h2> {{ article.title }} </h2>
 <h3> {{ article.author.all }}</h3>
 <h4> {{ article.created_on }} </h4>
 
@@ -27,11 +27,11 @@
 
 <h3> Comments:</h3>
 
-{% for post in comment %}
+{% for comment in comments %}
  <p>{{ comment.author.all }}</p>
  <p>{{ comment.created_on }}</p>
  <p> {{ comment.body}} </p>
 
- {{ endfor }}
+ {% endfor %}
 
 {% endblock %}

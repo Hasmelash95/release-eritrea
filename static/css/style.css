@@ -18,6 +18,13 @@ h2 {
     font-size: 1.5rem;
 }
 
+h3,
+h4 {
+    font-family: 'Noto Serif Oriya', serif;
+    font-size: 1.25rem;
+}
+
+
 .user-sign {
     margin: 20px;
     font-size: 1.2rem;

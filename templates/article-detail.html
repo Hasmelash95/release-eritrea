@@ -18,4 +18,10 @@
         <li class="nav-item"><a class="nav-link" href="/gallery"><strong>Gallery</strong></a></li>
     </ul>
 </nav>
+
+<h2> {{ article.title </h2>
+<h3> {{ article.author.all }}</h3>
+<h4> {{ article.created_on }} </h4>
+
+<p> {{ article.content }} </p>
 {% endblock %}

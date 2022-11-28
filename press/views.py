@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Article
-from .forms import CommentForm
+from .forms import CommentForm, ArticleForm
 
 
 class ArticleList(generic.ListView):
@@ -11,6 +11,11 @@ class ArticleList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 3
 
+
+class ArticlePost(View):
+    def post(self, request):
+        if request.user.is_staff:
+            article_form = ArticleForm(data=request.POST)
 
 
 class ArticleDetail(View):

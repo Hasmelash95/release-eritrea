@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Article
+from .forms import CommentForm
 
 
 class ArticleList(generic.ListView):
@@ -20,7 +21,8 @@ class ArticleDetail(View):
             "article-detail.html",
             {
                 "article": article,
-                "comments": comments       
+                "comments": comments,
+                "comment_form": CommentForm()     
             }
         )
 

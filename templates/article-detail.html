@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% load crispy_forms_tags %}
 <nav class="row">
     <h1 class="col logo"><a href="/" aria-label="Link to the landing page"><img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo"></a></h1>
     <div class="col user-sign">
@@ -33,5 +34,20 @@
  <p> {{ comment.body}} </p>
 
  {% endfor %}
+ {% if commented %}
+ <div class="alert alert-success" role="alert">
+     Your comment is awaiting approval
+ </div>
+ {% else %}
+ {% if user.is_authenticated %}
 
+ <h3>Leave a comment:</h3>
+ <p>Posting as: {{ user.username }}</p>
+ <form method="post" style="margin-top: 1.3em;">
+     {{ comment_form | crispy }}
+     {% csrf_token %}
+     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+ </form>
+ {% endif %}
+ {% endif %}
 {% endblock %}

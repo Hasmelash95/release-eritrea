@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Article
-from .forms import CommentForm, ArticleForm
+from .forms import CommentForm
 
 
 class ArticleList(generic.ListView):

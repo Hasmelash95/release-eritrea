@@ -23,5 +23,4 @@ urlpatterns = [
     path('', include('press.urls'), name='press_urls'),
     path('', views.home_page, name='home_page'),
     path('accounts/', include('allauth.urls')),
-    path('gallery/', views.gallery, name='gallery'),
 ]

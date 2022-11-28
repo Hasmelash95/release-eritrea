@@ -50,15 +50,3 @@ class ArticleDetail(View):
                 "comment_form": CommentForm()     
             }
         )  
-
-       
-
-      
-
-
-def home_page(request):
-    return render(request, 'index.html')
-
-
-def gallery(request):
-    return render(request, 'gallery.html')

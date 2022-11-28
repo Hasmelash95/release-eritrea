@@ -24,4 +24,14 @@
 <h4> {{ article.created_on }} </h4>
 
 <p> {{ article.content }} </p>
+
+<h3> Comments:</h3>
+
+{% for post in comment %}
+ <p>{{ comment.author.all }}</p>
+ <p>{{ comment.created_on }}</p>
+ <p> {{ comment.body}} </p>
+
+ {{ endfor }}
+
 {% endblock %}

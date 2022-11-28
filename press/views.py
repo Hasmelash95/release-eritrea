@@ -12,6 +12,7 @@ class ArticleList(generic.ListView):
     paginate_by = 3
 
 
+
 class ArticleDetail(View):
 
     def get(self, request, slug, *args, **kwargs):

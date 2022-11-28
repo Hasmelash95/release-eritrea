@@ -19,35 +19,4 @@
         <li class="nav-item"><a class="nav-link" href="/gallery"><strong>Gallery</strong></a></li>
     </ul>
 </nav>
-
-<h2> {{ article.title }} </h2>
-<h3> {{ article.author.all }}</h3>
-<h4> {{ article.created_on }} </h4>
-
-<p> {{ article.content }} </p>
-
-<h3> Comments:</h3>
-
-{% for comment in comments %}
- <p>{{ comment.name }}</p>
- <p>{{ comment.created_on }}</p>
- <p> {{ comment.content }} </p>
-
- {% endfor %}
- {% if commented %}
- <div class="alert alert-success" role="alert">
-     Your comment is awaiting approval
- </div>
- {% else %}
- {% if user.is_authenticated %}
-
- <h3>Leave a comment:</h3>
- <p>Posting as: {{ user.username }}</p>
- <form method="post" style="margin-top: 1.3em;">
-     {{ comment_form | crispy }}
-     {% csrf_token %}
-     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
- </form>
- {% endif %}
- {% endif %}
 {% endblock %}

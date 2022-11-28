@@ -31,6 +31,15 @@ class ArticleDetail(View):
     def post(self, request, slug, *args, **kwargs):
         article = get_object_or_404(Article, slug=slug)
         comments = article.comments.filter(approved=True).order_by('created_on')
+        comment_form = CommentForm(data=request.POST)  
+        if comment_form.is_valid():
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.article = article
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
         return render(
             request,
             "article-detail.html",
@@ -42,16 +51,9 @@ class ArticleDetail(View):
             }
         )  
 
-        comment_form = CommentForm(data=request.POST)  
-        if comment_form.is_valid():
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-            comment.article = article
-            comment.save()
-        else:
-            comment_form = CommentForm()
+       
 
-        return HttpResponseRedirect(reverse('article-detail', args=[slug]))
+      
 
 
 def home_page(request):

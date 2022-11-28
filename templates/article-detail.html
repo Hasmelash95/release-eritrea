@@ -34,7 +34,7 @@
  <p> {{ comment.content }} </p>
 
  {% endfor %}
- {% if commented %}
+ {% if comment_form.is_valid %}
  <div class="alert alert-success" role="alert">
      Your comment is awaiting approval
  </div>

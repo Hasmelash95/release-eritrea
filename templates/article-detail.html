@@ -18,25 +18,4 @@
         <li class="nav-item"><a class="nav-link" href="/gallery"><strong>Gallery</strong></a></li>
     </ul>
 </nav>
-    <section class="row hero-image"> 
-        HELLO CAN ANYONE HEAR ME
-    </section>
-    <section>
-       <h2>WHAT WE DO</h2>
-    </section>
-       <h2>PRESS RELEASES</h2>
-       {% for article in object_list %}
-
-       <h3> {{ article.title }} </h3>
-
-       <p> Author: {{ article.author.all }} </p>
-
-       <p> {{ article.excerpt }} </p>
-
-       
-       {% endfor %}
-    </section>
-    <section>
-
-    </section>
 {% endblock %}

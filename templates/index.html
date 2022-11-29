@@ -2,25 +2,48 @@
 {% load static %}
 
 {% block content %}
-    <section class="row hero-image"> 
-        HELLO CAN ANYONE HEAR ME
-    </section>
-    <section>
-       <h2>WHAT WE DO</h2>
-    </section>
-       <h2>PRESS RELEASES</h2>
-       {% for article in object_list %}
+<section class="row" r>
+    <div class="col">
+        <h2>What Is Release Eritrea?</h2>
+        <h3>
+            Release Eritrea is a global partnership of Eritrean Evangelicals standing in solidarity with
+            the persecuted Eritrean church.
+        </h3>
+        <p>
+            On May 22 2002, the PFDJ (the ruling party of Eritrea) ordered the closure of all churches
+            not belonging to the Orthodox, Roman Catholic or Evangelical Lutheran denominations.
+        </p>
+        <p>
+            On several occasions since then the Eritrean government issued blanket denials of the
+            existence of persecution in the country stating that 'no groups or persons are persecuted
+            in Eritrea for their beliefs or religion' and that people were 'free to worship according to their wish’.
+        </p>
+        <p>
+            The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
+            the worst human rights record in the world. 
+        </p>
+    </div>
+    <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754853/Release%20Eritrea/with_church_leaders_yvvtyl.jpg"
+        class="img-fluid hero col" alt="Imagie of director with church elders">
+</section>
+<section>
 
-       <a href="{% url 'article_detail' article.slug %}"><h3> {{ article.title }} </h3></a>
+</section>
+<h2>PRESS RELEASES</h2>
+{% for article in object_list %}
 
-       <p> Author: {{ article.author }} </p>
+<a href="{% url 'article_detail' article.slug %}">
+    <h3> {{ article.title }} </h3>
+</a>
 
-       <p> {{ article.excerpt }} </p>
+<p> Author: {{ article.author }} </p>
 
-       
-       {% endfor %}
-    </section>
-    <section>
-        <h2>GALLERY</h2>
-    </section>
+<p> {{ article.excerpt }} </p>
+
+
+{% endfor %}
+</section>
+<section>
+    <h2>GALLERY</h2>
+</section>
 {% endblock %}

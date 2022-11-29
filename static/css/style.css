@@ -10,8 +10,7 @@ body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754108/Release%20Eritrea/pexels-volkan-vardar-14523342_areebk.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: rgb(229, 242, 252);
 }
 
 h1, 
@@ -26,6 +25,11 @@ h4 {
     font-size: 1.25rem;
 }
 
+.hero {
+    width: 600px;
+    height:400px;
+    display: block;
+}
 
 .user-sign {
     margin: 20px;

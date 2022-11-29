@@ -10,6 +10,8 @@ body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754108/Release%20Eritrea/pexels-volkan-vardar-14523342_areebk.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 h1, 
@@ -42,12 +44,6 @@ h1 img {
     margin-top: 10px;
     font-size: 1.2rem;
 } 
-
-.hero-image {
-    background: url('https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669216378/pexels-pixabay-54333_rxsaew.jpg') no-repeat center center;
-    background-size: cover;
-    height: 300px;
-}
 
 .nav-link:hover {
     color: rgb(135, 164, 173);

@@ -7,6 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class ArticleAdmin(SummernoteModelAdmin):
     list_display = ('title', 'created_on')
     summernote_fields = ('content')
+    prepopulated_fields = {'slug': ('title',)}
 
 
 @admin.register(Comment)

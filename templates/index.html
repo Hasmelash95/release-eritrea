@@ -13,7 +13,7 @@
 
        <a href="{% url 'article_detail' article.slug %}"><h3> {{ article.title }} </h3></a>
 
-       <p> Author:  </p>
+       <p> Author: {{ article.author }} </p>
 
        <p> {{ article.excerpt }} </p>
 

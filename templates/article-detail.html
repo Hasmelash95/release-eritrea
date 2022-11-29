@@ -4,7 +4,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h2> {{ article.title }} </h2>
-<h3> {{ article.author.all }}</h3>
+<h3> by {{ article.author }}</h3>
 <h4> {{ article.created_on }} </h4>
 
 <p> {{ article.content }} </p>

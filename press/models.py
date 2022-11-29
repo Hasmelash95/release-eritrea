@@ -8,7 +8,8 @@ from cloudinary.models import CloudinaryField
 class Article(models.Model):
     title = models.CharField(max_length=300, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ManyToManyField(User, related_name='press_releases')
+    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE, 
+                               related_name='press_releases')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()

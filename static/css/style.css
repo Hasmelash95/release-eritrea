@@ -9,26 +9,25 @@
 body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    background-color: rgb(229, 242, 252);
+    background-color: rgb(243, 249, 253);
 }
 
 h1, 
-h2 {
-    font-family: 'Noto Serif Oriya', serif;
-    font-size: 1.5rem;
-}
-
+h2,
 h3,
 h4 {
     font-family: 'Noto Serif Oriya', serif;
-    font-size: 1.25rem;
 }
 
 .hero {
     width: 600px;
     height:400px;
     display: block;
+}
+
+.intro-text {
+    background-color:rgba(199, 217, 230, 0.5);
+    padding: 20px;
 }
 
 .user-sign {

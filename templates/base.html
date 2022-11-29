@@ -14,25 +14,26 @@
 </head>
 <body>
     <header>
-        <nav class="row">
+        <nav class="navbar fixed-top row">
             <h1 class="col logo">
                 <a href="/" aria-label="Link to the landing page">
                     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo">
                 </a>
-            </h1>
+            </h1>  
+            <h3 class="col"> Proclaim Release Eritrea</h2>
+            <ul class="col-6 nav">
+                <li class="nav-item"><a class="nav-link" href="/"><strong>Home</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Press Releases</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><strong>Gallery</strong></a></li>
+            </ul>
             <div class="col user-sign">
                 {% if user.is_authenticated %}
                     <span>Hello {{ user }}!</span> <span><a href="{% url 'account_logout' %}">Logout</a></span>
                 {% else %}
                     <span><a href="{% url 'account_login' %}">Sign In</a> | </span><span><a href="{% url 'account_signup' %}">Sign Up</a></span>
                 {% endif %}
-            </div>  
-            <ul class="col nav nav-pills">
-                <li class="nav-item"><a class="nav-link" href="/"><strong>Home</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>Press Releases</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>Gallery</strong></a></li>
-            </ul>
+            </div>
         </nav>
     </header>
     {% block content %}

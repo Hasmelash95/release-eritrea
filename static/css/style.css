@@ -12,6 +12,11 @@ body {
     background-color: rgb(243, 249, 253);
 }
 
+nav {
+    background-color: rgba(243, 249, 253, 0.5);
+    height: 180px;
+}
+
 h1, 
 h2,
 h3,
@@ -28,6 +33,7 @@ h4 {
 .intro-text {
     background-color:rgba(199, 217, 230, 0.5);
     padding: 20px;
+    margin-top: 200px;
 }
 
 .user-sign {
@@ -44,8 +50,6 @@ h1 img {
 
 .nav-link {
     color: black;
-    margin-top: 10px;
-    font-size: 1.2rem;
 } 
 
 .nav-link:hover {

@@ -2,42 +2,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href={% static "css/style.css" %}>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <title>Release Eritrea</title>
 
 </head>
+
 <body>
     <header>
         <nav class="navbar fixed-top row">
             <h1 class="col logo">
                 <a href="/" aria-label="Link to the landing page">
-                    <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg" alt="release eritrea logo">
+                    <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
+                        alt="release eritrea logo">
                 </a>
-            </h1>  
+            </h1>
             <h3 class="col"> Proclaim Release Eritrea</h2>
-            <ul class="col-6 nav">
-                <li class="nav-item"><a class="nav-link" href="/"><strong>Home</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>Press Releases</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><strong>Gallery</strong></a></li>
-            </ul>
-            <div class="col user-sign">
-                {% if user.is_authenticated %}
+                <ul class="col-6 nav">
+                    <li class="nav-item"><a class="nav-link" href="/"><strong>Home</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><strong>About Us</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><strong>Press Releases</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><strong>Gallery</strong></a></li>
+                </ul>
+                <div class="col user-sign">
+                    {% if user.is_authenticated %}
                     <span>Hello {{ user }}!</span> <span><a href="{% url 'account_logout' %}">Logout</a></span>
-                {% else %}
-                    <span><a href="{% url 'account_login' %}">Sign In</a> | </span><span><a href="{% url 'account_signup' %}">Sign Up</a></span>
-                {% endif %}
-            </div>
+                    {% else %}
+                    <span><a href="{% url 'account_login' %}">Sign In</a> | </span><span><a
+                            href="{% url 'account_signup' %}">Sign Up</a></span>
+                    {% endif %}
+                </div>
         </nav>
     </header>
     {% block content %}
-    
+
     {% endblock %}
 
     <footer class="container-fluid">
@@ -45,16 +60,18 @@
             &copy; Copyright Release Eritrea <span id="current-year"></span>
         </div>
         <div>
-            <p>You can contact us on: 
-                <a href="https://www.facebook.com/release.eritrea.7" aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank">
+            <p>You can contact us on:
+                <a href="https://www.facebook.com/release.eritrea.7"
+                    aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </p>
         </div>
-        
+
     </footer>
     <script src="https://kit.fontawesome.com/86de956f5a.js" crossorigin="anonymous"></script>
-    
+
     <script src={% static "js/script.js" %}></script>
 </body>
+
 </html>

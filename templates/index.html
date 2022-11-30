@@ -43,8 +43,18 @@
 
 
 {% endfor %}
+<form action="post">
+    <textarea name="article-form" id="summernote" cols="30" rows="10">
+
+    </textarea>
+</form>
 </section>
 <section>
     <h2>GALLERY</h2>
 </section>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script>
 {% endblock %}

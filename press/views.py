@@ -1,6 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from django.http import HttpResponseRedirect
 from .models import Article
 from .forms import CommentForm, ArticleForm
 
@@ -11,24 +10,8 @@ class ArticleList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 4
 
-
-class PostArticle(View):
-
-    def post(self, request):
-        if request.user.is_staff:
-            article_form = ArticleForm(data=request.POST)
-            if form.is_valid():
-                article_form.instance.author = request.user.username
-                article = article_form.save(commit=False)
-                messages.success(request, 'has been successfully posted')
-                article.save
-            else:
-                messages.fail(request, 'is not valid')
-                article_form = ArticleForm()
-            return render(
-                request, 'index.html',
-                {'article_form': ArticleForm()}
-            )    
+def post_article(request):
+    return render(request, 'post-article.html', {})
 
 class ArticleDetail(View):
 

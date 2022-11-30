@@ -27,9 +27,7 @@
     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754853/Release%20Eritrea/with_church_leaders_yvvtyl.jpg"
         class="img-fluid hero col" alt="Imagie of director with church elders">
 </section>
-<section>
-
-</section>
+<section class="row">
 <h2>PRESS RELEASES</h2>
 {% for article in object_list %}
 
@@ -43,18 +41,31 @@
 
 
 {% endfor %}
+<div>
 <form action="post">
     <textarea name="article-form" id="summernote" cols="30" rows="10">
 
     </textarea>
 </form>
+</div>
 </section>
 <section>
     <h2>GALLERY</h2>
 </section>
 <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
+    $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
 </script>
 {% endblock %}

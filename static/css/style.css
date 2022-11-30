@@ -10,11 +10,13 @@ body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
     background-color: rgb(243, 249, 253);
+    max-width: 2000px;
 }
 
 nav {
     background-color: rgba(243, 249, 253, 0.5);
     height: 180px;
+    max-width: 2000px;
 }
 
 h1, 
@@ -28,12 +30,14 @@ h4 {
     width: 600px;
     height:400px;
     display: block;
+    max-width: 600px;
 }
 
 .intro-text {
     background-color:rgba(199, 217, 230, 0.5);
     padding: 20px;
     margin-top: 200px;
+    max-width: 1600px;
 }
 
 .user-sign {

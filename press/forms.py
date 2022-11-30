@@ -7,6 +7,7 @@ class ArticleForm(forms.ModelForm):
     title = forms.TextInput()
     content = forms.TextInput()
     excerpt = forms.TextInput()
+    slug = forms.SlugField()
 
     class Meta:
         model = Article

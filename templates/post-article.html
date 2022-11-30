@@ -5,21 +5,10 @@
 <div class="create-article">
     <h1>Post an new Article:</h1>
     <p>Posting as {{ user.username }}</p>
-    <form method="POST" action="">
+    <form method="POST" action="{% url 'post-article' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ content|safe }}
-        <div>
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required>
-        </div>
-        <div>
-            <label for="summernote">Content</label>
-            <textarea name="article-content" id="summernote" cols="30" rows="10"></textarea>
-        </div>
-        <div>
-            <label for="excerpt">Excerpt</label>
-            <textarea name="excerpt" id="excerpt" cols="30" rows="10"></textarea>
-        </div>
+        {{ article_form }}
         <button type="submit">Post Article</button>
     </form>
 </div>

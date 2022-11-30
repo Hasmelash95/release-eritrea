@@ -10,9 +10,15 @@ class ArticleList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 4
 
+
 def post_article(request):
-    article_form = ArticleForm(request.POST)
-    return render(request, 'post-article.html', {'article_form': article_form})
+    if request.POST:
+        article_form = ArticleForm(data=request.POST)
+        print(request)
+        if article_form.is_valid():
+            article_form.save()
+    return render(request, 'post-article.html', {'article_form': ArticleForm})
+
 
 class ArticleDetail(View):
 

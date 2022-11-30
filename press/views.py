@@ -11,7 +11,8 @@ class ArticleList(generic.ListView):
     paginate_by = 4
 
 def post_article(request):
-    return render(request, 'post-article.html', {})
+    article_form = ArticleForm(request.POST)
+    return render(request, 'post-article.html', {'article_form': article_form})
 
 class ArticleDetail(View):
 

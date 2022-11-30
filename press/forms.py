@@ -4,10 +4,13 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 class ArticleForm(forms.ModelForm):
+    title = forms.TextInput()
+    content = forms.TextInput()
+    excerpt = forms.TextInput()
+
     class Meta:
         model = Article
-        content = forms.CharField(widget=SummernoteWidget())
-        fields = ('title', 'author', 'content', 'excerpt',)
+        fields = ['title', 'content', 'excerpt']
 
 
 class CommentForm(forms.ModelForm):

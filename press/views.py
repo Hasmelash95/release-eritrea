@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import Article
 from .forms import CommentForm, ArticleForm
+from django.template.defaultfilters import slugify
 
 
 class ArticleList(generic.ListView):
@@ -16,7 +17,10 @@ def post_article(request):
         article_form = ArticleForm(data=request.POST)
         print(request)
         if article_form.is_valid():
-            article_form.save()
+            new_article = article_form.save(commit=False)
+            new_article.author = request.user
+            new_article.slug = slugify(new_article.title)
+            new_article.save()
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 

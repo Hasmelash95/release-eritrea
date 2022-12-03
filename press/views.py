@@ -14,13 +14,14 @@ class ArticleList(generic.ListView):
 
 def post_article(request):
     if request.POST:
-        article_form = ArticleForm(data=request.POST)
+        article_form = ArticleForm(request.POST)
         print(request)
         if article_form.is_valid():
             new_article = article_form.save(commit=False)
             new_article.author = request.user
             new_article.slug = slugify(new_article.title)
             new_article.save()
+            return redirect('/')
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 

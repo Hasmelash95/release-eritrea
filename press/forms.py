@@ -1,16 +1,20 @@
 from .models import Comment, Article
 from django import forms
-from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+from django_summernote.fields import SummernoteTextField
+from django_summernote.widgets import SummernoteWidget
 
 
 class ArticleForm(forms.ModelForm):
     title = forms.TextInput()
-    content = forms.TextInput()
+    content = SummernoteTextField()
     excerpt = forms.TextInput()
     slug = forms.TextInput()
 
     class Meta:
         model = Article
+        widgets = {
+            'content': SummernoteWidget(),
+        }
         fields = ['title', 'content', 'excerpt']
 
 

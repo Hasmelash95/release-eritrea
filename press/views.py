@@ -24,9 +24,9 @@ def post_article(request):
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
-# def edit_article(request, slug):
-
-
+def edit_article(request, slug):
+    article_form = ArticleForm()
+    return render(request, 'edit-article.html', {'article_form': ArticleForm})
 
 
 class ArticleDetail(View):

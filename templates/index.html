@@ -39,6 +39,7 @@
 
 <p> {{ article.excerpt }} </p>
 
+<a href="{% url 'edit-article' article.slug %}">Edit article</a>
 
 {% endfor %}
 

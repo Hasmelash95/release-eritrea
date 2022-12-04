@@ -39,7 +39,9 @@
 
 <p> {{ article.excerpt }} </p>
 
+{% if user.is_staff %}
 <a href="{% url 'edit-article' article.slug %}">Edit article</a>
+{% endif %}
 
 {% endfor %}
 

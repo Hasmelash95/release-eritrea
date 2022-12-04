@@ -3,11 +3,14 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
+<div class = "article-format">
 <h2> {{ article.title }} </h2>
 <h3> by {{ article.author }}</h3>
 <h4> {{ article.created_on }} </h4>
 
-<p> {{ article.content }} </p>
+{{ article.content | safe }} 
+
+</div>
 
 <h3> Comments:</h3>
 

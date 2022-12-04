@@ -25,7 +25,14 @@ def post_article(request):
 
 
 def edit_article(request, slug):
-    article_form = ArticleForm()
+    article = get_object_or_404(Article, slug=slug)
+    article_form = ArticleForm(instance=article)
+    if request.POST:
+        article_form = ArticleForm(request.POST, instance=article)
+        article_form.content = article.content
+        if article_form.is_valid():
+            article_form.save()
+            return redirect('/')
     return render(request, 'edit-article.html', {'article_form': ArticleForm})
 
 

@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="article-format">
-    <h1>Post an new Article:</h1>
+    <h2>Post an new Article:</h1>
     <p>Posting as {{ user.username }}</p>
     <form method="POST" action="{% url 'post-article' %}" enctype="multipart/form-data">
         {% csrf_token %}

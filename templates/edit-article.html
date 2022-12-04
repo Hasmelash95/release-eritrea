@@ -3,13 +3,13 @@
 
 {% block content %}
 <div class="article-format">
-    <h1>Post an new Article:</h1>
+    <h1>Edit Article:</h1>
     <p>Posting as {{ user.username }}</p>
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
         {{ content|safe }}
         {{ article_form }}
-        <button type="submit">Post Article</button>
+        <button type="submit">Edit Article</button>
     </form>
 </div>
 {% endblock %}

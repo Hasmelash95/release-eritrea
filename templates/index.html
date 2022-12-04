@@ -41,6 +41,7 @@
 
 {% if user.is_staff %}
 <a href="{% url 'edit-article' article.slug %}">Edit article</a>
+<a href="{% url 'delete' article.slug %}">Delete article</a>
 {% endif %}
 
 {% endfor %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="article-format">
+<form method="POST" action="{% url 'delete' article.slug %}">
+{% csrf_token %}
+<h2>Are you sure you want to delete {{ article }}?</h2>
+<a href="/">No</a>
+<button type="submit">Yes</button>
+</form>
+</div>
+{% endblock %}

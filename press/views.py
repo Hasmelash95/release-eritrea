@@ -31,9 +31,19 @@ def edit_article(request, slug):
         article_form = ArticleForm(request.POST, instance=article)
         article_form.content = article.content
         if article_form.is_valid():
-            article_form.save()
+            new_article = article_form.save(commit=False)
+            new_article.slug = slugify(new_article.title)
+            new_article.save()
             return redirect('/')
     return render(request, 'edit-article.html', {'article_form': ArticleForm})
+
+
+def delete_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    if request.POST:
+        article.delete()
+        return redirect('/')
+    return render(request, 'delete.html', {'article': article})
 
 
 class ArticleDetail(View):

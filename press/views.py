@@ -24,8 +24,8 @@ def post_article(request):
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
-def edit_article(request, slug):
-    
+# def edit_article(request, slug):
+
 
 
 

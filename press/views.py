@@ -9,7 +9,7 @@ class ArticleList(generic.ListView):
     model = Article
     queryset = Article.objects.order_by('-created_on')
     template_name = 'index.html'
-    paginate_by = 4
+    paginate_by = 6
 
 
 def post_article(request):

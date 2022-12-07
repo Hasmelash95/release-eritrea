@@ -41,9 +41,8 @@
         </p>
     </div>
     <div class="col card what-do">
-        <p>We write to our Members of Parliament and speak directly in the House of Parliament
-            to ask to put in place strategic pressure on the Eritrean government to respect the
-            religious rights of Eritrean believers.
+        <p>We write to our Members of Parliament to ask to put in place strategic pressure on the Eritrean government to respect the
+            religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
         </p>
     </div>
 </section>
@@ -59,8 +58,8 @@
         {% for article in object_list %}
         <div class="col card article-box bg-light bg-gradient">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
-                <h3 class="card-header"> {{ article.title }} </h3>
-                <p class="card-text"> Author: {{ article.author }} </p>
+                <h4 class="card-header"> {{ article.title }} </h3>
+                <p class="card-text"> Author: Release Eritrea </p>
                 <p class="card-text"> {{ article.excerpt }} </p>
             </a>
             {% if user.is_staff %}

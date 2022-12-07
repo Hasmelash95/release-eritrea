@@ -9,12 +9,12 @@
 body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(243, 249, 253);
+    background-color: rgb(34 102 149);
     max-width: 2000px;
 }
 
 nav {
-    background-color: rgba(243, 249, 253, 0.5);
+    background-color: rgba(255, 255, 255, 0.87);
     height: 130px;
     max-width: 2000px;
 }
@@ -26,6 +26,11 @@ h4 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
+.section-headers {
+    color:#fff;
+    padding: 20px;
+}
+
 .hero {
     width: 600px;
     height:400px;
@@ -34,7 +39,7 @@ h4 {
 }
 
 .intro-text {
-    background-color:rgba(199, 217, 230, 0.5);
+    background-color:rgba(255, 255, 255, 0.87);
     padding: 60px 30px;
     margin-top: 70px;
     max-width: 1600px;
@@ -60,10 +65,12 @@ h1 img {
     color: rgb(135, 164, 173);
 }
 
-.article-box {
+.article-box,
+.what-do {
     margin: 20px 10px;
     max-width: 400px;
     left: 20px;
+    background-color:rgba(255, 255, 255, 0.87);
 }
 
 footer {

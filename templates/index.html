@@ -28,19 +28,19 @@
         class="img-fluid hero col" alt="Imagie of director with church elders">
 </section>
 <section class="row">
-    <h2>What We Do</h2>
-    <div class="col card">
+    <h2 class="section-headers">What We Do</h2>
+    <div class="col card what-do">
         <p> We call upon Eritreans, friends of Eritrea and members of the international
             community to pray and call upon the Government of Eritrea to restore freedom of worship to
-            members of independent Protestant churches via demonstrations and letters.
+            members of independent Protestant churches.
         </p>
     </div>
-    <div class="col card">
+    <div class="col card what-do">
         <p>We fundraise and accept donations to help refugees who have manged to escape to other
             countries and the families of prisoners of Faith who yet remain in captivity.
         </p>
     </div>
-    <div class="col card">
+    <div class="col card what-do">
         <p>We write to our Members of Parliament and speak directly in the House of Parliament
             to ask to put in place strategic pressure on the Eritrean government to respect the
             religious rights of Eritrean believers.
@@ -48,17 +48,13 @@
     </div>
 </section>
 <section id="press">
-    <h2>Press Releases</h2>
+    <h2 class="section-headers">Press Releases</h2>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}
         <div class="col card article-box">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
-
                 <h3> {{ article.title }} </h3>
-
-
                 <p> Author: {{ article.author }} </p>
-
                 <p> {{ article.excerpt }} </p>
             </a>
             {% if user.is_staff %}
@@ -91,7 +87,7 @@
 
 </section>
 <section id="gallery">
-    <h2>Gallery</h2>
+    <h2 class="section-headers">Gallery</h2>
 </section>
 
 {% endblock %}

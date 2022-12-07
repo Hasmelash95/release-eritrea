@@ -49,41 +49,42 @@
 </section>
 <section id="press">
     <h2 class="section-headers">Press Releases</h2>
+    {% if user.is_staff %}
+    <p>
+    <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
+</p>
+    {% endif %}
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}
         <div class="col card article-box">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
-                <h3> {{ article.title }} </h3>
-                <p> Author: {{ article.author }} </p>
-                <p> {{ article.excerpt }} </p>
+                <h3 class="card-header"> {{ article.title }} </h3>
+                <p class="card-text"> Author: {{ article.author }} </p>
+                <p class="card-text"> {{ article.excerpt }} </p>
             </a>
             {% if user.is_staff %}
-            <a href="{% url 'edit-article' article.slug %}">Edit article</a>
-            <a href="{% url 'delete' article.slug %}">Delete article</a>
+            <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
+            <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
         </div>
 
         {% endfor %}
     </div>
-    {% if user.is_staff %}
-    <a href="/post-article">Post a new article</a>
-    {% endif %}
-    <ul class="pagination">
-        <span>
+    <span>
+   <span class="page-info text-light"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+    <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li class="page-item" p><a href="?page=1">&laquo; first</a></li>
-            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+            <li class="page-item" p><a href="?page=1#press" class="page-link">&laquo; First</a></li>
+            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press" class="page-link">Previous</a></li>
             {% endif %}
-
+            <li class="page-item"><a class="page-link" href="?page=1#press">1</a></li>
+            <li class="page-item"><a class="page-link" href="?page=2#press">2</a></li>
             {% if page_obj.has_next %}
-            <li class="page-item"><a href="?page={{ page_obj.next_page_number }}">next</a></li>
-            <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
+            <li class="page-item"><a href="?page={{ page_obj.next_page_number }}#press" class="page-link">Next</a></li>
+            <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press" class="page-link">Last &raquo;</a></li>
     </ul>
     {% endif %}
     </span>
-    <div class="current-page">
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-    </div>
 
 </section>
 <section id="gallery">

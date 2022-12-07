@@ -38,10 +38,10 @@
                 </ul>
                 <div class="col user-sign">
                     {% if user.is_authenticated %}
-                    <span>Hello {{ user }}!</span> <span><a href="{% url 'account_logout' %}">Logout</a></span>
+                    Hello {{ user }}!<a href="{% url 'account_logout' %}" class="btn btn-dark">Logout</a>
                     {% else %}
-                    <span><a href="{% url 'account_login' %}">Sign In</a> | </span><span><a
-                            href="{% url 'account_signup' %}">Sign Up</a></span>
+                    <span><a href="{% url 'account_login' %}" class="btn btn-dark">Sign In</a> </span><span><a
+                            href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a></span>
                     {% endif %}
                 </div>
         </nav>

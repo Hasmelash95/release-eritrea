@@ -36,18 +36,12 @@ h4 {
 .intro-text {
     background-color:rgba(199, 217, 230, 0.5);
     padding: 20px;
-    margin-top: 200px;
     max-width: 1600px;
 }
 
 .user-sign {
     margin: 20px;
     font-size: 1.2rem;
-}
-
-.sign-in,
-.article-format {
-    margin-top: 200px;
 }
 
 h1 img { 

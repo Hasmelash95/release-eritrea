@@ -3,8 +3,9 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-<div class = "article-format">
-<h2> {{ article.title }} </h2>
+<div class="bg-light bg-gradient">
+<div class="article-format ">
+<h3> {{ article.title }} </h2>
 <h4> by {{ article.author }}</h3>
 <h5> {{ article.created_on }} </h4>
 
@@ -12,14 +13,15 @@
 
 </div>
 
-<h3> Comments:</h3>
+<h4> Comments:</h3>
 
 {% for comment in comments %}
  <p>{{ comment.name }}</p>
  <p>{{ comment.created_on }}</p>
- <p> {{ comment.content }} </p>
+ <p> {{ comment.content | safe }} </p>
 
  {% endfor %}
+</div>
  {% if commented %}
  <div class="alert alert-success" role="alert">
      Your comment is awaiting approval
@@ -27,7 +29,7 @@
  {% else %}
  {% if user.is_authenticated %}
 
- <h4>Leave a comment:</h3>
+ <h5>Leave a comment:</h3>
  <p>Posting as: {{ user.username }}</p>
  <form method="post" style="margin-top: 1.3em;">
      {{ comment_form | crispy }}

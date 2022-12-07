@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<section class="row intro-text" id="about">
+<section class="row intro-text bg-light bg-gradient" id="about">
     <div class="col">
         <h2>What Is Release Eritrea?</h2>
         <h3>
@@ -29,13 +29,13 @@
 </section>
 <section class="row">
     <h2 class="section-headers">What We Do</h2>
-    <div class="col card what-do">
+    <div class="col card what-do bg-light bg-gradient">
         <p> We call upon Eritreans, friends of Eritrea and members of the international
             community to pray and call upon the Government of Eritrea to restore freedom of worship to
             members of independent Protestant churches.
         </p>
     </div>
-    <div class="col card what-do">
+    <div class="col card what-do bg-light bg-gradient">
         <p>We fundraise and accept donations to help refugees who have manged to escape to other
             countries and the families of prisoners of Faith who yet remain in captivity.
         </p>
@@ -47,16 +47,17 @@
         </p>
     </div>
 </section>
+<hr>
 <section id="press">
     <h2 class="section-headers">Press Releases</h2>
     {% if user.is_staff %}
     <p>
-    <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
-</p>
+        <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
+    </p>
     {% endif %}
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}
-        <div class="col card article-box">
+        <div class="col card article-box bg-light bg-gradient">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
                 <h3 class="card-header"> {{ article.title }} </h3>
                 <p class="card-text"> Author: {{ article.author }} </p>
@@ -67,26 +68,28 @@
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
         </div>
-
         {% endfor %}
     </div>
     <span>
-   <span class="page-info text-light"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
-    <ul class="pagination justify-content-center">
+        <span class="page-info text-light"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li class="page-item" p><a href="?page=1#press" class="page-link">&laquo; First</a></li>
-            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press" class="page-link">Previous</a></li>
+            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press"
+                    class="page-link">Previous</a></li>
             {% endif %}
             <li class="page-item"><a class="page-link" href="?page=1#press">1</a></li>
             <li class="page-item"><a class="page-link" href="?page=2#press">2</a></li>
             {% if page_obj.has_next %}
             <li class="page-item"><a href="?page={{ page_obj.next_page_number }}#press" class="page-link">Next</a></li>
-            <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press" class="page-link">Last &raquo;</a></li>
-    </ul>
-    {% endif %}
+            <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press" class="page-link">Last
+                    &raquo;</a></li>
+        </ul>
+        {% endif %}
     </span>
 
 </section>
+<hr>
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
 </section>

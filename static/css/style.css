@@ -15,7 +15,7 @@ body {
 
 nav {
     background-color: rgba(243, 249, 253, 0.5);
-    height: 180px;
+    height: 130px;
     max-width: 2000px;
 }
 
@@ -51,8 +51,8 @@ h4 {
 }
 
 h1 img { 
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
     outline: 2px solid #fff;
 }

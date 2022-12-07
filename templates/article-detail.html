@@ -5,8 +5,8 @@
 {% load crispy_forms_tags %}
 <div class = "article-format">
 <h2> {{ article.title }} </h2>
-<h3> by {{ article.author }}</h3>
-<h4> {{ article.created_on }} </h4>
+<h4> by {{ article.author }}</h3>
+<h5> {{ article.created_on }} </h4>
 
 {{ article.content | safe }} 
 
@@ -27,7 +27,7 @@
  {% else %}
  {% if user.is_authenticated %}
 
- <h3>Leave a comment:</h3>
+ <h4>Leave a comment:</h3>
  <p>Posting as: {{ user.username }}</p>
  <form method="post" style="margin-top: 1.3em;">
      {{ comment_form | crispy }}

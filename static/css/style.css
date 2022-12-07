@@ -65,6 +65,11 @@ h1 img {
     color: rgb(135, 164, 173);
 }
 
+.article-box {
+    margin: 20px 10px;
+    max-width: 300px;
+}
+
 footer {
     background-color: rgb(164, 189, 196);
     text-align: center;

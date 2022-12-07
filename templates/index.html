@@ -27,31 +27,39 @@
     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754853/Release%20Eritrea/with_church_leaders_yvvtyl.jpg"
         class="img-fluid hero col" alt="Imagie of director with church elders">
 </section>
-<section class="row">
-<h2>PRESS RELEASES</h2>
+<section>
+    <div>
+        <h2>What We Do</h2>
+    </div>
+</section>
+<section>
+<h2>Press Releases</h2>
+<div class="row row-cols-1 row-cols-md-2 g-4">
 {% for article in object_list %}
+<div class="col card article-box">
+<a href="{% url 'article-detail' article.slug %}" class="card-body">
 
-<a href="{% url 'article-detail' article.slug %}">
     <h3> {{ article.title }} </h3>
-</a>
+
 
 <p> Author: {{ article.author }} </p>
 
 <p> {{ article.excerpt }} </p>
-
+</a>
 {% if user.is_staff %}
 <a href="{% url 'edit-article' article.slug %}">Edit article</a>
 <a href="{% url 'delete' article.slug %}">Delete article</a>
 {% endif %}
+</div>
 
 {% endfor %}
-
+</div>
 {% if user.is_staff %}
 <a href="/post-article">Post a new article</a>
 {% endif %}
 </section>
 <section>
-    <h2>GALLERY</h2>
+    <h2>Gallery</h2>
 </section>
 
 {% endblock %}

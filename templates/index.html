@@ -16,59 +16,74 @@
         <p>
             On several occasions since then the Eritrean government issued blanket denials of the
             existence of persecution in the country stating that 'no groups or persons are persecuted
-            in Eritrea for their beliefs or religion' and that people were 'free to worship according 
+            in Eritrea for their beliefs or religion' and that people were 'free to worship according
             to their wish'.
         </p>
         <p>
             The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
-            the worst human rights record in the world. 
+            the worst human rights record in the world.
         </p>
     </div>
     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669754853/Release%20Eritrea/with_church_leaders_yvvtyl.jpg"
         class="img-fluid hero col" alt="Imagie of director with church elders">
 </section>
-<section>
-    <div>
-        <h2>What We Do</h2>
+<section class="row">
+    <h2>What We Do</h2>
+    <div class="col card">
+        <p> We call upon Eritreans, friends of Eritrea and members of the international
+            community to pray and call upon the Government of Eritrea to restore freedom of worship to
+            members of independent Protestant churches via demonstrations and letters.
+        </p>
+    </div>
+    <div class="col card">
+        <p>We fundraise and accept donations to help refugees who have manged to escape to other
+            countries and the families of prisoners of Faith who yet remain in captivity.
+        </p>
+    </div>
+    <div class="col card">
+        <p>We write to our Members of Parliament and speak directly in the House of Parliament
+            to ask to put in place strategic pressure on the Eritrean government to respect the
+            religious rights of Eritrean believers.
+        </p>
     </div>
 </section>
 <section id="press">
-<h2>Press Releases</h2>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-{% for article in object_list %}
-<div class="col card article-box">
-<a href="{% url 'article-detail' article.slug %}" class="card-body">
+    <h2>Press Releases</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for article in object_list %}
+        <div class="col card article-box">
+            <a href="{% url 'article-detail' article.slug %}" class="card-body">
 
-    <h3> {{ article.title }} </h3>
+                <h3> {{ article.title }} </h3>
 
 
-<p> Author: {{ article.author }} </p>
+                <p> Author: {{ article.author }} </p>
 
-<p> {{ article.excerpt }} </p>
-</a>
-{% if user.is_staff %}
-<a href="{% url 'edit-article' article.slug %}">Edit article</a>
-<a href="{% url 'delete' article.slug %}">Delete article</a>
-{% endif %}
-</div>
+                <p> {{ article.excerpt }} </p>
+            </a>
+            {% if user.is_staff %}
+            <a href="{% url 'edit-article' article.slug %}">Edit article</a>
+            <a href="{% url 'delete' article.slug %}">Delete article</a>
+            {% endif %}
+        </div>
 
-{% endfor %}
-</div>
-{% if user.is_staff %}
-<a href="/post-article">Post a new article</a>
-{% endif %}
-<ul class="pagination">
-    <span>
-        {% if page_obj.has_previous %}
-            <li class="page-item"p><a href="?page=1">&laquo; first</a></li>
+        {% endfor %}
+    </div>
+    {% if user.is_staff %}
+    <a href="/post-article">Post a new article</a>
+    {% endif %}
+    <ul class="pagination">
+        <span>
+            {% if page_obj.has_previous %}
+            <li class="page-item" p><a href="?page=1">&laquo; first</a></li>
             <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}">previous</a></li>
-        {% endif %}
+            {% endif %}
 
-        {% if page_obj.has_next %}
+            {% if page_obj.has_next %}
             <li class="page-item"><a href="?page={{ page_obj.next_page_number }}">next</a></li>
             <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
-        </ul>
-        {% endif %}
+    </ul>
+    {% endif %}
     </span>
     <div class="current-page">
         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.

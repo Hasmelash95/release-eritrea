@@ -35,7 +35,8 @@ h4 {
 
 .intro-text {
     background-color:rgba(199, 217, 230, 0.5);
-    padding: 20px;
+    padding: 60px 30px;
+    margin-top: 70px;
     max-width: 1600px;
 }
 

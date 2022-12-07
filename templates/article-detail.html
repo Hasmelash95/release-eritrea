@@ -3,8 +3,8 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="bg-light bg-gradient">
-<div class="article-format ">
+<div class="bg-light bg-gradient article-section" >
+<div class="article-format">
 <h3> {{ article.title }} </h2>
 <h4> by {{ article.author }}</h3>
 <h5> {{ article.created_on }} </h4>
@@ -16,9 +16,11 @@
 <h4> Comments:</h3>
 
 {% for comment in comments %}
- <p>{{ comment.name }}</p>
- <p>{{ comment.created_on }}</p>
- <p> {{ comment.content | safe }} </p>
+<div class="card comment-format">
+ <div>Written by {{ comment.name }}</div>
+ <div>{{ comment.created_on }}</div>
+ <div> {{ comment.content | safe }} </div>
+</div>
 
  {% endfor %}
 </div>
@@ -29,13 +31,15 @@
  {% else %}
  {% if user.is_authenticated %}
 
+ <div class="comment-form bg-light bg-gradient">
  <h5>Leave a comment:</h3>
  <p>Posting as: {{ user.username }}</p>
  <form method="post" style="margin-top: 1.3em;">
      {{ comment_form | crispy }}
      {% csrf_token %}
-     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+     <button type="submit" class="btn btn-dark submit-btn">Submit</button>
  </form>
+</div>
  {% endif %}
  {% endif %}
 {% endblock %}

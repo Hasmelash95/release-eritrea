@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block title %} {{ article.title }} {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="bg-light bg-gradient article-section" >
@@ -26,7 +26,7 @@
 </div>
  {% if commented %}
  <div class="alert alert-success" role="alert">
-     Your comment is awaiting approval
+     Your comment is awaiting approval.
  </div>
  {% else %}
  {% if user.is_authenticated %}

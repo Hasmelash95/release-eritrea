@@ -4,6 +4,7 @@ from .models import Article
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 
 
 class ArticleList(generic.ListView):
@@ -52,12 +53,13 @@ class ArticleDetail(View):
         comments = article.comments.filter(approved=True).order_by('created_on')
         return render(
             request,
-            "article-detail.html",
+            'article-detail.html',
             {
-                "article": article,
-                "comments": comments,
-                "commented": False,
-                "comment_form": CommentForm()     
+                'article': article,
+                'comments': comments,
+                'commented': False,
+                'comment_form': CommentForm(),
+                'page_title': '| ' + article.title
             }
         )
 

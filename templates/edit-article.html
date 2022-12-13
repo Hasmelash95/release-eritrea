@@ -7,8 +7,8 @@
     <p>Posting as {{ user.username }}</p>
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
+        {{ article_form.as_p }}
         {{ content|safe }}
-        {{ article_form }}
         <button type="submit">Edit Article</button>
     </form>
 </div>

@@ -24,18 +24,14 @@ def post_article(request):
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
+
 def edit_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
-    article_form = ArticleForm(instance=article)
-    if request.POST:
-        article_form = ArticleForm(request.POST, instance=article)
-        article_form.content = article.content
-        if article_form.is_valid():
-            new_article = article_form.save(commit=False)
-            new_article.slug = slugify(new_article.title)
-            new_article.save()
-            return redirect('/')
-    return render(request, 'edit-article.html', {'article_form': ArticleForm})
+    article_form = ArticleForm(request.POST or None, instance=article)
+    if article_form.is_valid():
+        article_form.save()
+        return redirect('/' + slug)
+    return render(request, 'edit-article.html', {'article_form': article_form})
 
 
 def delete_article(request, slug):

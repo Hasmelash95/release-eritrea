@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<div class="text-bg-dark bg-gradient article-section" >
 <div class="article-format">
     <h1>Edit Article:</h1>
     <p>Posting as {{ user.username }}</p>
@@ -9,7 +10,8 @@
         {% csrf_token %}
         {{ article_form.as_p }}
         {{ content|safe }}
-        <button type="submit">Edit Article</button>
+        <button class="btn btn-light" type="submit">Edit Article</button>
     </form>
+</div>
 </div>
 {% endblock %}

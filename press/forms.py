@@ -5,9 +5,10 @@ from django_summernote.widgets import SummernoteWidget
 
 
 class ArticleForm(forms.ModelForm):
-    title = forms.TextInput()
+    title = forms.CharField(widget=forms.TextInput(attrs={'size': 80}))
     content = SummernoteTextField()
-    excerpt = forms.TextInput()
+    excerpt = forms.CharField(widget=forms.Textarea(attrs={'rows': 4, 
+                              'cols': 80}))
     slug = forms.TextInput()
 
     class Meta:

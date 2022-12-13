@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
+<div class="text-bg-dark bg-gradient article-section" >
 <div class="article-format">
 <form method="POST" action="{% url 'delete' article.slug %}">
 {% csrf_token %}
-<h2>Are you sure you want to delete {{ article }}?</h2>
-<a href="/">No</a>
-<button type="submit">Yes</button>
+<h3>Are you sure you want to delete "{{ article }}"?</h2>
+<a href="/" class="btn btn-light">No</a>
+<button class="btn btn-danger" type="submit">Yes</button>
 </form>
+</div>
 </div>
 {% endblock %}

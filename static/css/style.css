@@ -87,11 +87,8 @@ h1 img {
     padding: 20px;
 }
 
-.article-format {
-    margin-top: 180px;
-}
-
 .article-section {
+    margin-top: 180px;
     padding: 30px;
     max-width: 1000px;
     margin-left: 50px;

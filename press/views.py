@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Article
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 class ArticleList(generic.ListView):
@@ -12,6 +13,7 @@ class ArticleList(generic.ListView):
     paginate_by = 6
 
 
+@staff_member_required
 def post_article(request):
     if request.POST:
         article_form = ArticleForm(request.POST)
@@ -24,7 +26,7 @@ def post_article(request):
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
-
+@staff_member_required
 def edit_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     article_form = ArticleForm(request.POST or None, instance=article)
@@ -34,6 +36,7 @@ def edit_article(request, slug):
     return render(request, 'edit-article.html', {'article_form': article_form})
 
 
+@staff_member_required
 def delete_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.POST:

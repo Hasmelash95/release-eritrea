@@ -14,10 +14,15 @@ body {
     background-image: var(--bs-gradient);
 }
 
+
 nav {
-    height: 130px;
     max-width: 2000px;
+    height: 130px;
 }
+
+html {
+    scroll-padding-top: 180px;
+  }
 
 h1, 
 h2,
@@ -37,6 +42,10 @@ h4 {
     margin-left: 20px;
 }
 
+.sign-in {
+    margin-top: 180px;
+}
+
 .hero {
     width: 600px;
     height:400px;
@@ -46,7 +55,7 @@ h4 {
 
 .intro-text {
     padding: 60px 30px;
-    margin-top: 70px;
+    margin-top: 180px;
     max-width: 1600px;
 }
 
@@ -78,8 +87,11 @@ h1 img {
     padding: 20px;
 }
 
+.article-format {
+    margin-top: 180px;
+}
+
 .article-section {
-    margin-top: 70px;
     padding: 30px;
     max-width: 1000px;
     margin-left: 50px;

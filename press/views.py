@@ -52,6 +52,14 @@ def delete_article(request, slug):
     return render(request, 'delete.html', {'article': article})
 
 
+def favorite_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    if request.POST:
+        article.favorites.add(request.user)
+        return redirect('/' + slug)
+    return render(request, 'fave-article.html', {'article': article})
+
+
 class ArticleDetail(View):
 
     def get(self, request, slug, *args, **kwargs):

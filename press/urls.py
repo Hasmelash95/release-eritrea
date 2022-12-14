@@ -6,6 +6,7 @@ urlpatterns = [
     path('post-article', views.post_article, name='post-article'),
     path('edit-article/<slug:slug>', views.edit_article, name='edit-article'),
     path('delete/<slug:slug>', views.delete_article, name='delete'),
-    path('<slug:slug>', views.ArticleDetail.as_view(), 
+    path('fave-article/<slug:slug>', views.favorite_article, name='favorite'),
+    path('<slug:slug>/', views.ArticleDetail.as_view(), 
          name='article-detail'),
 ]

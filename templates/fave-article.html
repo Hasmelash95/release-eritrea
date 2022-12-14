@@ -6,11 +6,11 @@
 {% endif %}
 <div class="text-bg-dark bg-gradient article-section" >
 <div class="article-format">
-<form method="POST" action="{% url 'delete' article.slug %}">
+<form method="POST" action="{% url 'favorite' article.slug %}">
 {% csrf_token %}
-<h3>Are you sure you want to delete "{{ article }}"?</h2>
+<h3>Add "{{ article }}" to favorites?</h2>
 <a href="/" class="btn btn-light">No</a>
-<button class="btn btn-danger" type="submit">Yes</button>
+<button class="btn btn-success" type="submit">Yes</button>
 </form>
 </div>
 </div>

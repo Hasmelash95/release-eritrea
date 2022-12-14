@@ -22,7 +22,7 @@
     </div>
     {% endif %}
     <div>
-        <a href="#">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+        <a href="{% url 'favorite' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
     </div>
     <h4> Comments:</h3>
 

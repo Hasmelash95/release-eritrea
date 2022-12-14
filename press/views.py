@@ -1,17 +1,23 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from .models import Article
+from .models import Article, Gallery
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 
 
-class ArticleList(generic.ListView):
+class PressList(generic.ListView):
     model = Article
     queryset = Article.objects.order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+    context_object_name = 'article'
+
+    def get_context_data(self, **kwargs):
+        context = super(PressList, self).get_context_data(**kwargs)
+        context['gallery'] = Gallery.objects.all()
+        return context
 
 
 @staff_member_required

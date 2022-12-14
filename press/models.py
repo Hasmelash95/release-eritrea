@@ -49,8 +49,7 @@ class Gallery(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
     alt = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to=None, height_field=None,
-                              width_field=None, max_length=500)
+    image = CloudinaryField('image', default='temporary')
 
     class Meta:
         ordering = ['-created_on']

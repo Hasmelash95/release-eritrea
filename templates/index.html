@@ -93,6 +93,9 @@
 <hr>
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
+    {% for pictures in gallery %}
+    <img src="{{ pictures.image.url }}" alt="">
+    {% endfor %}
 </section>
 
 {% endblock %}

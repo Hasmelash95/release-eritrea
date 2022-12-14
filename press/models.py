@@ -8,8 +8,8 @@ from taggit.managers import TaggableManager
 
 class Article(models.Model):
     title = models.CharField(max_length=300, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE, 
+    slug = models.SlugField(max_length=300, unique=True)
+    author = models.ForeignKey(User, null=True, on_delete=models.CASCADE,
                                related_name='press_releases')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -29,7 +29,7 @@ class Article(models.Model):
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name='comments')
-    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE, 
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE,
                              related_name='commenter')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -42,3 +42,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.user
+
+
+class Gallery(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    alt = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to=None, height_field=None,
+                              width_field=None, max_length=500)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, Comment
+from .models import Article, Comment, Gallery
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,7 +12,10 @@ class ArticleAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'approved')
-    
+    list_display = ('user', 'approved')
 
 
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ('title', 'created_on')
+    prepopulated_fields = {'slug': ('title',)}

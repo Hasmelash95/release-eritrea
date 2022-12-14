@@ -66,6 +66,7 @@
             <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
+            <a href="#">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
         </div>
         {% endfor %}
     </div>

@@ -3,43 +3,54 @@
 {% block title %} {{ article.title }} {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="bg-light bg-gradient article-section" >
-<div class="article-format">
-<h3> {{ article.title }} </h2>
-<h4> by Release Eritrea</h3>
-<h5> {{ article.created_on }} </h4>
+<div class="bg-light bg-gradient article-section">
+    <div class="article-format">
+        <h3> {{ article.title }} </h2>
+            <h4> by Release Eritrea
+        </h3>
+        <h5> {{ article.created_on }} </h4>
 
-{{ article.content | safe }} 
+            {{ article.content | safe }}
 
+    </div>
+    {% if user.is_staff %}
+    <div>
+        <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
+    </div>
+    <div>
+        <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
+    </div>
+    {% endif %}
+    <div>
+        <a href="#">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+    </div>
+    <h4> Comments:</h3>
+
+        {% for comment in comments %}
+        <div class="card comment-format">
+            <div>Written by {{ comment.user }}</div>
+            <div>{{ comment.created_on }}</div>
+            <div> {{ comment.content | safe }} </div>
+        </div>
+
+        {% endfor %}
 </div>
-
-<h4> Comments:</h3>
-
-{% for comment in comments %}
-<div class="card comment-format">
- <div>Written by {{ comment.user }}</div>
- <div>{{ comment.created_on }}</div>
- <div> {{ comment.content | safe }} </div>
+{% if commented %}
+<div class="alert alert-success" role="alert">
+    Your comment is awaiting approval.
 </div>
+{% else %}
+{% if user.is_authenticated %}
 
- {% endfor %}
+<div class="comment-form bg-light bg-gradient">
+    <h5>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-dark submit-btn">Submit</button>
+        </form>
 </div>
- {% if commented %}
- <div class="alert alert-success" role="alert">
-     Your comment is awaiting approval.
- </div>
- {% else %}
- {% if user.is_authenticated %}
-
- <div class="comment-form bg-light bg-gradient">
- <h5>Leave a comment:</h3>
- <p>Posting as: {{ user.username }}</p>
- <form method="post" style="margin-top: 1.3em;">
-     {{ comment_form | crispy }}
-     {% csrf_token %}
-     <button type="submit" class="btn btn-dark submit-btn">Submit</button>
- </form>
-</div>
- {% endif %}
- {% endif %}
+{% endif %}
+{% endif %}
 {% endblock %}

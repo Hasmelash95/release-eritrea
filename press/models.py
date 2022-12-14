@@ -17,7 +17,7 @@ class Article(models.Model):
     excerpt = models.TextField(blank=True)
     favorites = models.ManyToManyField(User, related_name='favorite',
                                        default=None, blank=True)
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -34,14 +34,14 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    subject = models.TextField(blank=True)
+    subject = models.TextField()
     approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return self.user
+        return self.subject
 
 
 class Gallery(models.Model):

@@ -16,10 +16,10 @@ class ArticleForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
-        fields = ['title', 'content', 'excerpt']
+        fields = ['title', 'content', 'excerpt', 'tags']
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('content',)
+        fields = ['subject', 'content']

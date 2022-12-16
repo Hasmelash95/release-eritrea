@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<h1 class="article-section">Hi</h1>
-{{ gallery.title }}
-<img src="{{ gallery.image.url }}">
+<h1 class="article-section modal-header">Hi</h1>
+<div class="modal-title">{{ picture.title }}</div>
+<img src="{{ picture.image.url }}">
 {% endblock %}

@@ -44,7 +44,7 @@ class Comment(models.Model):
         return self.subject
 
 
-class Gallery(models.Model):
+class Picture(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)

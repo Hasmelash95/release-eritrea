@@ -109,6 +109,10 @@ h1 img {
     margin-top: 10px;
 }
 
+.image-cards {
+    max-width: 400px;
+}
+
 footer {
     text-align: center;
 }

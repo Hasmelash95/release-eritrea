@@ -94,10 +94,14 @@
 <hr>
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
-    {% for picture in gallery %}
-    <a href="{% url 'gallery-detail' picture.slug %}">
-    <img src="{{ picture.image.url }}" alt="">
+    <div class="row">
+    {% for pic in picture %}
+    <div class="cols image-cards card">
+    <a href="{% url 'gallery-detail' pic.slug %}" data-popup-url="{% url 'gallery-detail' pic.slug %}">
+    <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">
 </a>
+</div>
+</div>
     {% endfor %}
 </section>
 

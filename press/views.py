@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from .models import Article, Gallery
+from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
@@ -16,7 +16,7 @@ class PressList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PressList, self).get_context_data(**kwargs)
-        context['gallery'] = Gallery.objects.all()
+        context['picture'] = Picture.objects.all()
         return context
 
 
@@ -105,11 +105,11 @@ class ArticleDetail(View):
 class GalleryDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        gallery = get_object_or_404(Gallery, slug=slug)
+        picture = get_object_or_404(Picture, slug=slug)
         return render(
             request,
             'gallery-detail.html',
             {
-                'gallery': gallery
+                'picture': picture
             }
         )

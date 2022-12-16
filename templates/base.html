@@ -24,13 +24,13 @@
 <body>
     <header>
         <nav class="navbar fixed-top row bg-light bg-gradient">
-            <h1 class="col logo">
+            <span class="col logo">
                 <a href="/" aria-label="Link to the landing page">
                     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
                         alt="release eritrea logo">
                 </a>
-            </h1>
-            <h3 class="col"> Proclaim! Release Eritrea</h2>
+            </span>
+            <h3 class="company col"> Proclaim! Release Eritrea</h3>
                 <ul class="col-6 nav">
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"><strong>Home</strong></a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="{% url 'home' %}#about"><strong>About
@@ -53,19 +53,29 @@
     {% block content %}
 
     {% endblock %}
-    <footer class="container-fluid bg-light bg-gradient">
-        <div class="copyright">
-            &copy; Copyright Release Eritrea <span id="current-year"></span>
-        </div>
-        <div>
-            <p>You can contact us on:
-                <a href="https://www.facebook.com/release.eritrea.7"
-                    aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
+    <footer class="container-fluid text-bg-secondary bg-gradient">
+        <div class="row">
+            <span class="col logo">
+                <a href="/" aria-label="Link to the landing page">
+                    <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
+                        alt="release eritrea logo">
                 </a>
-            </p>
+            </span>
+            <div class="col copyright">
+                &copy; Copyright Release Eritrea <span id="current-year"></span>
+                <div>
+                    Charity number: 
+                </div>
+            </div>
+            <div class="col contact">
+                <p>You can contact us on:
+                    <a href="https://www.facebook.com/release.eritrea.7"
+                        aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </p>
+            </div>
         </div>
-
     </footer>
     <script src="https://kit.fontawesome.com/86de956f5a.js" crossorigin="anonymous"></script>
     <script src={% static "js/script.js" %}></script>

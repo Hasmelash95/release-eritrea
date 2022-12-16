@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="row intro-text bg-light bg-gradient">
+<section class="row intro-text container-fluid bg-light bg-gradient">
     <div class="col verse">
     <p class="display-6">
         <em>
@@ -20,7 +20,7 @@
     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671227564/Release%20Eritrea/chains_iyt2mb.jpg"
         class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
 </section>
-<section class="row intro-text bg-light bg-gradient" id="about">
+<section class="row what-is container-fluid  bg-light bg-gradient" id="about">
     <div class="col">
         <h2>What Is Release Eritrea?</h2>
         <h3>
@@ -41,6 +41,10 @@
             The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
             the worst human rights record in the world.
         </p>
+    </div>
+    <div class="col">
+        <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671229831/Release%20Eritrea/ethiopia-shimelba_svogfs.jpg" 
+        alt="People praying in a church in Ethiopia" id="balloon-img">
     </div>
 </section>
 <section class="row">
@@ -112,7 +116,7 @@
 <hr>
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for pic in picture %}
         <div class="col image-cards card">
             <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">

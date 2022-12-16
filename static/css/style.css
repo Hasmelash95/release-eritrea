@@ -58,8 +58,16 @@ h4 {
 
 .intro-text {
     padding: 60px 30px;
-    margin-top: 180px;
-    max-width: 1600px;
+    margin-top: 200px;
+}
+
+.what-is {
+    margin-top: 80px;
+    padding: 60px 30px;
+}
+
+#balloon-img {
+    max-width: 600px;
 }
 
 .user-sign {
@@ -83,7 +91,8 @@ h1 img {
 }
 
 .article-box,
-.what-do {
+.what-do,
+.image-cards {
     margin: 20px 10px;
     max-width: 400px;
     left: 20px;

@@ -46,9 +46,12 @@ h4 {
     margin-top: 180px;
 }
 
+.verse {
+    margin: 100px 10px
+}
+
 .hero {
-    width: 600px;
-    height:400px;
+    max-height: 600px;
     display: block;
     max-width: 600px;
 }

@@ -100,16 +100,3 @@ class ArticleDetail(View):
                 'comment_form': CommentForm()
             }
         )
-
-
-class GalleryDetail(View):
-
-    def get(self, request, slug, *args, **kwargs):
-        picture = get_object_or_404(Picture, slug=slug)
-        return render(
-            request,
-            'gallery-detail.html',
-            {
-                'picture': picture
-            }
-        )

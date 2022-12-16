@@ -9,6 +9,4 @@ urlpatterns = [
     path('fave-article/<slug:slug>', views.favorite_article, name='favorite'),
     path('<slug:slug>/', views.ArticleDetail.as_view(),
          name='article-detail'),
-    path('gallery/<slug:slug>', views.GalleryDetail.as_view(),
-         name='gallery-detail')
 ]

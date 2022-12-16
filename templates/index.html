@@ -41,7 +41,8 @@
         </p>
     </div>
     <div class="col card what-do">
-        <p>We write to our Members of Parliament to ask to put in place strategic pressure on the Eritrean government to respect the
+        <p>We write to our Members of Parliament to ask to put in place strategic pressure on the Eritrean government to
+            respect the
             religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
         </p>
     </div>
@@ -59,14 +60,15 @@
         <div class="col card article-box bg-light bg-gradient">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
                 <h4 class="card-header"> {{ article.title }} </h3>
-                <p class="card-text"> Author: Release Eritrea </p>
-                <p class="card-text"> {{ article.excerpt }} </p>
+                    <p class="card-text"> Author: Release Eritrea </p>
+                    <p class="card-text"> {{ article.excerpt }} </p>
             </a>
             {% if user.is_staff %}
             <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
-            <a href="{% url 'favorite' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+            <a href="{% url 'favorite' article.slug %}">Add to favorites <i
+                    class="fa-solid fa-star link-primary"></i></a>
         </div>
         {% endfor %}
     </div>
@@ -95,14 +97,17 @@
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
     <div class="row">
-    {% for pic in picture %}
-    <div class="cols image-cards card">
-    <a href="{% url 'gallery-detail' pic.slug %}" data-popup-url="{% url 'gallery-detail' pic.slug %}">
-    <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">
-</a>
-</div>
-</div>
-    {% endfor %}
+        {% for pic in picture %}
+        <div class="col image-cards card">
+            <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">
+                <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">
+            </a>
+
+        </div>
+    </div>
+
 </section>
+
+{% endfor %}
 
 {% endblock %}

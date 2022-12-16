@@ -4,6 +4,9 @@ from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
+
+                                                   
 from django.contrib import messages
 
 
@@ -52,6 +55,7 @@ def delete_article(request, slug):
     return render(request, 'delete.html', {'article': article})
 
 
+@login_required
 def favorite_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.POST:

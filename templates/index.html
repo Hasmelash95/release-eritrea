@@ -87,8 +87,10 @@
             <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
+            {% if user.is_authenticated %}
             <a href="{% url 'favorite' article.slug %}">Add to favorites <i
                     class="fa-solid fa-star link-primary"></i></a>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

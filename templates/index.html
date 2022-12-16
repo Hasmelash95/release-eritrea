@@ -94,8 +94,10 @@
 <hr>
 <section id="gallery">
     <h2 class="section-headers">Gallery</h2>
-    {% for pictures in gallery %}
-    <img src="{{ pictures.image.url }}" alt="">
+    {% for picture in gallery %}
+    <a href="{% url 'gallery-detail' picture.slug %}">
+    <img src="{{ picture.image.url }}" alt="">
+</a>
     {% endfor %}
 </section>
 

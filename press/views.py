@@ -73,8 +73,7 @@ class ArticleDetail(View):
                 'article': article,
                 'comments': comments,
                 'commented': False,
-                'comment_form': CommentForm(),
-                'page_title': '| ' + article.title
+                'comment_form': CommentForm()
             }
         )
 
@@ -93,11 +92,24 @@ class ArticleDetail(View):
 
         return render(
             request,
-            "article-detail.html",
+            'article-detail.html',
             {
-                "article": article,
-                "comments": comments,
-                "commented": True,
-                "comment_form": CommentForm()     
+                'article': article,
+                'comments': comments,
+                'commented': True,
+                'comment_form': CommentForm()
             }
-        )  
+        )
+
+
+class GalleryDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        gallery = get_object_or_404(Gallery, slug=slug)
+        return render(
+            request,
+            'gallery-detail.html',
+            {
+                'gallery': gallery
+            }
+        )

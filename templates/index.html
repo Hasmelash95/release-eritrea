@@ -74,12 +74,9 @@
     <p>
         <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
     </p>
-    <div>
-        <form method="get">
-            {{ filter.form.as_p }}
-            <input type="submit" />
-        </form>
-    </div>
+    <p>
+        <a href="/article-filter">Search Filters</a>
+    </p>
     {% endif %}
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}

@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.PressList.as_view(), name='home'),
+    path('article-filter', views.article_filter, name='filter'),
     path('post-article', views.post_article, name='post-article'),
     path('edit-article/<slug:slug>', views.edit_article, name='edit-article'),
     path('delete/<slug:slug>', views.delete_article, name='delete'),

@@ -10,18 +10,22 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
-class PressList(generic.ListView, FilterView):
+class PressList(generic.ListView):
     model = Article
     queryset = Article.objects.order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
     context_object_name = 'article'
-    filterset_class = ArticleFilter
 
     def get_context_data(self, **kwargs):
         context = super(PressList, self).get_context_data(**kwargs)
         context['picture'] = Picture.objects.all()
         return context
+
+
+def article_filter(request):
+    f = ArticleFilter(request.GET, queryset=Article.objects.all())
+    return render(request, 'article-filter.html', {'filter': f})
 
 
 @staff_member_required

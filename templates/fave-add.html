@@ -6,9 +6,13 @@
 {% endif %}
 <div class="text-bg-dark bg-gradient article-section" >
 <div class="article-format">
-<form method="POST" action="{% url 'favorite' article.slug %}">
+<form method="POST" action="{% url 'fave-add' article.slug %}">
 {% csrf_token %}
-<h3>Add "{{ article }}" to favorites?</h2>
+{% if is_fave %}
+<p>Remove "{{ article }}" to favorites?</p>
+{% else %}
+<p>Add "{{ article }}" to favorites?</p>
+{% endif %}
 <a href="/" class="btn btn-light">No</a>
 <button class="btn btn-success" type="submit">Yes</button>
 </form>

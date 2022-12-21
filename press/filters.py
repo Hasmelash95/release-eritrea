@@ -5,6 +5,5 @@ from .models import Article
 class ArticleFilter(django_filters.FilterSet):
 
     class Meta:
-        model = Article 
-        fields = ['favorites', 'tags', 'author']
-
+        model = Article
+        fields = ['tags', 'favorites']

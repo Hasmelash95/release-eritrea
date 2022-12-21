@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
-from django_filters.views import FilterView
 from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
 from .filters import ArticleFilter
@@ -21,11 +20,6 @@ class PressList(generic.ListView):
         context = super(PressList, self).get_context_data(**kwargs)
         context['picture'] = Picture.objects.all()
         return context
-
-
-def article_filter(request):
-    f = ArticleFilter(request.GET, queryset=Article.objects.all())
-    return render(request, 'article-filter.html', {'filter': f})
 
 
 @staff_member_required
@@ -56,17 +50,30 @@ def delete_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.POST:
         article.delete()
-        return redirect('/')
+        HttpResponseRedirect('/')
     return render(request, 'delete.html', {'article': article})
 
 
 @login_required
 def favorite_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
+    if article.favorites.filter(id=request.user.id).exists():
+        is_fave = True
+    else:
+        is_fave = False
     if request.POST:
-        article.favorites.add(request.user)
-        return redirect('/' + slug)
-    return render(request, 'fave-article.html', {'article': article})
+        if article.favorites.filter(id=request.user.id).exists():
+            article.favorites.remove(request.user)
+            return redirect('/' + slug)
+        else:
+            article.favorites.add(request.user)
+            return redirect('/' + slug)
+    return render(request, 'fave-add.html', {'article': article, 'is_fave': is_fave})
+
+
+def article_filter(request):
+    f = ArticleFilter(request.GET, queryset=Article.objects.all())
+    return render(request, 'article-filter.html', {'filter': f})
 
 
 class ArticleDetail(View):

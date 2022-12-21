@@ -2,11 +2,12 @@
 {% load static %}
 {% block title %} Filter Search {% endblock %}
 {% block content %}
-<div class="article-section">
+<div class="article-section bg-secondary bg-gradient">
     <form method="get">
         {{ filter.form.as_p }}
         <input type="submit"/>
     </form>
+    <div class="row row-cols-1 row-cols-md-2 g-6">
     {% for article in filter.qs %}
     <div class="col card article-box bg-light bg-gradient">
     <a href="{% url 'article-detail' article.slug %}" class="card-body">
@@ -16,5 +17,7 @@
     </a>
 </div>
     {% endfor %}
+    
+</div>
 </div>
 {% endblock %}

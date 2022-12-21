@@ -2,7 +2,6 @@ from django.db import models
 from django.db.models import Model
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from taggit.managers import TaggableManager
 
 # Create your models here.
 
@@ -21,7 +20,7 @@ class Article(models.Model):
     favorites = models.ManyToManyField(User, related_name='favorite',
                                        default=None, blank=True)
     tags = models.IntegerField(choices=TAGS, default=0)      
-                                 
+
     class Meta:
         ordering = ['-created_on']
 

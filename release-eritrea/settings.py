@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'taggit',
+    'django_filters',
     'press',
 ]
 

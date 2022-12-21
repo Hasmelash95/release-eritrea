@@ -1,19 +1,22 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
+from django_filters.views import FilterView
 from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
+from .filters import ArticleFilter
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required                                               
 from django.contrib import messages
 
 
-class PressList(generic.ListView):
+class PressList(generic.ListView, FilterView):
     model = Article
     queryset = Article.objects.order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
     context_object_name = 'article'
+    filterset_class = ArticleFilter
 
     def get_context_data(self, **kwargs):
         context = super(PressList, self).get_context_data(**kwargs)

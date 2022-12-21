@@ -4,9 +4,7 @@ from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
-from django.contrib.auth.decorators import login_required
-
-                                                   
+from django.contrib.auth.decorators import login_required                                               
 from django.contrib import messages
 
 

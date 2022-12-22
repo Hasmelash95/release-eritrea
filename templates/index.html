@@ -22,7 +22,7 @@
             class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
 </section>
-<section class="container-fluid what-is bg-light bg-gradient">
+<section class="container-fluid what-is bg-light bg-gradient" id="about">
     <div class="row">
         <div class="col">
             <h2>What Is Release Eritrea?</h2>
@@ -66,13 +66,28 @@
     </div>
     <div class="col card what-do">
         <p>We write to our Members of Parliament to ask to put in place strategic pressure on the Eritrean government to
-           respect the religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
+            respect the religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
         </p>
     </div>
 </section>
 <hr>
 <main id="press">
     <h2 class="section-headers">Press Releases</h2>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        {% if  message.tags == message.success %}
+        <div{% if message.tags %} class="{{ message.tags }} alert alert-success" role="alert" {% endif %}>
+            {{ message }}
+        </div>
+        {% else %}
+        <div{% if message.tags %} class="{{ message.tags }} alert alert-danger" role="alert" {% endif %}>
+            {{ message }}
+        </div>
+       {% endif %}
+       {% endfor %}
+    </div>
+    {% endif %}
     <div>
         {% if user.is_staff %}
         <span>

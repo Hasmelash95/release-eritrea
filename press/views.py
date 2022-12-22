@@ -31,7 +31,10 @@ def post_article(request):
             new_article.author = request.user
             new_article.slug = slugify(new_article.title)
             new_article.save()
-            return redirect('/')
+            messages.success(request, 'Article successfully posted.')
+            return redirect('/#press')
+        else:
+            messages.error(request, 'There was a problem submitting the form.')
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
@@ -41,6 +44,7 @@ def edit_article(request, slug):
     article_form = ArticleForm(request.POST or None, instance=article)
     if article_form.is_valid():
         article_form.save()
+        messages.success(request, 'Article successfully updated.')
         return redirect('/' + slug)
     return render(request, 'edit-article.html', {'article_form': article_form})
 
@@ -50,7 +54,8 @@ def delete_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.POST:
         article.delete()
-        return redirect('/')
+        messages.success(request, 'Article deleted.')
+        return redirect('/#press')
     return render(request, 'delete.html', {'article': article})
 
 
@@ -63,16 +68,18 @@ def favorite_article(request, slug):
     if request.POST:
         if article.favorites.filter(id=request.user.id).exists():
             article.favorites.remove(request.user)
+            messages.success(request, 'Article removed from favorites.')
             return redirect('/' + slug)
         else:
             article.favorites.add(request.user)
+            messages.success(request, 'Article added to favorites.')
             return redirect('/' + slug)
     return render(
         request,
         'fave-add.html',
         {
             'article': article,
-            'is_fave': is_fave
+            'is_fave': is_fave,
         }
         )
 

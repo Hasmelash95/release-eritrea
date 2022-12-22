@@ -9,7 +9,7 @@
         <form method="POST" action="{% url 'fave-add' article.slug %}">
             {% csrf_token %}
             {% if is_fave %}
-            <p>Remove "{{ article }}" to favorites?</p>
+            <p>Remove "{{ article }}" from favorites?</p>
             {% else %}
             <p>Add "{{ article }}" to favorites?</p>
             {% endif %}

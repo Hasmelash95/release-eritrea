@@ -8,15 +8,15 @@
         <button type="submit" class="btn btn-dark">Search</button>
     </form>
     <div class="row row-cols-1 row-cols-md-2 g-6">
-    {% for article in filter.qs %}
-    <div class="col card article-box text-bg-light bg-gradient">
-    <a href="{% url 'article-detail' article.slug %}" class="card-body">
-        <h4 class="card-header"> {{ article.title }} </h3>
-            <p class="card-text"> Author: Release Eritrea </p>
-            <p class="card-text"> {{ article.excerpt }} </p>
-    </a>
-</div>
-    {% endfor %}
-</div>
+        {% for article in filter.qs %}
+        <div class="col card article-box text-bg-light bg-gradient">
+            <a href="{% url 'article-detail' article.slug %}" class="card-body">
+                <h4 class="card-header"> {{ article.title }} </h3>
+                    <p class="card-text"> Author: Release Eritrea </p>
+                    <p class="card-text"> {{ article.excerpt }} </p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

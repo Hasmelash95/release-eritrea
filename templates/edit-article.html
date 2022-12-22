@@ -2,16 +2,16 @@
 {% load static %}
 {% block title %} Edit Article {% endblock %}
 {% block content %}
-<div class="text-bg-dark bg-gradient article-section" >
-<div class="article-format">
-    <h1>Edit Article:</h1>
-    <p>Posting as {{ user.username }}</p>
-    <form method="POST" action="" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ article_form.as_p }}
-        {{ content|safe }}
-        <button class="btn btn-light" type="submit">Edit Article</button>
-    </form>
-</div>
+<div class="text-bg-dark bg-gradient article-section">
+    <div class="article-format">
+        <h1>Edit Article:</h1>
+        <p>Posting as {{ user.username }}</p>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ article_form.as_p }}
+            {{ content|safe }}
+            <button class="btn btn-light" type="submit">Edit Article</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

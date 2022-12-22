@@ -58,7 +58,8 @@ span img {
 }
 
 .verse {
-    margin: 100px 10px
+    margin: 100px 10px;
+    width: 100px;
 }
 
 .hero {

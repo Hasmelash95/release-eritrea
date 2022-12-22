@@ -2,57 +2,61 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="row intro-text container-fluid bg-light bg-gradient">
-    <div class="col verse">
-    <p class="display-6">
-        <em>
-            "The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the poor.
-            He has sent me to comfort the brokenhearted and to proclaim that captives will be released and prisoners will be
-            freed."
-        </em>
-    </p>
-    <p>
-        <em>
-            - Isaiah 61: 1
-        </em>
-    </p>
+<section class="intro-text container-fluid bg-light bg-gradient">
+    <div class="row">
+        <div class="col verse">
+            <p class="display-6">
+                <em>
+                    "The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the
+                    poor. He has sent me to comfort the brokenhearted and to proclaim that captives will be released and
+                    prisoners will be freed."
+                </em>
+            </p>
+            <p>
+                <em>
+                    - Isaiah 61: 1
+                </em>
+            </p>
+        </div>
+        <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671227564/Release%20Eritrea/chains_iyt2mb.jpg"
+            class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
-    <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671227564/Release%20Eritrea/chains_iyt2mb.jpg"
-        class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
 </section>
-<section class="row what-is container-fluid  bg-light bg-gradient" id="about">
-    <div class="col">
-        <h2>What Is Release Eritrea?</h2>
-        <h3>
-            Release Eritrea is a global partnership of Eritrean Evangelicals standing in solidarity with
-            the persecuted Eritrean church.
-        </h3>
-        <p>
-            On May 22 2002, the PFDJ (the ruling party of Eritrea) ordered the closure of all churches
-            not belonging to the Orthodox, Roman Catholic or Evangelical Lutheran denominations.
-        </p>
-        <p>
-            On several occasions since then the Eritrean government issued blanket denials of the
-            existence of persecution in the country stating that 'no groups or persons are persecuted
-            in Eritrea for their beliefs or religion' and that people were 'free to worship according
-            to their wish'.
-        </p>
-        <p>
-            The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
-            the worst human rights record in the world.
-        </p>
-    </div>
-    <div class="col">
-        <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671229831/Release%20Eritrea/ethiopia-shimelba_svogfs.jpg" 
-        alt="People praying in a church in Ethiopia" id="balloon-img">
+<section class="container-fluid what-is bg-light bg-gradient">
+    <div class="row">
+        <div class="col">
+            <h2>What Is Release Eritrea?</h2>
+            <h3>
+                Release Eritrea is a global partnership of Eritrean Evangelicals standing in solidarity with
+                the persecuted Eritrean church.
+            </h3>
+            <p>
+                On May 22 2002, the PFDJ (the ruling party of Eritrea) ordered the closure of all churches
+                not belonging to the Orthodox, Roman Catholic or Evangelical Lutheran denominations.
+            </p>
+            <p>
+                On several occasions since then the Eritrean government issued blanket denials of the
+                existence of persecution in the country stating that 'no groups or persons are persecuted
+                in Eritrea for their beliefs or religion' and that people were 'free to worship according
+                to their wish'.
+            </p>
+            <p>
+                The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
+                the worst human rights record in the world.
+            </p>
+        </div>
+        <div class="col">
+            <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1671229831/Release%20Eritrea/ethiopia-shimelba_svogfs.jpg"
+                alt="People praying in a church in Ethiopia" id="balloon-img">
+        </div>
     </div>
 </section>
 <section class="row">
     <h2 class="section-headers">What We Do</h2>
     <div class="col card what-do bg-light bg-gradient">
-        <p> We call upon Eritreans, friends of Eritrea and members of the international
-            community to pray and call upon the Government of Eritrea to restore freedom of worship to
-            members of independent Protestant churches.
+        <p> We call upon Eritreans, friends of Eritrea and members of the international community to pray
+            and call upon the Government of Eritrea to restore freedom of worship to members of independent
+            Protestant churches.
         </p>
     </div>
     <div class="col card what-do bg-light bg-gradient">
@@ -62,8 +66,7 @@
     </div>
     <div class="col card what-do">
         <p>We write to our Members of Parliament to ask to put in place strategic pressure on the Eritrean government to
-            respect the
-            religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
+           respect the religious rights of Eritrean believers and organise rallies outside the Eritrean Embassy.
         </p>
     </div>
 </section>
@@ -71,15 +74,15 @@
 <main id="press">
     <h2 class="section-headers">Press Releases</h2>
     <div>
-    {% if user.is_staff %}
-    <span>
-        <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
-    </span>
-    {% endif %}
-    <span>
-        <a href="/article-filter" class="btn btn-secondary post-link">Search Filters</a>
-    </span>
-</div>
+        {% if user.is_staff %}
+        <span>
+            <a href="/post-article" class="btn btn-dark post-link">Post a new article</a>
+        </span>
+        {% endif %}
+        <span>
+            <a href="/article-filter" class="btn btn-secondary post-link">Search Filters</a>
+        </span>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}
         <div class="col card article-box bg-light bg-gradient">

@@ -31,23 +31,23 @@
                 </a>
             </span>
             <h3 class="company col"> Proclaim! Release Eritrea</h3>
-                <ul class="col-6 nav">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"><strong>Home</strong></a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="{% url 'home' %}#about"><strong>About
-                                Us</strong></a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press"><strong>Press
-                                Releases</strong></a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="{% url 'home' %}#gallery"><strong>Gallery</strong></a></li>
-                </ul>
-                <div class="col user-sign">
-                    {% if user.is_authenticated %}
-                    Hello {{ user }}!<a href="{% url 'account_logout' %}" class="btn btn-dark">Logout</a>
-                    {% else %}
-                    <span><a href="{% url 'account_login' %}" class="btn btn-dark">Sign In</a> </span><span><a
-                            href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a></span>
-                    {% endif %}
-                </div>
+            <ul class="col-6 nav">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"><strong>Home</strong></a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="{% url 'home' %}#about"><strong>About
+                            Us</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press"><strong>Press
+                            Releases</strong></a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#gallery"><strong>Gallery</strong></a>
+                </li>
+            </ul>
+            <div class="col user-sign">
+                {% if user.is_authenticated %}
+                Hello {{ user }}!<a href="{% url 'account_logout' %}" class="btn btn-dark">Logout</a>
+                {% else %}
+                <span><a href="{% url 'account_login' %}" class="btn btn-dark">Sign In</a> </span><span><a
+                        href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a></span>
+                {% endif %}
+            </div>
         </nav>
     </header>
     {% block content %}
@@ -64,7 +64,7 @@
             <div class="col copyright">
                 &copy; Copyright Release Eritrea <span id="current-year"></span>
                 <div>
-                    Charity number: 
+                    Charity number:
                 </div>
             </div>
             <div class="col contact">

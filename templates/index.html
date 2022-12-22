@@ -73,21 +73,7 @@
 <hr>
 <main id="press">
     <h2 class="section-headers">Press Releases</h2>
-    {% if messages %}
-    <div class="messages">
-        {% for message in messages %}
-        {% if  message.tags == message.success %}
-        <div{% if message.tags %} class="{{ message.tags }} alert alert-success" role="alert" {% endif %}>
-            {{ message }}
-        </div>
-        {% else %}
-        <div{% if message.tags %} class="{{ message.tags }} alert alert-danger" role="alert" {% endif %}>
-            {{ message }}
-        </div>
-       {% endif %}
-       {% endfor %}
-    </div>
-    {% endif %}
+    {% include 'includes/messages.html' %}
     <div>
         {% if user.is_staff %}
         <span>

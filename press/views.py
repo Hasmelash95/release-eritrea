@@ -34,7 +34,9 @@ def post_article(request):
             messages.success(request, 'Article successfully posted.')
             return redirect('/#press')
         else:
-            messages.error(request, 'There was a problem submitting the form.')
+            messages.error(request,
+                           'There was a problem submitting the form.'
+                           ' Make sure title is unique.')
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 

@@ -5,21 +5,7 @@
 {% load crispy_forms_tags %}
 
 <div class="bg-light bg-gradient article-section">
-    {% if messages %}
-    <div class="messages">
-        {% for message in messages %}
-        {% if  message.tags == message.success %}
-        <div{% if message.tags %} class="{{ message.tags }} alert alert-success" role="alert" {% endif %}>
-            {{ message }}
-        </div>
-        {% else %}
-        <div{% if message.tags %} class="{{ message.tags }} alert alert-danger" role="alert" {% endif %}>
-            {{ message }}
-        </div>
-       {% endif %}
-       {% endfor %}
-    </div>
-    {% endif %}
+{% include 'includes/messages.html' %}
     <div class="article-format">
         <h3> {{ article.title }} </h2>
             <h4> by Release Eritrea

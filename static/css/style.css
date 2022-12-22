@@ -121,6 +121,14 @@ span img {
     padding: 30px;
 }
 
+label {
+    padding: 5px;
+}
+
+.filtering label {
+    padding: 10px;
+}
+
 .submit-btn {
     margin-top: 10px;
 }
@@ -131,6 +139,7 @@ span img {
 
 footer {
     text-align: center;
+    margin-top: 100px;
 }
 
 .copyright,

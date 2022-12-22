@@ -5,7 +5,7 @@ from .forms import CommentForm, ArticleForm
 from .filters import ArticleFilter
 from django.template.defaultfilters import slugify
 from django.contrib.admin.views.decorators import staff_member_required
-from django.contrib.auth.decorators import login_required                                               
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
@@ -50,17 +50,16 @@ def delete_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.POST:
         article.delete()
-        HttpResponseRedirect('/')
+        return redirect('/')
     return render(request, 'delete.html', {'article': article})
 
 
 @login_required
 def favorite_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
+    is_fave = False
     if article.favorites.filter(id=request.user.id).exists():
         is_fave = True
-    else:
-        is_fave = False
     if request.POST:
         if article.favorites.filter(id=request.user.id).exists():
             article.favorites.remove(request.user)
@@ -68,7 +67,14 @@ def favorite_article(request, slug):
         else:
             article.favorites.add(request.user)
             return redirect('/' + slug)
-    return render(request, 'fave-add.html', {'article': article, 'is_fave': is_fave})
+    return render(
+        request,
+        'fave-add.html',
+        {
+            'article': article,
+            'is_fave': is_fave
+        }
+        )
 
 
 def article_filter(request):
@@ -82,6 +88,9 @@ class ArticleDetail(View):
         article = get_object_or_404(Article, slug=slug)
         comments = article.comments.filter(approved=True).order_by(
                                                          'created_on')
+        is_fave = False
+        if article.favorites.filter(id=request.user.id).exists():
+            is_fave = True                                                
         return render(
             request,
             'article-detail.html',
@@ -89,6 +98,7 @@ class ArticleDetail(View):
                 'article': article,
                 'comments': comments,
                 'commented': False,
+                'is_fave': is_fave,
                 'comment_form': CommentForm()
             }
         )

@@ -12,6 +12,10 @@ body {
     background-color: rgb(0, 95, 161);
     max-width: 2000px;
     background-image: var(--bs-gradient);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -117,8 +121,7 @@ span img {
 }
 
 .comment-form {
-    margin-top: 30px;
-    margin-left: 50px;
+    margin: 30px 10px 50px 50px;
     padding: 30px;
 }
 
@@ -140,7 +143,8 @@ label {
 
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: auto;
+    
 }
 
 .copyright,

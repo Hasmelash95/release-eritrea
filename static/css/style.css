@@ -42,7 +42,7 @@ h4 {
 span img { 
     width: 100px;
     height: 100px;
-    margin: 10px 35px;
+    margin: 5px 20px;
     outline: 2px solid #fff;
 }
 
@@ -90,12 +90,16 @@ span img {
 
 .user-sign {
     margin: 20px;
-    font-size: 1.2rem;
+    font-size: 0.75rem;
 }
 
 .nav-link {
     color: black;
 } 
+
+.toggler-btn {
+    width: 50px;
+}
 
 .nav-link:hover {
     color: rgb(135, 164, 173);

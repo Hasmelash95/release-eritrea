@@ -153,6 +153,10 @@ label {
     padding: 5px;
 }
 
+.filtering {
+    margin-bottom: 100px;
+}
+
 .filtering label {
     padding: 10px;
 }

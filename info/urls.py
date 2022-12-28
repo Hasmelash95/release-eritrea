@@ -1,7 +1,7 @@
 from django.urls import path
-from info.views import say_hello
+from info.views import info_profile
 
 urlpatterns = [
-    path('', say_hello, name='info'),
+    path('', info_profile , name='info'),
 ]
 

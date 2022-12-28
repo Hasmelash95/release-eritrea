@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from press import views
+from info import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('info/', include('info.urls'), name='info_urls'),
     path('', include('press.urls'), name='press_urls'),
     path('accounts/', include('allauth.urls')),
 ]

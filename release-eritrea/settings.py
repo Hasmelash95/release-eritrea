@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'taggit',
     'django_filters',
     'press',
+    'info',
 ]
 
 SITE_ID = 1

@@ -6,6 +6,7 @@
     <div class="article-format">
         <h1>Edit Article:</h1>
         <p>Posting as {{ user.username }}</p>
+        <p>Required fields are marked with *</p>
         <form method="POST" action="" enctype="multipart/form-data">
             {% csrf_token %}
             {{ article_form.as_p }}

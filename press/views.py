@@ -32,11 +32,11 @@ def post_article(request):
             new_article.slug = slugify(new_article.title)
             new_article.save()
             messages.success(request, 'Article successfully posted.')
-            return redirect('/#press')
+            return redirect('/' + new_article.slug)
         else:
             messages.error(request,
                            'There was a problem submitting the form.'
-                           ' Make sure title is unique.')
+                           ' Make sure all fields are filled.')
     return render(request, 'post-article.html', {'article_form': ArticleForm})
 
 
@@ -45,9 +45,10 @@ def edit_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     article_form = ArticleForm(request.POST or None, instance=article)
     if article_form.is_valid():
+        article.slug = slugify(article.title)
         article_form.save()
         messages.success(request, 'Article successfully updated.')
-        return redirect('/' + slug)
+        return redirect('/' + article.slug)
     return render(request, 'edit-article.html', {'article_form': article_form})
 
 

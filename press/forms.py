@@ -2,19 +2,25 @@ from .models import Comment, Article
 from django import forms
 from django_summernote.fields import SummernoteTextField
 from django_summernote.widgets import SummernoteWidget
+from django.utils.translation import gettext_lazy as _
 
 
 class ArticleForm(forms.ModelForm):
-    title = forms.CharField(widget=forms.TextInput(attrs={'size': 80}))
+    title = forms.CharField(label='Title*:', required=True,
+                            widget=forms.Textarea(attrs={'rows': 1,
+                                                  'cols': 80}))
     content = SummernoteTextField()
-    excerpt = forms.CharField(widget=forms.Textarea(attrs={'rows': 4,
-                              'cols': 80}))
+    excerpt = forms.CharField(required=False, widget=forms.Textarea(
+                              attrs={'rows': 4, 'cols': 80}))
     slug = forms.TextInput()
 
     class Meta:
         model = Article
         widgets = {
             'content': SummernoteWidget(),
+        }
+        labels = {
+            'content': 'Content*'
         }
         fields = ['title', 'content', 'excerpt', 'tags']
 

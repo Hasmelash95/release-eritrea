@@ -89,7 +89,12 @@ def favorite_article(request, slug):
 
 def article_filter(request):
     f = ArticleFilter(request.GET, queryset=Article.objects.all())
-    return render(request, 'article-filter.html', {'filter': f})
+    return render(request, 'article-filter.html', {'f': f})
+
+
+def favorites(request):
+    articles = request.user.favorite.all()
+    return render(request, 'favorites.html', {'articles': articles})
 
 
 class ArticleDetail(View):

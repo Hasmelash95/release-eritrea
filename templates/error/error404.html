@@ -3,11 +3,11 @@
 {% block title %} Page Not Found {% endblock %}
 {% block content %}
 
-<div class="text-bg-error error-pages">
-    <div>
+<div class="text-bg-error grid gap-3 error-pages">
+    <div class="p-2">
         <i class="fa-solid fa-triangle-exclamation"></i> The page was not found.
     </div>
-    <div>
+    <div class="p-2">
         <a href="{% url 'home' %}" aria-label="Link to return home" class="btn btn-dark" role="button">Return Home</a>
     </div>
 </div>

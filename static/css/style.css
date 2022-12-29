@@ -64,7 +64,8 @@ span img {
     margin: 10px 20px 20px;
 }
 
-.sign-in {
+.sign-in,
+.error-pages {
     margin: 180px 60px 100px;
     padding: 30px;
     max-width: 700px;

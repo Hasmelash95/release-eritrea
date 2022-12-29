@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from press import views
 from info import views
+from .views import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,3 +26,5 @@ urlpatterns = [
     path('', include('press.urls'), name='press_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'release-eritrea.views.handler404'

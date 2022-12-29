@@ -102,6 +102,11 @@ span img {
     padding: 60px 30px;
 }
 
+.who {
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
 #balloon-img {
     max-width: 600px;
 }

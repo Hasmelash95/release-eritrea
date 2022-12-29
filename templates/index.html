@@ -64,10 +64,11 @@
     </div>
 </section>
 <section class="row">
-    <h2 class="section-headers">Who We Are</h2>
-    <a href="/info" class="who-link link-light">Click here to find out more about our members and where we're located.</a>
+    <div class="who text-bg-light bg-gradient">
+    <h2 class="section-headers text-dark">Who We Are</h2>
+    <a href="/info" class="who-link">Click here to find out more about our members and where we're located.</a>
+</div>
 </section>
-<hr>
 <main id="press">
     <h2 class="section-headers">Press Releases</h2>
     {% include 'includes/messages.html' %}
@@ -125,12 +126,12 @@
     </span>
 </main>
 <hr>
-<section id="gallery">
+<section id="gallery" class="gallery-section">
     <h2 class="section-headers">Gallery</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for pic in picture %}
         <div class="col text-center">
-        <div class="image-cards card h-100 text-bg-dark">
+        <div class="image-cards card text-bg-dark">
             <h5 class="card-title">{{ pic.title }}</h5>
             <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">
                 <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">

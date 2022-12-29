@@ -78,6 +78,11 @@
             <a href="{% url 'post-article' %}" class="btn btn-dark post-link">Post a new article</a>
         </span>
         {% endif %}
+        {% if user.is_authenticated %}
+        <span>
+            <a href="{% url 'favorites' %}" class="btn btn-success post-link">Favorites <i class="fa-solid fa-star"></i></a>
+        </span>
+        {% endif %}
         <span>
             <a href="{% url 'filter' %}" class="btn btn-secondary post-link">Search Filters</a>
         </span>

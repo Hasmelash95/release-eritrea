@@ -24,6 +24,7 @@ class PressList(generic.ListView):
 
 @staff_member_required
 def post_article(request):
+    article_form = ArticleForm()
     if request.POST:
         article_form = ArticleForm(request.POST)
         if article_form.is_valid():
@@ -37,7 +38,7 @@ def post_article(request):
             messages.error(request,
                            'There was a problem submitting the form.'
                            ' Make sure all fields are filled.')
-    return render(request, 'post-article.html', {'article_form': ArticleForm})
+    return render(request, 'post-article.html', {'article_form': article_form})
 
 
 @staff_member_required
@@ -92,6 +93,7 @@ def article_filter(request):
     return render(request, 'article-filter.html', {'f': f})
 
 
+@login_required
 def favorites(request):
     articles = request.user.favorite.all()
     return render(request, 'favorites.html', {'articles': articles})

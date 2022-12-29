@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Server Error {% endblock %}
+{% block title %} Bad Request {% endblock %}
 {% block content %}
 
 <div class="text-bg-error error-pages">
-    <i class="fa-solid fa-triangle-exclamation"></i> There was an internal server error.
+    <i class="fa-solid fa-triangle-exclamation"></i> Bad request, do not repeat without modification.
     <a href="{% url 'home' %}" aria-label="Link to return home">Return Home</a>
 </div>
 

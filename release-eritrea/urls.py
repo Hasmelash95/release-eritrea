@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from press import views
 from info import views
-from .views import handler404, handler500
+from .views import handler404, handler403, handler400, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 ]
 
+handler400 = 'release-eritrea.views.handler400'
+handler403 = 'release-eritrea.views.handler403'
 handler404 = 'release-eritrea.views.handler404'
 handler500 = 'release-eritrea.views.handler500'

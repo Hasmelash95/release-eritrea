@@ -4,8 +4,12 @@
 {% block content %}
 
 <div class="text-bg-error error-pages">
-    <i class="fa-solid fa-triangle-exclamation"></i> Sorry, you do not have access to this page.
-    <a href="{% url 'home' %}" aria-label="Link to return home">Return Home</a>
+    <div>
+        <i class="fa-solid fa-triangle-exclamation"></i> Sorry, you do not have access to this page.
+    </div>
+    <div>
+        <a href="{% url 'home' %}" aria-label="Link to return home" class="btn btn-dark" role="button">Return Home</a>
+    </div>
 </div>
 
 {% endblock %}

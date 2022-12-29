@@ -35,13 +35,16 @@
     {% endif %}
     <div class="comment-section">
     <h4> Comments:</h3>
+
         {% for comment in comments %}
         <div class="card comment-format">
             <div>Written by {{ comment.user }}</div>
             <div>{{ comment.created_on }}</div>
             <div> {{ comment.content | safe }} </div>
         </div>
+
         {% endfor %}
+    </div>
 </div>
 {% if commented %}
 <div class="alert alert-success" role="alert">

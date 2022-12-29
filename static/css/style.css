@@ -138,13 +138,13 @@ span img {
 }
 
 .article-section {
-    margin: 180px 0 100px 50px;
+    margin: 180px 0 75px 50px;
     padding: 30px;
     max-width: 1000px;
 }
 
 .comment-section {
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 .comment-format,
@@ -153,7 +153,7 @@ span img {
 }
 
 .comment-form {
-    margin: 30px 10px 50px 50px;
+    margin: 10px 10px 50px 50px;
     padding: 30px;
 }
 

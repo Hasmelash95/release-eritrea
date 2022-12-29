@@ -13,7 +13,8 @@ class ArticleAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'approved')
+    list_display = ('user', 'created_on', 'approved')
+    list_filter = ('user', 'approved')
 
 
 @admin.register(Picture)

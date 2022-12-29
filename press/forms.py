@@ -7,7 +7,7 @@ from django_summernote.widgets import SummernoteWidget
 class ArticleForm(forms.ModelForm):
     title = forms.CharField(widget=forms.TextInput(attrs={'size': 80}))
     content = SummernoteTextField()
-    excerpt = forms.CharField(widget=forms.Textarea(attrs={'rows': 4, 
+    excerpt = forms.CharField(widget=forms.Textarea(attrs={'rows': 4,
                               'cols': 80}))
     slug = forms.TextInput()
 
@@ -20,6 +20,9 @@ class ArticleForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    subject = forms.CharField(widget=forms.Textarea(attrs={'rows': 1,
+                              'cols': 80}))
+
     class Meta:
         model = Comment
         fields = ['subject', 'content']

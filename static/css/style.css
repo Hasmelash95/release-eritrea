@@ -124,8 +124,7 @@ span img {
 }
 
 .article-box,
-.what-do,
-.image-cards {
+.what-do {
     margin: 20px 10px;
     max-width: 400px;
     left: 20px;
@@ -167,6 +166,12 @@ label {
 
 .image-cards {
     max-width: 400px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.image-cards img {
+    max-height: 250px;
 }
 
 .gallery-section {

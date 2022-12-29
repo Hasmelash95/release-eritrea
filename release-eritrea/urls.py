@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from press import views
 from info import views
-from .views import handler404
+from .views import handler404, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +28,4 @@ urlpatterns = [
 ]
 
 handler404 = 'release-eritrea.views.handler404'
+handler500 = 'release-eritrea.views.handler500'

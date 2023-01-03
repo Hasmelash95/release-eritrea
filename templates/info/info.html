@@ -16,5 +16,18 @@
     </div>
     {% endfor %}
 </div>
+<div class="location text-bg-light">
+    <h2>Our Offices</h2>
+    {% for loc in location %}
+    <div class="col card text-bg-secondary bg-gradient" style="width: 18rem">
+        <div class="card-body">
+            <h4 class="card-title">{{ loc.name }}</h4>
+            <p class="card-text">{{ loc.street_name }}</p>
+            <p class="card-text">{{ loc.city }}</p>
+            <p class="card-text">{{ loc.post_code }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

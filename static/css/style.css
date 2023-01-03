@@ -144,6 +144,12 @@ span img {
     max-width: 1000px;
 }
 
+.location {
+    max-width: 1000px;
+    padding: 30px;
+    margin: 0 75px 75px 50px;
+}
+
 .comment-section {
     padding-top: 50px;
 }

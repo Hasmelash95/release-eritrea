@@ -7,12 +7,13 @@
 <div class="bg-light bg-gradient article-section">
 {% include 'includes/messages.html' %}
     <div class="article-format">
-        <h3> {{ article.title }} </h2>
-            <h4> by Release Eritrea
-        </h3>
-        <h5> {{ article.created_on }} </h4>
-
-            {{ article.content | safe }}
+        <h3> {{ article.title }} </h3>
+        <h5> by Release Eritrea</h5>
+        <div class="post-dates">
+            <div> Posted on {{ article.created_on }}</div>
+            <div> Updated on {{ article.updated_on }}</div>
+        </div>
+        <div>{{ article.content | safe }}</div>
 
     </div>
     {% if user.is_staff %}
@@ -26,7 +27,7 @@
     {% if is_fave %}
     <div>
         <a href="{% url 'fave-add' article.slug %}">Remove from favorites 
-        <i>class="fa-solid fa-star link-primary"></i></a>
+        <i class="fa-solid fa-star link-primary"></i></a>
     </div>
     {% else %}
     <div>
@@ -40,6 +41,7 @@
         <div class="card comment-format">
             <div>Written by {{ comment.user }}</div>
             <div>{{ comment.created_on }}</div>
+            <div>{{ comment.updated_on }}</div>
             <div> {{ comment.content | safe }} </div>
         </div>
 

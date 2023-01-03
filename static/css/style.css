@@ -144,6 +144,12 @@ span img {
     max-width: 1000px;
 }
 
+.post-dates {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
 .location {
     max-width: 1000px;
     padding: 30px;

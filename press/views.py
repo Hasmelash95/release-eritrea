@@ -90,7 +90,7 @@ def favorite_article(request, slug):
 
 def article_filter(request):
     f = ArticleFilter(request.GET, queryset=Article.objects.all())
-    return render(request, 'article-filter.html', {'f': f})
+    return render(request, 'article-filter.html', {'filter': f})
 
 
 @login_required
@@ -107,7 +107,7 @@ class ArticleDetail(View):
                                                          'created_on')
         is_fave = False
         if article.favorites.filter(id=request.user.id).exists():
-            is_fave = True                                                
+            is_fave = True
         return render(
             request,
             'article-detail.html',

@@ -137,7 +137,8 @@ span img {
     padding: 20px;
 }
 
-.article-section {
+.article-section,
+.who-section {
     margin: 180px 0 75px 50px;
     padding: 30px;
     max-width: 1000px;

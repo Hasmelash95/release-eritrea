@@ -3,6 +3,18 @@
 {% block title %} Who We Are {% endblock %}
 {% block content %}
 
-<h1 class="article-section">Hey there</h1>
+<div class="who-section text-bg-light">
+    <h2> Who We Are</h2>
+    {% for info in object_list %}
+    <div class="col card text-bg-info bg-gradient" style="width: 18rem">
+        <img src="{{ info.image.url }}" class="card-img-top" alt="Profile picture of member">
+        <div class="card-body">
+            <h5 class="card-title"> {{ info.first_name }} {{ info.last_name}}</h5>
+            <h6 class="card-subtitle">{{ info.job_title }}</h6>
+            <p class="card-text">{{ info.about }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

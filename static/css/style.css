@@ -18,7 +18,6 @@ body {
     flex-direction: column;
 }
 
-
 nav {
     max-width: 2000px;
     height: 130px;
@@ -91,11 +90,20 @@ span img {
 
 @keyframes fadeinwards {
     from {
-        opacity: 0.3;
+        opacity: 0;
     }
     to {
         opacity: 1;
     }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.fade-in.scrolled {
+    opacity: 1;
 }
 
 .what-is {

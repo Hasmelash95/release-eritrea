@@ -22,7 +22,7 @@
             class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
 </section>
-<section class="container-fluid what-is bg-light bg-gradient" id="about">
+<section class="container-fluid fade-in what-is bg-light bg-gradient" id="about">
     <div class="row">
         <div class="col">
             <h2>What Is Release Eritrea?</h2>
@@ -51,7 +51,8 @@
         </div>
     </div>
 </section>
-<section class="row" id="mission">
+<section class="fade-in">
+    <div class="row">
     <h2 class="section-headers">What We Do</h2>
     <div class="col card rounded-pill text-center what-do text-bg-light bg-gradient">
         <p> Leading and coordinating prayer and intercession for human right victims.</p>
@@ -62,14 +63,13 @@
     <div class="col card rounded-pill text-center what-do text-bg-dark bg-gradient">
         <p>Providing humanitarian assistance to prisoners, their families and refugees.</p>
     </div>
-</section>
-<section class="row">
-    <div class="who text-bg-light bg-gradient">
+ </div>
+ <div class="who row text-bg-light bg-gradient">
     <h2 class="section-headers text-dark">Who We Are</h2>
     <a href="{% url 'info' %}" class="who-link">Click here to find out more about our members and where we're located.</a>
 </div>
 </section>
-<main id="press">
+<main id="press" class="fade-in">
     <h2 class="section-headers">Press Releases</h2>
     {% include 'includes/messages.html' %}
     <div>
@@ -132,7 +132,7 @@
     </span>
 </main>
 <hr>
-<section id="gallery" class="gallery-section">
+<section id="gallery" class="gallery-section fade-in">
     <h2 class="section-headers">Gallery</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for pic in picture %}

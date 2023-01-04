@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
 from .models import Article, Picture
 from .forms import CommentForm, ArticleForm
@@ -33,7 +33,7 @@ def post_article(request):
             new_article.slug = slugify(new_article.title)
             new_article.save()
             messages.success(request, 'Article successfully posted.')
-            return redirect('/' + new_article.slug)
+            return redirect(reverse('article-detail', args=[new_article.slug]))
         else:
             messages.error(request,
                            'There was a problem submitting the form.'
@@ -49,7 +49,7 @@ def edit_article(request, slug):
         article.slug = slugify(article.title)
         article_form.save()
         messages.success(request, 'Article successfully updated.')
-        return redirect('/' + article.slug)
+        return redirect(reverse('article-detail', args=[article.slug]))
     return render(request, 'edit-article.html', {'article_form': article_form})
 
 
@@ -73,11 +73,11 @@ def favorite_article(request, slug):
         if article.favorites.filter(id=request.user.id).exists():
             article.favorites.remove(request.user)
             messages.success(request, 'Article removed from favorites.')
-            return redirect('/' + slug)
+            return redirect(reverse('article-detail', args=[slug]))
         else:
             article.favorites.add(request.user)
             messages.success(request, 'Article added to favorites.')
-            return redirect('/' + slug)
+            return redirect(reverse('article-detail', args=[slug]))
     return render(
         request,
         'fave-add.html',

@@ -23,9 +23,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>Release Eritrea | {% block title %} {% endblock %}</title>
-
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top row bg-light">
@@ -36,15 +34,15 @@
                     <strong>Proclaim! Release Eritrea</strong>
                 </a>
             </span>
-            <button class="navbar-toggler toggler-btn" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler flex toggler-btn" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarElement" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarElement">
                 {% with request.resolver_match.url_name as url_name %}
-                <ul class="col-6 nav justify-content-end navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active{% endif %}"
+                <ul class="col-6 nav justify-content-end navbar-nav me-auto text-bg-light mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active" aria-current="page"{% endif %}
                             href="{% url 'home' %}"><strong>Home</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about"><strong>About
                                 Us</strong></a></li>
@@ -53,7 +51,7 @@
                     <li class="nav-item"><a class="nav-link"
                             href="{% url 'home' %}#gallery"><strong>Gallery</strong></a>
                     </li>
-                    <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active{% endif %}"
+                    <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active" aria-current="page"{% endif %}
                             href="{% url 'info' %}"><strong>The Team</strong></a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item nav-link text-dark"><strong>Hello {{ user }}! </strong><a

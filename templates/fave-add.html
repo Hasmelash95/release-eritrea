@@ -13,7 +13,7 @@
             {% else %}
             <p>Add "{{ article }}" to favorites?</p>
             {% endif %}
-            <a href="/" class="btn btn-light">No</a>
+            <a href="{% url 'home' %}" class="btn btn-light">No</a>
             <button class="btn btn-success" type="submit">Yes</button>
         </form>
     </div>

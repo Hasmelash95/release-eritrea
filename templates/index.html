@@ -25,7 +25,7 @@
 <section class="container-fluid fade-in what-is text-bg-dark bg-gradient" id="about">
     <div class="row">
         <div class="col">
-            <h2>What Is Release Eritrea?</h2>
+            <h2>What Is Release Eritrea? <i class="fa-solid fa-globe"></i></h2>
             <h3>
                 Release Eritrea is a global partnership of Eritrean Evangelicals standing in solidarity with
                 the persecuted Eritrean church.
@@ -53,16 +53,16 @@
 </section>
 <section class="fade-in what">
     <div class="row text-bg-light">
-    <h2 class="section-headers text-black">What We Do</h2>
-    <div class="col card border border-white rounded-pill text-center what-do text-bg-secondary bg-gradient">
+    <h2 class="section-headers text-black">What We Do <i class="fa-solid fa-hands-praying"></i></h2>
+    <div class="col card border border-dark rounded-pill text-center what-do text-bg-secondary bg-gradient">
         <i class="fa-solid fa-cross"></i>
         <p> Leading and coordinating prayer and intercession for human right victims.</p>
     </div>
-    <div class="col card border border-white  rounded-pill text-center what-do text-bg-dark bg-gradient">
+    <div class="col card border border-dark  rounded-pill text-center what-do text-bg-dark bg-gradient">
         <i class="fa-solid fa-cross"></i>
         <p>Advocacy on behalf of victims of abuse.</p>
     </div>
-    <div class="col card border border-white rounded-pill text-center what-do text-white bg-black bg-gradient">
+    <div class="col card rounded-pill text-center what-do text-white bg-black bg-gradient">
         <i class="fa-solid fa-cross"></i>
         <p>Providing humanitarian assistance to prisoners, their families and refugees.</p>
     </div>
@@ -70,7 +70,7 @@
  </section>
  <section class="fade-in who">
  <div class="row text-bg-dark bg-gradient">
-    <h2 class="section-headers">Who We Are</h2>
+    <h2 class="section-headers">Who We Are <i class="fa-solid fa-people-group"></i></h2>
     <a href="{% url 'info' %}" class="col link-light who-link">Click here to find out more about our members and where we're located. 
         <i class="fa-solid fa-dove"> </i>
     </a>
@@ -78,7 +78,7 @@
 </section>
 <hr class="text-primary">
 <main id="press" class="fade-in">
-    <h2 class="section-headers">Press Releases</h2>
+    <h2 class="section-headers">Press Releases <i class="fa-solid fa-bullhorn"></i></h2>
     {% include 'includes/messages.html' %}
     <div>
         {% if user.is_staff %}
@@ -141,7 +141,7 @@
 </main>
 <hr class="text-primary">
 <section id="gallery" class="gallery-section fade-in">
-    <h2 class="section-headers">Gallery</h2>
+    <h2 class="section-headers">Gallery <i class="fa-solid fa-camera"></i></h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for pic in picture %}
         <div class="col text-center">

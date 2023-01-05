@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="intro-text container-fluid bg-light bg-gradient">
+<section class="intro-text container-fluid text-bg-light bg-gradient">
     <div class="row">
         <div class="col verse">
             <p class="display-6">
@@ -22,7 +22,7 @@
             class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
 </section>
-<section class="container-fluid fade-in what-is bg-light bg-gradient" id="about">
+<section class="container-fluid fade-in what-is text-bg-dark bg-gradient" id="about">
     <div class="row">
         <div class="col">
             <h2>What Is Release Eritrea?</h2>
@@ -51,22 +51,29 @@
         </div>
     </div>
 </section>
-<section class="fade-in">
-    <div class="row">
-    <h2 class="section-headers">What We Do</h2>
-    <div class="col card border border-info rounded-pill text-center what-do text-bg-light bg-gradient">
+<section class="fade-in what">
+    <div class="row text-bg-light">
+    <h2 class="section-headers text-black">What We Do</h2>
+    <div class="col card border border-white rounded-pill text-center what-do text-bg-secondary bg-gradient">
+        <i class="fa-solid fa-cross"></i>
         <p> Leading and coordinating prayer and intercession for human right victims.</p>
     </div>
-    <div class="col card border border-info  rounded-pill text-center what-do text-bg-secondary bg-gradient">
+    <div class="col card border border-white  rounded-pill text-center what-do text-bg-dark bg-gradient">
+        <i class="fa-solid fa-cross"></i>
         <p>Advocacy on behalf of victims of abuse.</p>
     </div>
-    <div class="col card border border-info rounded-pill text-center what-do text-bg-dark bg-gradient">
+    <div class="col card border border-white rounded-pill text-center what-do text-white bg-black bg-gradient">
+        <i class="fa-solid fa-cross"></i>
         <p>Providing humanitarian assistance to prisoners, their families and refugees.</p>
     </div>
  </div>
- <div class="who row text-bg-light bg-gradient">
-    <h2 class="section-headers text-dark">Who We Are</h2>
-    <a href="{% url 'info' %}" class="who-link">Click here to find out more about our members and where we're located.</a>
+ </section>
+ <section class="fade-in who">
+ <div class="row text-bg-dark bg-gradient">
+    <h2 class="section-headers">Who We Are</h2>
+    <a href="{% url 'info' %}" class="col link-light who-link">Click here to find out more about our members and where we're located. 
+        <i class="fa-solid fa-dove"> </i>
+    </a>
 </div>
 </section>
 <hr class="text-primary">
@@ -138,7 +145,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for pic in picture %}
         <div class="col text-center">
-        <div class="image-cards card text-bg-dark">
+        <div class="image-cards card text-bg-dark bg-gradient">
             <h5 class="card-title">{{ pic.title }}</h5>
             <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">
                 <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">

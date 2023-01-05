@@ -50,10 +50,6 @@ span img {
     margin: 50px 0 30px 20px;
 }
 
-.who-link {
-    margin-left: 20px;
-}
-
 .active {
     text-decoration: underline;
 }
@@ -111,10 +107,25 @@ span img {
     padding: 60px 30px;
 }
 
-.who {
-    margin-top: 50px;
-    padding-bottom: 30px;
+.who,
+.what {
+    margin-top: 80px;
 }
+
+.who {
+    margin-bottom: 30px;
+}
+
+.who a {
+    margin-left: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.who a:hover {
+    text-decoration: underline;
+}
+
 
 #balloon-img {
     max-width: 600px;

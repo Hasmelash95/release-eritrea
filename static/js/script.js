@@ -8,7 +8,7 @@ let today = new Date().getFullYear();
 presentYear.innerHTML = today;
 
 const fadeOptions = {
-    threshold: 0.3
+    threshold: 0.01
 };
 
 const visibleOnScroll = new IntersectionObserver(function(

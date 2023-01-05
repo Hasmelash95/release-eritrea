@@ -140,7 +140,7 @@ span img {
 .article-box,
 .what-do {
     margin: 20px 10px;
-    max-width: 400px;
+    max-width: 450px;
     left: 20px;
     padding: 20px;
 }
@@ -176,6 +176,10 @@ span img {
 .comment-form {
     margin: 10px 10px 50px 50px;
     padding: 30px;
+}
+
+a.card-body {
+    text-decoration: none;
 }
 
 label {

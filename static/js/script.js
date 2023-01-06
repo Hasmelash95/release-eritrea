@@ -1,6 +1,3 @@
-// Code credit to stack overflow
-document.body.scrollTop = document.documentElement.scrollTop = 0;
-
 const scrollFadeIn = document.querySelectorAll('.fade-in');
 const presentYear = document.getElementById('current-year');
 

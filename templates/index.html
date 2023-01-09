@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="intro-text container-fluid text-bg-light bg-gradient">
+<section class="intro-text container-fluid text-bg-light bg-gradient" id="home">
     <div class="row">
         <div class="col verse">
             <p class="display-6">
@@ -21,9 +21,9 @@
         <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1673280151/Release%20Eritrea/chains_pldi85.jpg"
             class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
-</section>
-<section class="container-fluid fade-in what-is text-bg-dark bg-gradient" id="about">
-    <div class="row">
+</section>i
+<section class="fade-in" id="about">
+    <div class="row what-is  text-bg-dark bg-gradient">
         <div class="col">
             <h2>What Is Release Eritrea? <i class="fa-solid fa-globe"></i></h2>
             <h3>
@@ -50,9 +50,7 @@
                 alt="People praying in a church in Ethiopia" id="balloon-img">
         </div>
     </div>
-</section>
-<section class="fade-in what">
-    <div class="row text-bg-light">
+    <div class="row what text-bg-light">
     <h2 class="section-headers text-black">What We Do <i class="fa-solid fa-hands-praying"></i></h2>
     <div class="col card border border-dark rounded-pill text-center what-do text-bg-secondary bg-gradient">
         <i class="fa-solid fa-cross"></i>
@@ -67,9 +65,7 @@
         <p>Providing humanitarian assistance to prisoners, their families and refugees.</p>
     </div>
  </div>
- </section>
- <section class="fade-in who">
- <div class="row text-bg-dark bg-gradient">
+ <div class="row text-bg-dark who bg-gradient">
     <h2 class="section-headers">Who We Are <i class="fa-solid fa-people-group"></i></h2>
     <a href="{% url 'info' %}" aria-label="Link to the Team page" class="link-light who-link">
         Click here to find out more about our members and where we're located. 

@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const submit = document.getElementsByClassName('submit-btn');
+    const submit = document.getElementsByClassName('submit-btn')[0];
     const title = document.getElementById('id_title');
     const content = document.getElementById('id_content');
-    submit[0].addEventListener('click', submitCheck);
+    if (submit != undefined) {
+        submit.addEventListener('click', submitCheck);
+    }
 
     function submitCheck() {
         if (title.value.length == 0) {

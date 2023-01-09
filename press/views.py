@@ -134,7 +134,10 @@ class ArticleDetail(View):
             comment_form.instance.user = request.user
             comment = comment_form.save(commit=False)
             comment.article = article
+            messages.success(request, 'Your comment is awaiting approval.')
             comment.save()
+        elif comment_form.errors:
+            messages.error(request, 'There was a problem submitting the form.')
         else:
             comment_form = CommentForm()
 
@@ -144,7 +147,6 @@ class ArticleDetail(View):
             {
                 'article': article,
                 'comments': comments,
-                'commented': True,
                 'comment_form': CommentForm()
             }
         )

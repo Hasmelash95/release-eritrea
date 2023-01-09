@@ -23,6 +23,7 @@
         <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
     </div>
     {% endif %}
+    {% if user.is_authenticated %}
     {% if is_fave %}
     <div>
         <a href="{% url 'fave-add' article.slug %}">Remove from favorites 
@@ -32,6 +33,7 @@
     <div>
         <a href="{% url 'fave-add' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
     </div>
+    {% endif %}
     {% endif %}
     <div class="comment-section">
     <h4> Comments:</h3>

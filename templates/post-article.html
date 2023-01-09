@@ -12,7 +12,7 @@
                 {% csrf_token %}
                 {{ content|safe }}
                 {{ article_form.as_p }}
-                <button class="btn btn-light" type="submit">Post Article</button>
+                <button class="btn btn-light" id="submit-btn" type="submit">Post Article</button>
             </form>
     </div>
 </div>

@@ -34,10 +34,6 @@ def post_article(request):
             new_article.save()
             messages.success(request, 'Article successfully posted.')
             return redirect(reverse('article-detail', args=[new_article.slug]))
-        else:
-            messages.error(request,
-                           'There was a problem submitting the form.'
-                           ' Make sure all fields are filled.')
     return render(request, 'post-article.html', {'article_form': article_form})
 
 

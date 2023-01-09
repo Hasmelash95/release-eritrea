@@ -17,7 +17,7 @@ class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         widgets = {
-            'content': SummernoteWidget(attrs={'required': True}),
+            'content': SummernoteWidget(),
         }
         labels = {
             'content': 'Content*'

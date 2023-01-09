@@ -34,7 +34,7 @@ def post_article(request):
             new_article.save()
             messages.success(request, 'Article successfully posted.')
             return redirect(reverse('article-detail', args=[new_article.slug]))
-        else:
+        elif article_form.errors:
             messages.error(request,
                            'There was a problem submitting the form.'
                            ' Make sure all required fields are filled.')
@@ -51,7 +51,7 @@ def edit_article(request, slug):
         article_form.save()
         messages.success(request, 'Article successfully updated.')
         return redirect(reverse('article-detail', args=[article.slug]))
-    else:
+    elif article_form.errors:
         messages.error(request,
                        'There was a problem submitting the form.'
                        ' Make sure all required fields are filled.')

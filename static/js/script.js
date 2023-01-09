@@ -3,15 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const title = document.getElementById('id_title');
     const content = document.getElementById('id_content');
     submit[0].addEventListener('click', submitCheck);
-    submit[1].addEventListener('click', submitCheck)
-
 
     function submitCheck() {
         if (title.value.length == 0) {
-            alert('You need a title!')
+            alert('You need a title!');
         }
         else if (content.value.length == 0) {
-            alert('The article needs content!')
+            alert('The article needs content!');
         }
     }
 })

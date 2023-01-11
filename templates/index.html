@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="intro-text container-fluid text-bg-light bg-gradient" id="home">
+<section class="intro-text container-fluid text-bg-light bg-gradient">
     <div class="row">
         <div class="col verse">
             <p class="display-6">
@@ -21,9 +21,10 @@
         <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1673280151/Release%20Eritrea/chains_pldi85.jpg"
             class="img-fluid hero col" alt="Image of a chains wrapped around a hand">
     </div>
-</section>i
+</section>
+<hr>
 <section class="fade-in" id="about">
-    <div class="row what-is  text-bg-dark bg-gradient">
+    <div class="row what-is text-bg-dark bg-gradient">
         <div class="col">
             <h2>What Is Release Eritrea? <i class="fa-solid fa-globe"></i></h2>
             <h3>
@@ -77,7 +78,7 @@
     </a>
 </div>
 </section>
-<hr class="text-primary">
+<hr>
 <main id="press" class="fade-in">
     <h2 class="section-headers">Press Releases <i class="fa-solid fa-bullhorn"></i></h2>
     {% include 'includes/messages.html' %}
@@ -140,7 +141,7 @@
         {% endif %}
     </span>
 </main>
-<hr class="text-primary">
+<hr>
 <section id="gallery" class="gallery-section fade-in">
     <h2 class="section-headers">Gallery <i class="fa-solid fa-camera"></i></h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -156,5 +157,4 @@
     {% endfor %}
     </div>
 </section>
-
 {% endblock %}

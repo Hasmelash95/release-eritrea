@@ -22,11 +22,11 @@ const presentYear = document.getElementById('current-year');
 let today = new Date().getFullYear();
 presentYear.innerHTML = today;
 
-const fadeOptions = {
+let fadeOptions = {
     threshold: 0.1
 };
 
-const visibleOnScroll = new IntersectionObserver(function(
+let visibleOnScroll = new IntersectionObserver(function(
     entries, visibleOnScroll) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {

@@ -23,9 +23,14 @@ nav {
     height: 130px;
 }
 
+
 html {
     scroll-padding-top: 180px;
-  }
+}
+
+hr {
+    visibility: hidden;
+}
 
 h1, 
 h2,
@@ -80,6 +85,7 @@ span img {
 .intro-text {
     padding: 60px 30px;
     margin-top: 200px;
+    margin-bottom: 90px;
     opacity: 1;
     animation: fadeinwards 3s;
 }
@@ -103,7 +109,7 @@ span img {
 }
 
 .what-is {
-    margin-top: 80px;
+    margin-top: 30px;
     padding: 60px 30px;
 }
 

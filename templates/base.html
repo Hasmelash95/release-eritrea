@@ -19,7 +19,7 @@
     <title>Release Eritrea | {% block title %} {% endblock %}</title>
 
 </head>
-<body  data-bs-spy="scroll" data-bs-target="#navbarScrolling">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top row bg-light" id="navbarScrolling">
             <span class="col navbar-brand logo">
@@ -38,7 +38,7 @@
                 {% with request.resolver_match.url_name as url_name %}
                 <ul class="col-6 nav justify-content-end navbar-nav me-auto text-bg-light mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active" aria-current="page{% endif %}"
-                            href="{% url 'home' %}#home"><strong>Home</strong></a></li>
+                            href="{% url 'home' %}"><strong>Home</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about"><strong>About
                                 Us</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press"><strong>Press

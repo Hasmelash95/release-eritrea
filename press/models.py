@@ -3,8 +3,6 @@ from django.db.models import Model
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-
 TAGS = ((0, 'Real Time'), (1, 'Archive'))
 
 

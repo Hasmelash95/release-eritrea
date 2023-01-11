@@ -122,16 +122,15 @@
             <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press"
                 aria-label="Link to the previous page of article list" class="page-link">Previous</a></li>
             {% endif %}
-            <li class="page-item"><a class="page-link" href="?page=1#press" 
-                aria-label="Link to the first page of article list">1</a></li>
-            <li class="page-item"><a class="page-link" href="?page=2#press"
-                aria-label="Link to the second page of article list">2</a></li>
-            <li class="page-item"><a class="page-link" href="?page=3#press"
-                aria-label="Link to the third page of article list">3</a></li>
-            <li class="page-item"><a class="page-link" href="?page=4#press"
-                aria-label="Link to the fourth page of article list">4</a></li>
-            <li class="page-item"><a class="page-link" href="?page=5#press"
-                aria-label="Link to the fifth page of article list">5</a></li>
+            {% for page in page_obj.paginator.page_range %}
+              {% if page_obj.number == page %}
+              <li class="page-item"><a class="page-link active" href="?page={{ page }}#press"
+                aria-label="Link to the current page of article list">{{ page }}</a></li>
+              {% else %}
+              <li class="page-item"><a class="page-link" href="?page={{ page }}#press"
+                aria-label="Link to the specified page of article list">{{ page }}</a></li>
+              {% endif %}
+            {% endfor %}
             {% if page_obj.has_next %}
             <li class="page-item"><a href="?page={{ page_obj.next_page_number }}#press"
                 aria-label="Link to the next page of article list" class="page-link">Next</a></li>

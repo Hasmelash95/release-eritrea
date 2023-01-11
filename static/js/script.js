@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function submitCheck() {
         if (title.value.length == 0) {
-            alert('You need a title!');
+            alert('The article needs a title!');
         }
         else if (content.value.length == 0) {
             alert('The article needs content!');

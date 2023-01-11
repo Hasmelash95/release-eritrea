@@ -39,6 +39,10 @@ h4 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
+nav li {
+    margin-left: 5px;
+}
+
 .company {
     margin-top: 15px; 
 }
@@ -55,7 +59,7 @@ span img {
     margin: 50px 0 30px 20px;
 }
 
-.active {
+nav .active {
     text-decoration: underline;
 }
 

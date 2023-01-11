@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-<section class="intro-text container-fluid text-bg-light bg-gradient">
+<section class="intro-text fade-in container-fluid text-bg-light bg-gradient">
     <div class="row">
         <div class="col verse">
             <p class="display-6">
@@ -72,29 +72,41 @@
         Click here to find out more about our members and where we're located. 
         <i class="fa-solid fa-dove"> </i>
     </a>
-    <a href="https://releaseinternational.org/" class="link-light who-link" aria-label="Opens link to the release international site in a new tab" target="_blank">
+    <a href="https://releaseinternational.org/" class="link-light who-link" 
+        aria-label="Opens link to the release international site in a new tab" target="_blank">
         To learn more about our partners in Release International, check out their site.
+        <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+    </a>
+    <a href="https://www.churchinchains.ie/" class="link-light who-link" 
+        aria-label="Opens link to the church in chains site in a new tab" target="_blank">
+        To learn more about our partners in Church in Chains, check out their site.
         <i class="fa-solid fa-arrow-up-right-from-square"> </i>
     </a>
 </div>
 </section>
 <hr>
 <main id="press" class="fade-in">
-    <h2 class="section-headers">Press Releases <i class="fa-solid fa-bullhorn"></i></h2>
+    <h2 class="section-headers">Press Releases <i id="press-icon" class="fa-solid fa-bullhorn"></i></h2>
     {% include 'includes/messages.html' %}
     <div>
         {% if user.is_staff %}
         <span>
-            <a href="{% url 'post-article' %}" class="btn btn-dark post-link">Post a new article</a>
+            <a href="{% url 'post-article' %}" class="btn btn-dark post-link">
+                Post a new article <i class="fa-solid fa-pen-to-square"></i>
+            </a>
         </span>
         {% endif %}
         {% if user.is_authenticated %}
         <span>
-            <a href="{% url 'favorites' %}" class="btn btn-success post-link">Favorites <i class="fa-solid fa-star"></i></a>
+            <a href="{% url 'favorites' %}" id="fave" class="btn btn-success filter-link">
+                Favorites <i class="fa-solid fa-heart"></i>
+            </a>
         </span>
         {% endif %}
         <span>
-            <a href="{% url 'filter' %}" class="btn btn-secondary post-link">Search Filters</a>
+            <a href="{% url 'filter' %}" id="filter" class="btn btn-secondary filter-link">
+                Search Filters <i class="fa-solid fa-magnifying-glass"></i>
+            </a> 
         </span>
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">

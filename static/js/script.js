@@ -2,8 +2,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const submit = document.getElementsByClassName('submit-btn')[0];
     const title = document.getElementById('id_title');
     const content = document.getElementById('id_content');
+    const fave = document.getElementById('fave');
+    const filter = document.getElementById('filter')
+    const pressIcon = document.getElementById('press-icon')
+
+    if (fave != undefined) {
+        fave.addEventListener('mouseover', faveHover);
+        fave.addEventListener('mouseleave', faveLeave);
+    }
+
+    if (filter != undefined) {
+        filter.addEventListener('mouseover', filterHover);
+        filter.addEventListener('mouseleave', filterLeave);
+    }
+
     if (submit != undefined) {
         submit.addEventListener('click', submitCheck);
+    }
+
+    function faveHover() {
+        pressIcon.classList.remove('fa-bullhorn');
+        pressIcon.classList.add('fa-heart');
+    }
+
+    function faveLeave() {
+        pressIcon.classList.remove('fa-heart');
+        pressIcon.classList.add('fa-bullhorn');
+    }
+
+    function filterHover() {
+        pressIcon.classList.remove('fa-bullhorn');
+        pressIcon.classList.add('fa-magnifying-glass');
+    }
+
+    function filterLeave() {
+        pressIcon.classList.remove('fa-magnifying-glass');
+        pressIcon.classList.add('fa-bullhorn');
     }
 
     function submitCheck() {

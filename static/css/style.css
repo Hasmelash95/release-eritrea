@@ -64,6 +64,7 @@ nav .active {
 }
 
 .post-link,
+.filter-link,
 .page-info {
     margin: 10px 20px 20px;
 }
@@ -88,24 +89,13 @@ nav .active {
 
 .intro-text {
     padding: 60px 30px;
-    margin-top: 200px;
+    margin-top: 250px;
     margin-bottom: 90px;
-    opacity: 1;
-    animation: fadeinwards 3s;
-}
-
-@keyframes fadeinwards {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .fade-in {
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 650ms ease-in;
 }
 
 .fade-in.scrolled {
@@ -115,6 +105,10 @@ nav .active {
 .what-is {
     margin-top: 30px;
     padding: 60px 30px;
+}
+
+.page-link.active {
+    background-color:rgb(33, 37, 42);
 }
 
 .who,

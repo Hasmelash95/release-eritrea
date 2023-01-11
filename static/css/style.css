@@ -168,6 +168,12 @@ span img {
     max-width: 1000px;
 }
 
+.who-section .card,
+.location .card {
+    width: 24rem;
+    padding: 20px;
+}
+
 .post-dates {
     margin-top: 20px;
     margin-bottom: 20px;

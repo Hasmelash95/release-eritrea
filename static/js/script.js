@@ -1,9 +1,12 @@
 const submit = document.getElementsByClassName('submit-btn')[0];
+const peopleIcon = document.getElementById('people')
 const title = document.getElementById('id_title');
 const content = document.getElementById('id_content');
 const fave = document.getElementById('fave');
-const filter = document.getElementById('filter')
-const pressIcon = document.getElementById('press-icon')
+const filter = document.getElementById('filter');
+const pressIcon = document.getElementById('press-icon');
+const logBtn = document.getElementsByClassName('log-btn')[0];
+const logMsg = document.getElementsByClassName('log-msg')[0];
 const scrollFadeIn = document.querySelectorAll('.fade-in');
 const presentYear = document.getElementById('current-year');
 
@@ -21,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (submit != undefined) {
         submit.addEventListener('click', submitCheck);
+    }
+
+    if (logBtn != undefined) {
+        logBtn.addEventListener('click', logClick);
     }
 })
 
@@ -51,6 +58,11 @@ function submitCheck() {
     else if (content.value.length == 0) {
         alert('The article needs content!');
     }
+}
+
+function logClick() {
+    logMsg.classList.remove('visually-hidden');
+    
 }
 
 let today = new Date().getFullYear();

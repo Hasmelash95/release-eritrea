@@ -14,13 +14,14 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
 
     <title>Release Eritrea | {% block title %} {% endblock %}</title>
 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top row bg-light" id="navbarScrolling">
+        <nav class="row navbar navbar-expand-lg fixed-top bg-light" id="navbarScrolling">
             <span class="col navbar-brand logo">
                 <a href="{% url 'home' %}" class="link-dark nav-link" aria-label="Link to the landing page">
                     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
@@ -29,7 +30,7 @@
                 </a>
             </span>
             <button class="navbar-toggler flex toggler-btn" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarElement" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                data-bs-target="#navbarElement" aria-controls="navbarToggler" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,8 +64,8 @@
     {% block content %}
 
     {% endblock %}
-    <footer class="container-fluid text-bg-secondary bg-gradient">
-        <div class="row">
+    <footer class="text-bg-secondary bg-gradient">
+        <div class="row container-fluid ">
             <span class="col logo">
                 <a href="{% url 'home' %}" aria-label="Link to the landing page">
                     <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
@@ -91,7 +92,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/86de956f5a.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 

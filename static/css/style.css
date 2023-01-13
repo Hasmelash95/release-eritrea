@@ -12,6 +12,7 @@ body {
     background-color: rgb(0, 95, 161);
     max-width: 2000px;
     background-image: var(--bs-gradient);
+    font-size: 1rem;
 
     min-height: 100vh;
     display: flex;
@@ -76,21 +77,25 @@ nav .active {
     max-width: 700px;
 }
 
+.intro-text {
+    padding: 60px 30px;
+    margin-top: 250px;
+    margin-bottom: 90px;
+}
+
 .verse {
     margin: 100px 10px;
-    width: 100px;
+    min-width: 24rem;
+}
+
+.verse-text {
+    font-size: 2rem;
 }
 
 .hero {
     max-height: 600px;
     display: block;
     max-width: 600px;
-}
-
-.intro-text {
-    padding: 60px 30px;
-    margin-top: 250px;
-    margin-bottom: 90px;
 }
 
 .fade-in {
@@ -102,9 +107,20 @@ nav .active {
     opacity: 1;
 }
 
+.what-is,
+.intro-text {
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
 .what-is {
     margin-top: 30px;
     padding: 60px 30px;
+}
+
+.what-is-text {
+    min-width: 32rem;
 }
 
 .page-link.active {
@@ -163,7 +179,7 @@ nav .active {
 .who-section {
     margin: 180px 0 75px 50px;
     padding: 30px;
-    max-width: 1000px;
+    max-width: 700px;
 }
 
 .who-section .card,
@@ -254,4 +270,19 @@ footer {
 
 div .log-msg {
     padding-top: 10px;
+}
+
+.toggler-btn {
+    margin-right: 70px;
+}
+
+@media screen and (max-width: 900px) {
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    .verse-text {
+        font-size: 1.5rem;
+    }
 }

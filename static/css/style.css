@@ -77,6 +77,10 @@ nav .active {
     max-width: 700px;
 }
 
+.logo strong {
+    font-size: 0.8rem;
+}
+
 .intro-text {
     padding: 60px 30px;
     margin-top: 250px;
@@ -169,17 +173,15 @@ nav .active {
 
 .article-box,
 .what-do {
-    margin: 20px 10px;
+    margin: 20px 20px;
     max-width: 450px;
-    left: 20px;
     padding: 20px;
 }
 
 .article-section,
 .who-section {
-    margin: 180px 0 75px 50px;
+    margin: 180px 50px 75px;
     padding: 30px;
-    max-width: 700px;
 }
 
 .who-section .card,
@@ -284,5 +286,29 @@ div .log-msg {
 
     .verse-text {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .logo strong {
+        font-size: 0.5rem;
+    }
+
+    .toggler-btn {
+        margin-right: 150px;
+    }
+
+    #balloon-img {
+        width: 400px;
+    }
+
+    .what-is-text {
+        min-width: 16rem;
+    }
+
+    .copyright,
+    .contact {
+        margin: 20px auto;
     }
 }

@@ -51,7 +51,7 @@ nav li {
 span img { 
     width: 100px;
     height: 100px;
-    margin: 5px 20px;
+    margin: 10px 20px;
     outline: 2px solid #fff;
 }
 
@@ -178,6 +178,10 @@ nav .active {
     padding: 20px;
 }
 
+.what-heading {
+    padding-top: 50px;
+}
+
 .article-section,
 .who-section {
     margin: 180px 50px 75px;
@@ -292,7 +296,12 @@ div .log-msg {
 @media screen and (max-width: 650px) {
 
     .logo strong {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    span img {
+        width: 75px;
+        height: 75px;
     }
 
     .toggler-btn {
@@ -310,5 +319,39 @@ div .log-msg {
     .copyright,
     .contact {
         margin: 20px auto;
+    }
+    
+    .foot-logo {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .logo strong {
+        font-size: 0.4rem;
+    }
+
+    .verse,
+    .verse-text {
+        font-size: 0.7rem;
+        width: 270px;
+    }
+
+    .who a {
+        width: 300px;
+    }
+
+    span img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #balloon-img {
+        width: 280px;
+    }
+
+    .what-do {
+        width: 300px;
     }
 }

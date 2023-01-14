@@ -255,7 +255,6 @@ label {
 }
 
 footer {
-    text-align: center;
     margin-top: auto;
     
 }
@@ -279,7 +278,7 @@ div .log-msg {
 }
 
 .toggler-btn {
-    margin-right: 70px;
+    margin-right: 50px;
 }
 
 @media screen and (max-width: 900px) {
@@ -304,16 +303,17 @@ div .log-msg {
         height: 75px;
     }
 
-    .toggler-btn {
-        margin-right: 150px;
-    }
-
     #balloon-img {
         width: 400px;
     }
 
     .what-is-text {
         min-width: 16rem;
+    }
+
+    .article-section {
+        width: 100%;
+        margin-left: 0;
     }
 
     .copyright,

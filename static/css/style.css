@@ -299,6 +299,13 @@ div .log-msg {
         width: 500px;
     }
 
+    .article-section,
+    .sign-in,
+    .comment-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
     .verse-text {
         font-size: 1.5rem;
     }
@@ -336,13 +343,6 @@ div .log-msg {
         font-size: 0.8rem;
     }
 
-    .article-section,
-    .sign-in,
-    .comment-form {
-        width: 100%;
-        margin-left: 0;
-    }
-
     .comments {
         padding: 10px;
     }
@@ -368,6 +368,12 @@ div .log-msg {
         font-size: 0.7rem;
         width: 270px;
     }
+
+    .intro-text {
+        padding: 20px 30px;
+        margin-top: 200px;
+        margin-bottom: 50px;
+    }    
 
     .who a {
         width: 300px;

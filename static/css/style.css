@@ -206,6 +206,10 @@ nav .active {
     margin: 0 75px 75px 50px;
 }
 
+iframe {
+    width: 650px;
+}
+
 .comment-section {
     padding-top: 50px;
 }
@@ -259,6 +263,10 @@ footer {
     
 }
 
+form div {
+    max-width: 700px;
+}
+
 .copyright,
 .contact {
     margin: 20px auto;
@@ -287,6 +295,14 @@ div .log-msg {
         font-size: 0.8rem;
     }
 
+    textarea {
+        width: 500px;
+    }
+
+   iframe {
+        width: 500px;
+    }
+
     .verse-text {
         font-size: 1.5rem;
     }
@@ -309,6 +325,18 @@ div .log-msg {
 
     .what-is-text {
         min-width: 16rem;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    iframe {
+        width: 400px;
+    }
+
+    .submit-btn {
+        font-size: 0.8rem;
     }
 
     .article-section {
@@ -352,6 +380,14 @@ div .log-msg {
     }
 
     #balloon-img {
+        width: 280px;
+    }
+
+    textarea {
+        width: 280px;
+    }
+
+    iframe {
         width: 280px;
     }
 

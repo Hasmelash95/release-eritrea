@@ -13,12 +13,13 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}"/>
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>Release Eritrea | {% block title %} {% endblock %}</title>
 
 </head>
+
 <body>
     <header>
         <nav class="row navbar navbar-expand-lg fixed-top bg-light" id="navbarScrolling">
@@ -37,8 +38,8 @@
             <div class="collapse navbar-collapse" id="navbarElement">
                 {% with request.resolver_match.url_name as url_name %}
                 <ul class="col-6 nav justify-content-end navbar-nav me-auto text-bg-light mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active" aria-current="page{% endif %}"
-                            href="{% url 'home' %}"><strong>Home</strong></a></li>
+                    <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active"
+                            aria-current="page{% endif %}" href="{% url 'home' %}"><strong>Home</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about"><strong>About
                                 Us</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press"><strong>Press
@@ -46,8 +47,8 @@
                     <li class="nav-item"><a class="nav-link"
                             href="{% url 'home' %}#gallery"><strong>Gallery</strong></a>
                     </li>
-                    <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active" aria-current="page{% endif %}"
-                            href="{% url 'info' %}"><strong>The Team</strong></a></li>
+                    <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active"
+                            aria-current="page{% endif %}" href="{% url 'info' %}"><strong>The Team</strong></a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item nav-link text-dark"><strong>Hello {{ user }}! </strong><a
                             href="{% url 'account_logout' %}" class="link-primary">Logout</a></li>
@@ -74,8 +75,8 @@
             </span>
             <div class="col copyright">
                 <div>
-                &copy; Release Eritrea <span id="current-year"></span>
-            </div>
+                    &copy; Release Eritrea <span id="current-year"></span>
+                </div>
                 <div>
                     Charity No: 1136627
                 </div>
@@ -84,11 +85,14 @@
                 </div>
             </div>
             <div class="col contact">
-                <div>Contact Us:</div>
                 <div>
                     <a href="https://www.facebook.com/release.eritrea.7"
-                    aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
+                        aria-label="Link opens Release Eritrea facebook page in a new tab" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://mobile.twitter.com/release_eritrea"
+                       aria-label="Link opens Release Eritrea twitter page in a new tab" target="_blank" rel="noopener">
+                       <i class="fa-brands fa-twitter"></i>
                     </a>
                 </div>
             </div>

@@ -267,10 +267,17 @@ footer {
 .contact {
     margin: 20px auto;
     padding: 10px;
+    text-align: center;
 }
 
 .contact i {
     color: #fff;
+    font-size: 2rem;
+    padding: 0 10px;
+}
+
+.contact a {
+    text-decoration: none;
 }
 
 .contact i:hover {
@@ -368,8 +375,8 @@ div .log-msg {
         margin: 20px auto;
     }
 
-    i.fa-brands.fa-facebook {
-        font-size: 1rem;
+    i.fa-brands {
+        font-size: 1.5rem;
     }
     
     .foot-logo {

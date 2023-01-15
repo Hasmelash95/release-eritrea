@@ -299,9 +299,15 @@ div .log-msg {
         width: 500px;
     }
 
+    .verse {
+        margin: 75px 10px;
+    }
+
     .article-section,
     .sign-in,
-    .comment-form {
+    .comment-form,
+    .who-section,
+    .location {
         width: 100%;
         margin-left: 0;
     }
@@ -312,6 +318,10 @@ div .log-msg {
 }
 
 @media screen and (max-width: 650px) {
+
+    .intro-text {
+        margin-top: 200px;
+    }
 
     .logo strong {
         font-size: 0.6rem;
@@ -330,6 +340,10 @@ div .log-msg {
         min-width: 16rem;
     }
 
+    .verse {
+        margin: 50px 10px;
+    }
+
     textarea {
         width: 400px;
     }
@@ -339,7 +353,9 @@ div .log-msg {
     }
 
     .submit-btn,
-    .page-link {
+    .page-link,
+    .filter-link,
+    .post-link {
         font-size: 0.8rem;
     }
 
@@ -351,13 +367,29 @@ div .log-msg {
     .contact {
         margin: 20px auto;
     }
+
+    i.fa-brands.fa-facebook {
+        font-size: 1rem;
+    }
     
     .foot-logo {
         margin-top: 10px;
     }
+
 }
 
 @media screen and (max-width: 460px) {
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    h3, 
+    h4,
+    h5,
+    h6 {
+        font-size: 1rem;
+    }
 
     .logo strong {
         font-size: 0.4rem;

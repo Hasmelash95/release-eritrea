@@ -3,9 +3,9 @@
 {% block title %} {{ article.title }} {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="bg-light bg-gradient article-section">
+<section class="bg-light bg-gradient article-section">
     {% include 'includes/messages.html' %}
-    <div class="article-format">
+    <article class="article-format">
         <h3> {{ article.title }} </h3>
         <h5> by Release Eritrea</h5>
         <div class="post-dates">
@@ -13,8 +13,7 @@
             <div> Updated on {{ article.updated_on }}</div>
         </div>
         <div>{{ article.content | safe }}</div>
-
-    </div>
+    </article>
     {% if user.is_staff %}
     <div>
         <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
@@ -48,7 +47,7 @@
         {% endfor %}
     </div>
     </div>
-</div>
+</section>
 {% if user.is_authenticated %}
 <div class="comment-form bg-light bg-gradient">
     <h5>Leave a comment:</h3>

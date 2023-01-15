@@ -113,7 +113,7 @@
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         {% for article in object_list %}
-        <div class="col card article-box bg-light bg-gradient">
+        <article class="col card article-box bg-light bg-gradient">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
                 <h4 class="card-header"> {{ article.title }} </h3>
                     <p class="card-text"> Author: Release Eritrea </p>
@@ -124,7 +124,7 @@
             <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
-        </div>
+        </article>
         {% endfor %}
     </div>
     <span>

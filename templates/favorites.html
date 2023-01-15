@@ -2,11 +2,11 @@
 {% load static %}
 {% block title %} Favorites {% endblock %}
 {% block content %}
-<div class="article-section container text-bg-success bg-gradient">
+<section class="article-section container text-bg-success bg-gradient">
 <h2>{{ user }}'s Favorite Articles <i class="fa-solid fa-heart"></i></h2>
 <div class="row row-cols-1 row-cols-md-2 g-6">
     {% for article in articles %}
-        <div class="col card article-box text-bg-light bg-gradient">
+        <article class="col card article-box text-bg-light bg-gradient">
             <a href="{% url 'article-detail' article.slug %}" class="card-body">
                 <h4 class="card-header"> {{ article.title }} </h3>
                     <p class="card-text"> Author: Release Eritrea </p>
@@ -17,8 +17,8 @@
             <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
             <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
             {% endif %}
-        </div>
+        </article>
         {% endfor %}
 </div>
-</div>
+</section>
 {% endblock %}

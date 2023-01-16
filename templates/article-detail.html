@@ -3,60 +3,64 @@
 {% block title %} {{ article.title }} {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
+<!-- Detailed page for selected article -->
 <section class="bg-light bg-gradient article-section">
-    {% include 'includes/messages.html' %}
-    <article class="article-format">
-        <h3> {{ article.title }} </h3>
-        <h5> by Release Eritrea</h5>
-        <div class="post-dates">
-            <div> Posted on {{ article.created_on }}</div>
-            <div> Updated on {{ article.updated_on }}</div>
-        </div>
-        <div>{{ article.content | safe }}</div>
-    </article>
-    {% if user.is_staff %}
-    <div>
-        <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
-    </div>
-    <div>
-        <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
-    </div>
-    {% endif %}
-    {% if user.is_authenticated %}
-    {% if is_fave %}
-    <div>
-        <a href="{% url 'fave-add' article.slug %}">Remove from favorites 
-        <i class="fa-solid fa-star link-primary"></i></a>
-    </div>
-    {% else %}
-    <div>
-        <a href="{% url 'fave-add' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
-    </div>
-    {% endif %}
-    {% endif %}
-    <div class="comment-section">
-    <h4> Comments:</h4>
-    <div class="card comments">
-        {% for comment in comments %}
-        <div class="comment-format">
+   {% include 'includes/messages.html' %}
+   <article class="article-format">
+      <h3> {{ article.title }} </h3>
+      <h5> by Release Eritrea</h5>
+      <div class="post-dates">
+         <div> Posted on {{ article.created_on }}</div>
+         <div> Updated on {{ article.updated_on }}</div>
+      </div>
+      <div>{{ article.content | safe }}</div>
+   </article>
+   {% if user.is_staff %}
+   <div>
+      <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
+   </div>
+   <div>
+      <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
+   </div>
+   {% endif %}
+   {% if user.is_authenticated %}
+   {% if is_fave %}
+   <div>
+      <a href="{% url 'fave-add' article.slug %}">Remove from favorites 
+      <i class="fa-solid fa-star link-primary"></i></a>
+   </div>
+   {% else %}
+   <div>
+      <a href="{% url 'fave-add' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+   </div>
+   {% endif %}
+   {% endif %}
+   <!-- Comments under the article -->
+   <div class="comment-section">
+      <h4> Comments:</h4>
+      <div class="card comments">
+         {% for comment in comments %}
+         <div class="comment-format">
             <div>Written by {{ comment.user }}</div>
             <div>Posted on: {{ comment.created_on }}</div>
             <div>{{ comment.content | safe }}</div>
             <br>
-        </div>
-        {% endfor %}
-    </div>
-    </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
 {% if user.is_authenticated %}
-<div class="comment-form bg-light bg-gradient">
-    <h5>Leave a comment:</h3>
-        <p>Posting as: {{ user.username }}</p>
-        <form method="post" style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button type="submit" class="btn btn-dark submit-btn">Submit</button>
-        </form>
-</div>
+<!-- Comment form for the above article -->
+<section class="comment-form bg-light bg-gradient">
+   <h5>
+   Leave a comment:</h3>
+   <p>Posting as: {{ user.username }}</p>
+   <form method="post" style="margin-top: 1.3em;">
+      {{ comment_form | crispy }}
+      {% csrf_token %}
+      <button type="submit" class="btn btn-dark submit-btn">Submit</button>
+   </form>
+</section>
 {% endif %}
 {% endblock %}

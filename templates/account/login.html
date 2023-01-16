@@ -2,28 +2,25 @@
 {% block title %} Sign In {% endblock %}
 {% load i18n %}
 {% load account socialaccount %}
-
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
-
 {% block content %}
-<div class="sign-in text-bg-dark bg-gradient">
-<h1>{% trans "Sign In" %}</h1>
-
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}" class="link-info">sign up</a> first to access member only features.{% endblocktrans %}</p>
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="primaryAction log-btn btn btn-light" type="submit">{% trans "Sign In" %}</button>
-</form>
-<div class="log-msg visually-hidden">
-  <div>Logging in...</div>
-  <div class="spinner-border text-success" role="status"></div>
-</div>
-</div>
-
+<!-- Sign in form -->
+<section class="sign-in text-bg-dark bg-gradient">
+   <h1>{% trans "Sign In" %}</h1>
+   <p>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}" class="link-info">sign up</a> first to access member only features.{% endblocktrans %}
+   </p>
+   <form class="login" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="primaryAction log-btn btn btn-light" type="submit">{% trans "Sign In" %}</button>
+   </form>
+   <div class="log-msg visually-hidden">
+      <div>Logging in...</div>
+      <div class="spinner-border text-success" role="status"></div>
+   </div>
+</section>
 {% endblock %}

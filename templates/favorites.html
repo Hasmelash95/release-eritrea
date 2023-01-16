@@ -2,23 +2,25 @@
 {% load static %}
 {% block title %} Favorites {% endblock %}
 {% block content %}
+<!-- Lists logged in user's favorite articles -->
 <section class="article-section container text-bg-success bg-gradient">
-<h2>{{ user }}'s Favorite Articles <i class="fa-solid fa-heart"></i></h2>
-<div class="row row-cols-1 row-cols-md-2 g-6">
-    {% for article in articles %}
-        <article class="col card article-box text-bg-light bg-gradient">
-            <a href="{% url 'article-detail' article.slug %}" class="card-body">
-                <h4 class="card-header"> {{ article.title }} </h3>
-                    <p class="card-text"> Author: Release Eritrea </p>
-                    <p class="card-text"> {{ article.excerpt }} </p>
-                    <p><em>Posted on {{ article.created_on }}</em></p>
-            </a>
-            {% if user.is_staff %}
-            <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
-            <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
-            {% endif %}
-        </article>
-        {% endfor %}
-</div>
+   <h2>{{ user }}'s Favorite Articles <i class="fa-solid fa-heart"></i></h2>
+   <div class="row row-cols-1 row-cols-md-2 g-6">
+      {% for article in articles %}
+      <article class="col card article-box text-bg-light bg-gradient">
+         <a href="{% url 'article-detail' article.slug %}" class="card-body">
+            <h4 class="card-header">
+            {{ article.title }} </h3>
+            <p class="card-text"> Author: Release Eritrea </p>
+            <p class="card-text"> {{ article.excerpt }} </p>
+            <p><em>Posted on {{ article.created_on }}</em></p>
+         </a>
+         {% if user.is_staff %}
+         <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
+         <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
+         {% endif %}
+      </article>
+      {% endfor %}
+   </div>
 </section>
 {% endblock %}

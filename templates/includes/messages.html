@@ -1,4 +1,5 @@
 {% if messages %}
+<!-- Django message alerts -->
 <div class="messages">
     {% for message in messages %}
     <div{% if message.tags %} class="alert {{ message.tags }}" role="alert" {% endif %}>{{ message }}</div>

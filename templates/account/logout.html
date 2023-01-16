@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% block title %} Logout {% endblock %}
 {% load i18n %}
-
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
 {% block content %}
-<div class="sign-in text-bg-dark bg-gradient">
-<h1>{% trans "Sign Out" %}</h1>
-
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit" class="btn log-btn btn-light">{% trans 'Sign Out' %}</button>
-</form>
-<div class="log-msg visually-hidden">
-  <div>Hope to see you again soon!</div>
-  <div class="spinner-border text-success" role="status"></div>
-</div>
-</div>
-
+<!-- Sign out form -->
+<section class="sign-in text-bg-dark bg-gradient">
+   <h1>{% trans "Sign Out" %}</h1>
+   <p>{% trans 'Are you sure you want to sign out?' %}</p>
+   <form method="post" action="{% url 'account_logout' %}">
+      {% csrf_token %}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+      {% endif %}
+      <button type="submit" class="btn log-btn btn-light">{% trans 'Sign Out' %}</button>
+   </form>
+   <div class="log-msg visually-hidden">
+      <div>Hope to see you again soon!</div>
+      <div class="spinner-border text-success" role="status"></div>
+   </div>
+</section>
 {% endblock %}

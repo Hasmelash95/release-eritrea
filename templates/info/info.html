@@ -2,37 +2,37 @@
 {% load static %}
 {% block title %} Who We Are {% endblock %}
 {% block content %}
-
-<div class="who-section text-bg-light">
-    <h2> Who We Are</h2>
-    <div class="row row-cols-1 row-cols-md-2 gap-3 g-4">
-    {% for info in object_list %}
-    <div class="col card text-bg-dark bg-gradient">
-        <img src="{{ info.image.url }}" class="card-img-top img-fluid" alt="Profile picture of member">
-        <div class="card-body">
+<!-- Section for members of the team -->
+<section class="who-section text-bg-light">
+   <h2> Who We Are</h2>
+   <div class="row row-cols-1 row-cols-md-2 gap-3 g-4">
+      {% for info in object_list %}
+      <div class="col card text-bg-dark bg-gradient">
+         <img src="{{ info.image.url }}" class="card-img-top img-fluid" alt="Profile picture of member">
+         <div class="card-body">
             <h5 class="card-title"> {{ info.first_name }} {{ info.last_name}}</h5>
             <h6 class="card-subtitle">Title: {{ info.job_title }}</h6>
             <p class="card-text">Email: {{ info.email }}</p>
             <p class="card-text">{{ info.about }}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-</div>
-<div class="location text-bg-light">
-    <h2>Our Offices</h2>
-    <div class="row row-cols-1 row-cols-md-2 gap-3 g-4">
-    {% for loc in location %}
-    <div class="col card text-bg-secondary bg-gradient">
-        <div class="card-body">
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+</section>
+<!-- Section for charity offices -->
+<section class="location text-bg-light">
+   <h2>Our Offices</h2>
+   <div class="row row-cols-1 row-cols-md-2 gap-3 g-4">
+      {% for loc in location %}
+      <div class="col card text-bg-secondary bg-gradient">
+         <div class="card-body">
             <h4 class="card-title">{{ loc.name }}</h4>
             <p class="card-text">{{ loc.street_name }}</p>
             <p class="card-text">{{ loc.city }}</p>
             <p class="card-text">{{ loc.post_code }}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-</div>
-
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+</section>
 {% endblock %}

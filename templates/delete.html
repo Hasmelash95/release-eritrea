@@ -2,9 +2,8 @@
 {% load static %}
 {% block title %} Delete Article {% endblock %}
 {% block content %}
-{% if messages %}
-{% endif %}
-<div class="text-bg-dark bg-gradient article-section">
+<!-- Form to delete selected article -->
+<section class="text-bg-dark bg-gradient article-section">
     <div class="article-format">
         <form method="POST" action="{% url 'delete' article.slug %}">
             {% csrf_token %}
@@ -13,5 +12,5 @@
             <button class="btn btn-danger" type="submit">Yes</button>
         </form>
     </div>
-</div>
+</section>
 {% endblock %}

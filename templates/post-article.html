@@ -2,10 +2,11 @@
 {% load static %}
 {% block title %} Post Article {% endblock %}
 {% block content %}
-<div class="text-bg-dark bg-gradient container article-section">
+<!-- Form to post a new article  -->
+<section class="text-bg-dark bg-gradient container article-section">
     {% include 'includes/messages.html' %}
     <div class="article-format">
-        <h2>Post a New Article:</h1>
+        <h2>Post a New Article:</h2>
             <p>Posting as {{ user.username }}</p>
             <p>Required fields are marked with *</p>
             <form method="POST" action="{% url 'post-article' %}" enctype="multipart/form-data">
@@ -15,5 +16,5 @@
                 <button class="btn btn-light submit-btn" type="submit">Post Article</button>
             </form>
     </div>
-</div>
+</section>
 {% endblock %}

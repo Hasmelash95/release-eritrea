@@ -2,8 +2,7 @@
 {% load static %}
 {% block title %} Delete Article {% endblock %}
 {% block content %}
-{% if messages %}
-{% endif %}
+<!-- Form to add or remove selected article from faves -->
 <div class="text-bg-dark bg-gradient article-section">
     <div class="article-format">
         <form method="POST" action="{% url 'fave-add' article.slug %}">

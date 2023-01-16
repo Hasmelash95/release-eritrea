@@ -2,7 +2,8 @@
 {% load static %}
 {% block title %} Edit Article {% endblock %}
 {% block content %}
-<div class="text-bg-dark bg-gradient container article-section">
+<!-- Form to edit selected article -->
+<section class="text-bg-dark bg-gradient container article-section">
     {% include 'includes/messages.html' %}
     <div class="article-format">
         <h1>Edit Article:</h1>
@@ -15,5 +16,5 @@
             <button class="btn btn-light submit-btn" type="submit">Edit Article</button>
         </form>
     </div>
-</div>
+</section>
 {% endblock %}

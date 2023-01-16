@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@500&family=Roboto:wght@300&display=swap');
+/* Importing Noto Serify Oriya and Roboto fonts */
 
+/* Resetting the margins and padding for the entire site */
 * {
     margin: 0;
     padding: 0;
     border: none;
  }
 
+ /* Setting the general style for the site */
 body {
     color: rgb(33, 37, 42); 
     font-family: 'Roboto', sans-serif;
@@ -19,20 +22,24 @@ body {
     flex-direction: column;
 }
 
+
+/* Navigation bar */
 nav {
     max-width: 2000px;
     height: 130px;
 }
 
-
+/* Allow the page to scroll but the bar to remain put */
 html {
     scroll-padding-top: 180px;
 }
 
+/* The horizontal rule */
 hr {
     visibility: hidden;
 }
 
+/* Font for the headings */
 h1, 
 h2,
 h3,
@@ -40,14 +47,35 @@ h4 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
+/* Styling for the individual nav links */
 nav li {
     margin-left: 5px;
 }
 
+.nav-link {
+    color: black;
+} 
+
+.nav-link:hover {
+    color: rgb(135, 164, 173);
+}
+
+/* The toggle button for smaller screens */
+.toggler-btn {
+    width: 80px;
+    margin-right: 50px;
+}
+
+/* Styling for the company name */
 .company {
     margin-top: 15px; 
 }
 
+.logo strong {
+    font-size: 0.8rem;
+}
+
+/* Styling for the header logo */
 span img { 
     width: 100px;
     height: 100px;
@@ -55,21 +83,25 @@ span img {
     outline: 2px solid #fff;
 }
 
+/* Styling for the section headers */
 .section-headers {
     color:#fff;
     margin: 50px 0 30px 20px;
 }
 
+/*  Nav links when page is active */
 nav .active {
     text-decoration: underline;
 }
 
+/* Styling for links */
 .post-link,
 .filter-link,
 .page-info {
     margin: 10px 20px 20px;
 }
 
+/* Styling for sign in/logout and error pages */
 .sign-in,
 .error-pages {
     margin: 180px 60px 100px;
@@ -77,31 +109,32 @@ nav .active {
     max-width: 700px;
 }
 
-.logo strong {
-    font-size: 0.8rem;
-}
-
+/* Styling for intro text */
 .intro-text {
     padding: 60px 30px;
     margin-top: 250px;
     margin-bottom: 90px;
 }
 
+/* Styling for the verse section */
 .verse {
     margin: 100px 10px;
     min-width: 24rem;
 }
 
+/* Styling for the verse text */
 .verse-text {
     font-size: 2rem;
 }
 
+/* Hero image */
 .hero {
     max-height: 600px;
     display: block;
     max-width: 600px;
 }
 
+/* Fade in effect for divs on scroll */
 .fade-in {
     opacity: 0;
     transition: opacity 650ms ease-in;
@@ -111,6 +144,7 @@ nav .active {
     opacity: 1;
 }
 
+/* Ensuring they take up the page width */
 .what-is,
 .intro-text {
     position: relative;
@@ -118,6 +152,7 @@ nav .active {
     right: 0;
 }
 
+/* Styling for what is section */
 .what-is {
     margin-top: 30px;
     padding: 60px 30px;
@@ -127,8 +162,9 @@ nav .active {
     min-width: 32rem;
 }
 
-.page-link.active {
-    background-color:rgb(33, 37, 42);
+/* Image in what is section */
+#balloon-img {
+    max-width: 600px;
 }
 
 .who,
@@ -136,6 +172,7 @@ nav .active {
     margin-top: 80px;
 }
 
+/* Styling for who section with external links */
 .who {
     margin-bottom: 30px;
 }
@@ -150,55 +187,56 @@ nav .active {
     text-decoration: underline;
 }
 
-#balloon-img {
-    max-width: 600px;
-}
-
+/* Styling for login, logout and signup pages */
 .user-sign {
     margin: 20px;
     font-size: 0.75rem;
 }
 
-.nav-link {
-    color: black;
-} 
-
-.toggler-btn {
-    width: 80px;
+/* Styling for the message when users sign in or log out */
+div .log-msg {
+    padding-top: 10px;
 }
 
-.nav-link:hover {
-    color: rgb(135, 164, 173);
-}
-
+/* Styling for article cards and what do cards */
 .article-box,
 .what-do {
-    margin: 10px 5px;
+    margin: 30px 5px;
     max-width: 450px;
     left: 10px;
     padding: 20px;
 }
 
+/* Heading of what is section */
 .what-heading {
     padding-top: 50px;
 }
 
+/* Styling for article detail and info page */
 .article-section,
 .who-section {
     margin: 180px 50px 75px;
     padding: 30px;
+    max-width: 1300px;
 }
 
-.who-section .card,
-.location .card {
-    width: 24rem;
-    padding: 20px;
-}
-
+/* Styling for the dates */
 .post-dates {
     margin-top: 20px;
     margin-bottom: 20px;
     font-style: italic;
+}
+
+/* Styling for pagination button for active page */
+.page-link.active {
+    background-color:rgb(33, 37, 42);
+}
+
+/* Styling for the cards in the info page */
+.who-section .card,
+.location .card {
+    width: 24rem;
+    padding: 20px;
 }
 
 .location {
@@ -207,10 +245,12 @@ nav .active {
     margin: 0 75px 75px 50px;
 }
 
+/* Setting the width of the summernote iframe */
 iframe {
     width: 650px;
 }
 
+/* Styling for the comment section */
 .comment-section {
     padding-top: 50px;
 }
@@ -225,14 +265,17 @@ iframe {
     padding: 30px;
 }
 
+/* Removing underlines from card links */
 a.card-body {
     text-decoration: none;
 }
 
+/* Styling all of the form labels */
 label {
     padding: 5px;
 }
 
+/* Styling the article filter page */
 .filtering {
     margin-bottom: 100px;
 }
@@ -241,10 +284,12 @@ label {
     padding: 10px;
 }
 
+/* Styling the form submit buttons */
 .submit-btn {
     margin-top: 10px;
 }
 
+/* Styling for the gallery section */
 .image-cards {
     max-width: 400px;
     padding: 10px;
@@ -259,6 +304,7 @@ label {
     margin-bottom: 100px;
 }
 
+/* Styling for the footer */
 footer {
     margin-top: auto;
     
@@ -285,14 +331,7 @@ footer {
     color: rgb(0, 95, 161);
 }
 
-div .log-msg {
-    padding-top: 10px;
-}
-
-.toggler-btn {
-    margin-right: 50px;
-}
-
+/* Media queries for large to medium screen sizes */
 @media screen and (max-width: 900px) {
 
     body {
@@ -325,6 +364,7 @@ div .log-msg {
     }
 }
 
+/* Media queries for medium screen sizes */
 @media screen and (max-width: 650px) {
 
     .intro-text {
@@ -386,6 +426,7 @@ div .log-msg {
 
 }
 
+/* Media queries for small screen sizes */
 @media screen and (max-width: 460px) {
 
     h2 {
@@ -444,12 +485,25 @@ div .log-msg {
     .what-do {
         width: 300px;
     }
+
+    .contact i {
+        padding-top: 10px;
+    }
 }
 
+/* Media queries for very large screen sizes */
 @media screen and (min-width: 1600px) {
-    
+
     .article-box,
     .what-do {
         margin: 10px 30px;
+    }
+
+    footer {
+        font-size: 1.3rem;
+    }
+
+    .contact i {
+        font-size: 2.5rem;
     }
 }

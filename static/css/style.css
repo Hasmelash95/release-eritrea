@@ -445,3 +445,11 @@ div .log-msg {
         width: 300px;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    
+    .article-box,
+    .what-do {
+        margin: 10px 30px;
+    }
+}

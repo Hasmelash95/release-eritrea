@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+# Url patterns for the press app
+
 urlpatterns = [
     path('', views.PressList.as_view(), name='home'),
     path('article-filter', views.article_filter, name='filter'),

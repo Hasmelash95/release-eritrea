@@ -7,7 +7,7 @@ from .forms import CommentForm, ArticleForm
 
 class TestingViews(TestCase):
 
-    # Setting up data to test 
+    # Setting up data to test
     @classmethod
     def setUpTestData(self):
         self.user = User.objects.create(username='smiletest')
@@ -96,6 +96,7 @@ class TestingViews(TestCase):
         self.assertTemplateUsed(response_three, 'base.html')
         self.assertTemplateUsed(response_three, 'delete.html')
 
+    # Retrieving add article to favorites page
     def test_add_to_favorites_page(self):
         self.client.login(username='smiletest', password='iliketosmile')
         response = self.client.get(reverse('fave-add',

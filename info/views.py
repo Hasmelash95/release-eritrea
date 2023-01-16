@@ -4,6 +4,10 @@ from .models import Profile, Location
 
 
 class Info(generic.ListView):
+    """
+    Generic view for the info page which includes
+    profile list views and location list views.
+    """
     model = Profile
     template_name = 'info/info.html'
     context_object_name = 'profile'

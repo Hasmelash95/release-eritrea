@@ -19,6 +19,8 @@ from press import views
 from info import views
 from .views import handler404, handler403, handler400, handler500
 
+# url patterns for project
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
@@ -26,6 +28,8 @@ urlpatterns = [
     path('', include('press.urls'), name='press_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+# error handler urls
 
 handler400 = 'release-eritrea.views.handler400'
 handler403 = 'release-eritrea.views.handler403'

@@ -10,6 +10,10 @@ from django.contrib import messages
 
 
 class PressList(generic.ListView):
+    """
+    Generic view for the index page which includes
+    article list views and picture list views.
+    """
     model = Article
     queryset = Article.objects.order_by('-created_on')
     template_name = 'index.html'
@@ -24,6 +28,14 @@ class PressList(generic.ListView):
 
 @staff_member_required
 def post_article(request):
+    """
+    Defines the function to post an article to the site. Triggers
+    an error message when the form is not valid and requires the
+    user to submit again when the form is valid.
+    Redirects user to the newly formed article detail page when the
+    form is valid with a success message.
+    View is only accessible to staff accounts.
+    """
     article_form = ArticleForm()
     if request.POST:
         article_form = ArticleForm(request.POST)
@@ -43,6 +55,16 @@ def post_article(request):
 
 @staff_member_required
 def edit_article(request, slug):
+    """
+    Selects an article by its unique slug.
+    Defines the function to edit an article to the site. Triggers
+    an error message when the form is not valid and requires the
+    user to submit again when the form is valid.
+    Redirects user to the updated article detail page when the
+    form is valid with a success message.
+    404 error is raised if article does not exist.
+    View is only accessible to staff accounts.
+    """
     article = get_object_or_404(Article, slug=slug)
     article_form = ArticleForm(request.POST or None, instance=article)
     if article_form.is_valid():
@@ -60,6 +82,15 @@ def edit_article(request, slug):
 
 @staff_member_required
 def delete_article(request, slug):
+    """
+    Selects an article by its unique slug.
+    Renders a page to confirm whether the user wishes to delete
+    the selected article.
+    Redirects to the home page press section and triggers a success
+    message to show the article has been deleted.
+    404 error is raised if article does not exist.
+    View is only accessible to staff accounts.
+    """
     article = get_object_or_404(Article, slug=slug)
     if request.POST:
         article.delete()
@@ -70,6 +101,14 @@ def delete_article(request, slug):
 
 @login_required
 def favorite_article(request, slug):
+    """
+    Selects an article by its unique slug.
+    Renders a page to confirm whether the user wishes to add
+    or remove the selected articles from their favorites.
+    Redirects user to the selected article detail page.
+    Raises a 404 error if the article does not exist.
+    View is only accessible to logged in users.
+    """
     article = get_object_or_404(Article, slug=slug)
     is_fave = False
     if article.favorites.filter(id=request.user.id).exists():
@@ -94,19 +133,34 @@ def favorite_article(request, slug):
 
 
 def article_filter(request):
+    """
+    Renders the article filter page with a form.
+    """
     f = ArticleFilter(request.GET, queryset=Article.objects.all())
     return render(request, 'article-filter.html', {'filter': f})
 
 
 @login_required
 def favorites(request):
+    """
+    Lists only the articles in the logged in users' favorites.
+    """
     articles = request.user.favorite.all()
     return render(request, 'favorites.html', {'articles': articles})
 
 
 class ArticleDetail(View):
-
+    """
+    Display the article detail page.
+    """
     def get(self, request, slug, *args, **kwargs):
+        """
+        Gets the article using its unique slug along with
+        the user comments and comment form.
+        Adds link to add article to favorites if is_fave is False
+        and a link to remove article from favorites if is_fave is 
+        True.
+        """
         article = get_object_or_404(Article, slug=slug)
         comments = article.comments.filter(approved=True).order_by(
                                                          'created_on')
@@ -126,6 +180,10 @@ class ArticleDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Allows user to post comment with a success message
+        if the comment form is valid.
+        """
         article = get_object_or_404(Article, slug=slug)
         comments = article.comments.filter(approved=True).order_by(
                                                          'created_on')

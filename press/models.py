@@ -3,10 +3,14 @@ from django.db.models import Model
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+# Tags for the articles
 TAGS = ((0, 'Real Time'), (1, 'Archive'))
 
 
 class Article(models.Model):
+    """
+    Article model for press releases
+    """
     title = models.CharField(max_length=300, unique=True)
     slug = models.SlugField(max_length=300, unique=True)
     author = models.ForeignKey(User, null=True, on_delete=models.CASCADE,
@@ -27,6 +31,9 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
+    """
+    User comment model 
+    """
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name='comments')
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE,
@@ -45,6 +52,9 @@ class Comment(models.Model):
 
 
 class Picture(models.Model):
+    """
+    Picture model for the gallery
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)

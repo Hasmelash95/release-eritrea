@@ -5,6 +5,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Profile(models.Model):
+    """
+    Profile model for info page.
+    """
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     email = models.EmailField()
@@ -21,6 +24,9 @@ class Profile(models.Model):
 
 
 class Location(models.Model):
+    """
+    Location model for info page.
+    """
     name = models.CharField(max_length=60)
     street_name = models.CharField(max_length=60)
     city = models.CharField(max_length=20)

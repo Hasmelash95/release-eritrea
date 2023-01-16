@@ -136,6 +136,7 @@ class ArticleDetail(View):
             comment.article = article
             messages.success(request, 'Your comment is awaiting approval.')
             comment.save()
+            return redirect(reverse('article-detail', args=[slug]))
         elif comment_form.errors:
             messages.error(request, 'There was a problem submitting the form.')
         else:

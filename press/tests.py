@@ -23,7 +23,7 @@ class TestingViews(TestCase):
                        slug='test-title',
                        content='test content',
                        excerpt='test excerpt',
-                       tags=1
+                       tags=1,
                        )
         self.comment = Comment.objects.create(
                        article=self.article,
@@ -44,7 +44,8 @@ class TestingViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'index.html')
-    
+        self.assertTemplateUsed(response, 'includes/messages.html')
+
     # Retrieving and testing article detail page
     def test_article_detail(self):
         response = self.client.get(reverse('article-detail',
@@ -70,7 +71,7 @@ class TestingViews(TestCase):
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'favorites.html')
 
-    # Retrieving and testing the crud pages
+    # Retrieving and testing the crud pages which need admin login
     def test_crud(self):
         self.client.login(username='super', password='superuserpass')
         # Retrieving post article page
@@ -78,3 +79,27 @@ class TestingViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'post-article.html')
+        self.assertTemplateUsed(response, 'includes/messages.html')
+
+        # Retrieving edit article page
+        response_two = self.client.get(reverse('edit-article', 
+                                       args=[self.article.slug]))
+        self.assertEqual(response_two.status_code, 200)
+        self.assertTemplateUsed(response_two, 'base.html')
+        self.assertTemplateUsed(response_two, 'edit-article.html')
+        self.assertTemplateUsed(response, 'includes/messages.html')
+
+        # Retrieving delete article page
+        response_three = self.client.get(reverse('delete', 
+                                         args=[self.article.slug]))
+        self.assertEqual(response_three.status_code, 200)
+        self.assertTemplateUsed(response_three, 'base.html')
+        self.assertTemplateUsed(response_three, 'delete.html')
+
+    def test_add_to_favorites_page(self):
+        self.client.login(username='smiletest', password='iliketosmile')
+        response = self.client.get(reverse('fave-add',
+                                           args=[self.article.slug]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'fave-add.html')

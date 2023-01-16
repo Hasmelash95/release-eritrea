@@ -5,8 +5,8 @@
 <section class="article-section container text-bg-secondary bg-gradient filtering">
     <h2>Search Filters <i class="fa-solid fa-magnifying-glass"></i></h2>
     <form method="get">
-        {{ filter.form }}
-        <button type="submit" class="btn btn-dark">Search</button>
+        {{ filter.form.as_p }}
+        <button type="submit" class="btn filter-link btn-dark">Search</button>
     </form>
     <div class="row row-cols-1 row-cols-md-2 g-6">
         {% for article in filter.qs %}

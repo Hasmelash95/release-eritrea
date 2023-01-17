@@ -8,7 +8,7 @@
         <form method="POST" action="{% url 'delete' article.slug %}">
             {% csrf_token %}
             <p>Are you sure you want to delete "{{ article }}"?</p>
-            <a href="{% url 'home' %}" class="btn btn-light">No</a>
+            <a href="{% url 'home' %}" aria-label="Link to return to the home page" class="btn btn-light">No</a>
             <button class="btn btn-danger" type="submit">Yes</button>
         </form>
     </div>

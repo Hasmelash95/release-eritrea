@@ -97,20 +97,20 @@
    <div>
       {% if user.is_staff %}
       <span>
-      <a href="{% url 'post-article' %}" class="btn btn-dark post-link">
+      <a href="{% url 'post-article' %}" aria-label="Link to the post article form" class="btn btn-dark post-link">
       Post a new article <i class="fa-solid fa-pen-to-square"></i>
       </a>
       </span>
       {% endif %}
       {% if user.is_authenticated %}
       <span>
-      <a href="{% url 'favorites' %}" id="fave" class="btn btn-success filter-link">
+      <a href="{% url 'favorites' %}" aria-label="Link to the user favorites page" id="fave" class="btn btn-success filter-link">
       Favorites <i class="fa-solid fa-heart"></i>
       </a>
       </span>
       {% endif %}
       <span>
-      <a href="{% url 'filter' %}" id="filter" class="btn btn-secondary filter-link">
+      <a href="{% url 'filter' %}" aria-label="Link to the search filters page" id="filter" class="btn btn-secondary filter-link">
       Search Filters <i class="fa-solid fa-magnifying-glass"></i>
       </a> 
       </span>
@@ -118,7 +118,7 @@
    <div class="row row-cols-1 row-cols-md-2 g-4">
       {% for article in object_list %}
       <article class="col card article-box bg-light bg-gradient">
-         <a href="{% url 'article-detail' article.slug %}" class="card-body">
+         <a href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
             <h4 class="card-header">
             {{ article.title }} </h3>
             <p class="card-text"> Author: Release Eritrea </p>
@@ -126,8 +126,8 @@
             <p><em>Posted on {{ article.created_on }}</em></p>
          </a>
          {% if user.is_staff %}
-         <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
-         <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
+         <a href="{% url 'edit-article' article.slug %}" aria-label="Link to the edit article form" class="link-primary">Edit article</a>
+         <a href="{% url 'delete' article.slug %}" aria-label="Link to the delete article form" class="link-danger">Delete article</a>
          {% endif %}
       </article>
       {% endfor %}

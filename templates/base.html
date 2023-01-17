@@ -23,7 +23,7 @@
       <header>
          <nav class="row navbar navbar-expand-lg fixed-top bg-light" id="navbarScrolling">
             <span class="col navbar-brand logo">
-            <a href="{% url 'home' %}" class="link-dark nav-link" aria-label="Link to the landing page">
+            <a href="{% url 'home' %}" class="link-dark nav-link" aria-label="Link to the home page">
             <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
                alt="release eritrea logo">
             <strong>Proclaim! Release Eritrea</strong>
@@ -38,25 +38,31 @@
                {% with request.resolver_match.url_name as url_name %}
                <ul class="col-6 nav justify-content-end navbar-nav me-auto text-bg-light mb-2 mb-lg-0">
                   <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active"
-                     aria-current="page{% endif %}" href="{% url 'home' %}"><strong>Home</strong></a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about"><strong>About
-                     Us</strong></a>
+                     aria-current="page{% endif %}" href="{% url 'home' %}" aria-label="Link to home page">
+                     <strong>Home</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press"><strong>Press
-                     Releases</strong></a>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about" aria-label="Link to about section">
+                     <strong>About Us</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link"
-                     href="{% url 'home' %}#gallery"><strong>Gallery</strong></a>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press" aria-label="Link to press releases section">
+                     <strong>Press Releases</strong></a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#gallery" aria-label="Link to gallery section">
+                     <strong>Gallery</strong></a>
                   </li>
                   <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active"
-                     aria-current="page{% endif %}" href="{% url 'info' %}"><strong>The Team</strong></a></li>
+                     aria-current="page{% endif %}" href="{% url 'info' %}" aria-label="Link to info page">
+                     <strong>The Team</strong></a>
+                  </li>
                   {% if user.is_authenticated %}
                   <li class="nav-item nav-link text-dark"><strong>Hello {{ user }}! </strong><a
-                     href="{% url 'account_logout' %}" class="link-primary">Logout</a></li>
+                     href="{% url 'account_logout' %}" aria-label="Link to logout page" class="link-primary">Logout</a></li>
                   {% else %}
-                  <li class="nav-item"><a href="{% url 'account_login' %}" class="nav-link link-info">Sign In</a></li>
-                  <li class="nav-item"><a href="{% url 'account_signup' %}" class="nav-link link-primary">No account?
-                     Sign Up</a>
+                  <li class="nav-item"><a href="{% url 'account_login' %}" aria-label="Link to log in page" class="nav-link link-info">
+                     Sign In</a>
+                  </li>
+                  <li class="nav-item"><a href="{% url 'account_signup' %}" aria-label="Link to sign up page" class="nav-link link-primary">
+                     No account? Sign Up</a>
                   </li>
                   {% endif %}
                </ul>
@@ -71,7 +77,7 @@
       <footer class="text-bg-secondary bg-gradient">
          <div class="row container-fluid">
             <span class="col foot-logo logo">
-            <a href="{% url 'home' %}" aria-label="Link to the landing page">
+            <a href="{% url 'home' %}" aria-label="Link to the home page">
             <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
                alt="release eritrea logo">
             </a>

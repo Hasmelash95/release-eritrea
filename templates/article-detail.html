@@ -17,21 +17,21 @@
    </article>
    {% if user.is_staff %}
    <div>
-      <a href="{% url 'edit-article' article.slug %}" class="link-primary">Edit article</a>
+      <a href="{% url 'edit-article' article.slug %}" aria-label="Link to the edit article form" class="link-primary">Edit article</a>
    </div>
    <div>
-      <a href="{% url 'delete' article.slug %}" class="link-danger">Delete article</a>
+      <a href="{% url 'delete' article.slug %}" aria-label="Link to the delete article form" class="link-danger">Delete article</a>
    </div>
    {% endif %}
    {% if user.is_authenticated %}
    {% if is_fave %}
    <div>
-      <a href="{% url 'fave-add' article.slug %}">Remove from favorites 
+      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the remove from favorites form">Remove from favorites 
       <i class="fa-solid fa-star link-primary"></i></a>
    </div>
    {% else %}
    <div>
-      <a href="{% url 'fave-add' article.slug %}">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the add to favorites form">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
    </div>
    {% endif %}
    {% endif %}

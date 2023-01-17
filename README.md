@@ -103,6 +103,16 @@ Theme - View and Edit Content
   4. View Info Page - As a Site User I can can view the info page so that I can know who are the team members, how to contact them and where the offices are.
 
 ### Scope
+  
+The website will contain user authentication to allow those with staff permissions to log in and access the admin database and those with user permissions to comment and favorite posts. 
+  
+A single page will contain the About Us section (which will contain external links to partner charities and another page with information on the Team and Release Eritrea offices). The main page will provide a list of Press Releases which can be navigated through using pagination. Clicking on any one of these will take the user to the article detail page where they can comment - which will be processed for admin approval - and favorite the article. The home page will also contain a gallery section which can be edited by admin. 
+  
+There will be links to allow users to access their favorites page and the search filter page to filter articles by tags and title content. 
+  
+Those with admin permissions will be able to add, edit and delete articles from the front end. 
+  
+Social media links will be available on the footer along with the charity and company number. 
 
 ### Structure
 

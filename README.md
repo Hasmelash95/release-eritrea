@@ -116,6 +116,16 @@ Social media links will be available on the footer along with the charity and co
 
 ### Structure
 
+The logo at the header contains a link to the home page. Navigation links on the header allow users to navigate to the Home and the three sections on the home page, About Us, Press Releases, Gallery. Another link takes the user to the info page. User authentication links are also present on the header to take users to the log in, sign up or logout pages. 
+  
+The Press Releases section shows 6 article previews a page and clicking on any of the previews takes the user to that specific article. Attempting to access an article that has been deleted will raise a 404 error and the users will be taken to a custom 404 error page. 
+  
+ERD (courtesy of Visual Paradigm Online)
+  
+![Screenshot 2023-01-17 at 23 02 49](https://user-images.githubusercontent.com/103432143/213031512-17ce36b8-9297-49c6-bc38-ded22e0ae8d6.png)
+
+![Screenshot 2023-01-17 at 23 17 37](https://user-images.githubusercontent.com/103432143/213033387-1ab8cf09-1917-47a8-a24a-92fba9ffecbe.png)
+
 ### Skeleton
 
 #### Wireframes

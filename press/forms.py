@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 class ArticleForm(forms.ModelForm):
     """
-    Creates a form the staff can fill out on the site to 
+    Creates a form the staff can fill out on the site to
     post articles.
     """
     title = forms.CharField(label='Title*:', required=True,
@@ -31,7 +31,7 @@ class ArticleForm(forms.ModelForm):
 
 class CommentForm(forms.ModelForm):
     """
-    Creates a form logged in users can fill out underneath 
+    Creates a form logged in users can fill out underneath
     articles that will be sent to the database to be approved.
     """
     subject = forms.CharField(widget=forms.Textarea(attrs={'rows': 1,

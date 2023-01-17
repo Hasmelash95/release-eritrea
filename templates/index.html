@@ -137,7 +137,7 @@
       <ul class="pagination justify-content-center">
          {% if page_obj.has_previous %}
          <li class="page-item" p><a href="?page=1#press" aria-label="Link to the first page of article list" 
-            class="page-link">&laquo; First</a></li>
+            class="page-link">First</a></li>
          <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press"
             aria-label="Link to the previous page of article list" class="page-link">Previous</a></li>
          {% endif %}
@@ -154,7 +154,7 @@
          <li class="page-item"><a href="?page={{ page_obj.next_page_number }}#press"
             aria-label="Link to the next page of article list" class="page-link">Next</a></li>
          <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press" 
-            aria-label="Link to the last page of article list" class="page-link">Last &raquo;</a></li>
+            aria-label="Link to the last page of article list" class="page-link">Last</a></li>
       </ul>
       {% endif %}
    </span>

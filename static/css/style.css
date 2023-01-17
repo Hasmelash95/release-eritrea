@@ -491,6 +491,18 @@ footer {
     }
 }
 
+/* Media queries for very small screen sizes */
+@media screen and (max-width: 400px) {
+
+    .image-cards {
+        margin-left: 0;
+    }
+
+    .page-link {
+        font-size: 0.6rem;
+    }
+}
+
 /* Media queries for very large screen sizes */
 @media screen and (min-width: 1600px) {
 

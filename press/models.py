@@ -21,7 +21,7 @@ class Article(models.Model):
     excerpt = models.TextField(blank=True)
     favorites = models.ManyToManyField(User, related_name='favorite',
                                        default=None, blank=True)
-    tags = models.IntegerField(choices=TAGS, default=0)      
+    tags = models.IntegerField(choices=TAGS, default=0)
 
     class Meta:
         ordering = ['-created_on']
@@ -32,7 +32,7 @@ class Article(models.Model):
 
 class Comment(models.Model):
     """
-    User comment model 
+    User comment model
     """
     article = models.ForeignKey(Article, on_delete=models.CASCADE,
                                 related_name='comments')

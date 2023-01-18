@@ -335,6 +335,18 @@ footer {
     color: rgb(0, 95, 161);
 }
 
+/* Media queries for large screens */
+@media screen and (max-width: 1400px) {
+    .article-section,
+    .sign-in,
+    .comment-form,
+    .who-section,
+    .location {
+        width: 100%;
+        margin-left: 2px;
+    }
+}
+
 /* Media queries for large to medium screen sizes */
 @media screen and (max-width: 900px) {
 
@@ -352,15 +364,6 @@ footer {
 
     .verse {
         margin: 75px 10px;
-    }
-
-    .article-section,
-    .sign-in,
-    .comment-form,
-    .who-section,
-    .location {
-        width: 100%;
-        margin-left: 0;
     }
 
     .verse-text {

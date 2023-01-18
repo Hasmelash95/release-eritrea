@@ -239,6 +239,10 @@ div .log-msg {
     padding: 20px;
 }
 
+.temporary {
+    padding-bottom: 80px;
+}
+
 .location {
     max-width: 1000px;
     padding: 30px;

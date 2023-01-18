@@ -9,7 +9,7 @@
       {% for info in object_list %}
       <div class="col card text-bg-dark bg-gradient">
          {% if "temporary" in info.image.url %}
-         <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" alt="Temporary image">
+         <img class="temporary" src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" alt="Temporary image">
          {% else %}
          <img src="{{ info.image.url }}" class="card-img-top img-fluid" alt="Profile picture of member">
          {% endif %}

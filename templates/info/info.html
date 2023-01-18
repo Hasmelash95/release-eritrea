@@ -8,7 +8,11 @@
    <div class="row row-cols-1 row-cols-md-2 gap-3 g-4">
       {% for info in object_list %}
       <div class="col card text-bg-dark bg-gradient">
+         {% if "temporary" in info.image.url %}
+         <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" alt="Temporary image">
+         {% else %}
          <img src="{{ info.image.url }}" class="card-img-top img-fluid" alt="Profile picture of member">
+         {% endif %}
          <div class="card-body">
             <h5 class="card-title"> {{ info.first_name }} {{ info.last_name}}</h5>
             <h6 class="card-subtitle">Title: {{ info.job_title }}</h6>

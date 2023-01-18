@@ -168,9 +168,16 @@
       <div class="col text-center">
          <div class="image-cards card text-bg-dark bg-gradient">
             <h5 class="card-title">{{ pic.title }}</h5>
+            {% if "temporary" in pic.image.url %}
+            <a href="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" target="_blank" 
+            aria-label="Opens image link in a new tab">
+            </a>
+            <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" alt="Temporary image">
+            {% else %}
             <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">
             <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">
             </a>
+            {% endif %}
          </div>
       </div>
       {% endfor %}

@@ -37,7 +37,7 @@ def post_article(request):
     View is only accessible to staff accounts.
     """
     article_form = ArticleForm()
-    if request.POST:
+    if request.method == 'POST':
         article_form = ArticleForm(request.POST)
         if article_form.is_valid():
             new_article = article_form.save(commit=False)
@@ -92,7 +92,7 @@ def delete_article(request, slug):
     View is only accessible to staff accounts.
     """
     article = get_object_or_404(Article, slug=slug)
-    if request.POST:
+    if request.method == 'POST':
         article.delete()
         messages.success(request, 'Article deleted.')
         return redirect('/#press')
@@ -113,7 +113,7 @@ def favorite_article(request, slug):
     is_fave = False
     if article.favorites.filter(id=request.user.id).exists():
         is_fave = True
-    if request.POST:
+    if request.method == 'POST':
         if article.favorites.filter(id=request.user.id).exists():
             article.favorites.remove(request.user)
             messages.success(request, 'Article removed from favorites.')

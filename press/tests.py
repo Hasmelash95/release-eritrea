@@ -6,6 +6,9 @@ from .forms import CommentForm, ArticleForm
 
 
 class TestingViews(TestCase):
+    """
+    Testing press views
+    """
 
     # Setting up data to test
     @classmethod
@@ -21,6 +24,7 @@ class TestingViews(TestCase):
         self.article = Article.objects.create(
                        title='test title',
                        slug='test-title',
+                       author=self.super_user,
                        content='test content',
                        excerpt='test excerpt',
                        tags=1,
@@ -104,3 +108,25 @@ class TestingViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'fave-add.html')
+
+    # def test_add_to_favorites(self):
+    #     self.client.login(username='smiletest', password='iliketosmile')
+    #     no_of_fave = self.article.favorites.count()
+    #     response = self.client.post(reverse('fave-add',
+    #                                         args=[self.article.slug]))
+    #     response_two = self.client.get(reverse('favorites'))
+    #     self.assertEqual(self.article.favorites.count(), 1)
+
+    def test_post_comment(self):
+        self.client.login(username='smiletest', password='iliketosmile')
+        response = self.client.post(reverse('article-detail',
+                                            args=[self.article.slug]),
+                                    data={'subject': 'test',
+                                          'content': 'test comment'})
+        self.assertRedirects(response, reverse('article-detail',
+                                               args=[self.article.slug]))
+
+    # def test_post_article(self):
+    #     self.client.login(username='super', password='superuserpass')
+    #     response = self.client.post(reverse('post-article'))
+    #     self.assertRedirects(response, reverse('article-detail', args=[self.article.slug]))

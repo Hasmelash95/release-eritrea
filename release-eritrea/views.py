@@ -22,5 +22,15 @@ def handler404(request, exception):
     return render(request, 'error/error404.html', status=404)
 
 
+def handler405(request, exception):
+    """
+    Renders the custom error 405 page.
+    """
+    return render(request, 'error/error405.html', status=405)
+
+
 def handler500(request):
+    """
+    Renders the custom error 500 page.
+    """
     return render(request, 'error/error500.html', status=500)

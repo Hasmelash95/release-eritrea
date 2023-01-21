@@ -279,6 +279,11 @@ label {
     padding: 5px;
 }
 
+/* Styling for form inputs */
+input {
+    padding: 5px;
+}
+
 /* Styling the article filter page */
 .filtering {
     margin-bottom: 100px;

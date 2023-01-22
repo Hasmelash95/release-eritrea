@@ -173,19 +173,93 @@ Noto Serif Oriya and Roboto fonts were imported from google fonts for the header
 
 Other bootstrap classes are used to colour in the buttons, to ensure that they stood out in the page and are still visible against the background. Font awesome icons decorate some of the headings and the buttons to add a touch of decor to the site. 
   
+A fade in effect is triggered when an object is visible to the user - some elements begin to appear as the user scrolls. 
+  
 ## Features
   
 ### Header and Hero
   
+The header contains the logo of Release Eritrea along with the name (a bird breaking a chain) along with the nav elements which take the users to specific sections of the page or to other sites within the page. There are Sign In and Sign Up options for users who have not been authenticated with links to the relevant pages. 
+  
+![Screenshot 2023-01-22 at 14 28 29](https://user-images.githubusercontent.com/103432143/213921167-873ee366-67f7-4498-a03d-e4bb03482ec1.png)
+
+If the User has already signed in, a 'Hello, [User Name]!' appears along with a Logout link. 
+  
+![Screenshot 2023-01-22 at 14 28 43](https://user-images.githubusercontent.com/103432143/213921226-074f7aa3-b7c7-410c-aa6a-1109a21707a9.png)
+
+The Navbar remains on screen as the user scrolls to allow for easy navigation. The active page is underlined (in this case, the home page). 
+  
+The hero image of a hand holding chains is adjacent to a verse (recommended by the client). This fades into view when the page has loaded. 
+  
+![Screenshot 2023-01-22 at 14 34 40](https://user-images.githubusercontent.com/103432143/213921358-e87542ca-f31f-4995-9f4d-b190db77868c.png)
+  
 ### About Us
+
+The About Us section introduces visitors of the site to Release Eritrea and provides them information (simplified) to introduce them to the charity and what they do.
+
+In addition, links are provided to give users additional resources, such as links to the Team Page and external links to partner charity websites (which open in another tab).
+  
+![Screenshot 2023-01-22 at 14 39 17](https://user-images.githubusercontent.com/103432143/213921600-23a4bd5b-203e-47b9-8116-c57b34a71a6e.png)
+  
+![Screenshot 2023-01-22 at 14 40 27](https://user-images.githubusercontent.com/103432143/213921659-4491d3ba-a337-462f-bbaa-f8b215ce48c5.png)
 
 ### Press Releases
   
+The main draw of the site is of course the press releases. Previews with links to the detailed pages of the articles allow users to peruse through the many pages and click on whichever article captures their attention. 
+  
+![Screenshot 2023-01-22 at 14 44 46](https://user-images.githubusercontent.com/103432143/213921879-b218ea40-397e-46cb-b8b6-4d28f44a5775.png)
+  
+Article detail pages have a comment section with a comment form, the latter of which is only visible to logged in users. Comments must be approved by the admin to be visible under the article.
+  
+![Screenshot 2023-01-22 at 14 49 12](https://user-images.githubusercontent.com/103432143/213922278-d2ea1186-9343-4b4d-a4d2-7d94f9d96057.png)
+
+![Screenshot 2023-01-22 at 14 50 21](https://user-images.githubusercontent.com/103432143/213922289-eba7c310-e47b-429b-b61e-fbcb5dbf63bc.png)
+  
+![Screenshot 2023-01-22 at 14 51 17](https://user-images.githubusercontent.com/103432143/213922267-6c972178-4729-446b-80bc-0cca42ed07ef.png)
+
+Admin may click on the edit or delete buttons, or post a new article article from that section. There are also buttons to direct users to the Favorites or Search Filter pages.
+
+![Screenshot 2023-01-22 at 14 45 17](https://user-images.githubusercontent.com/103432143/213921908-077fcc08-c2e2-4746-bb4e-3bb06b8f772e.png)
+  
+![Screenshot 2023-01-22 at 14 46 03](https://user-images.githubusercontent.com/103432143/213921947-b2bc8db3-1582-4b3d-b1ed-480eff4c3b9e.png)
+  
+![Screenshot 2023-01-22 at 14 46 49](https://user-images.githubusercontent.com/103432143/213921981-095f94a2-fb5d-4b86-a5f7-59236a420071.png)
+  
+The Search Filter page allows users to find the article they need through tags or words or phrases in the title.
+  
+![Screenshot 2023-01-22 at 14 47 13](https://user-images.githubusercontent.com/103432143/213922002-727f4363-016d-441f-ae3f-7b456e9b81a5.png)
+
 ### Gallery
+  
+The Gallery section shows users official Release Eritrea pictures for a visual sense of what the organisation does. Admin can add, edit and delete pictures via the admin page. 
+  
+![Screenshot 2023-01-22 at 14 52 37](https://user-images.githubusercontent.com/103432143/213922368-746ba9ef-764c-48c4-8ffb-795fdecf57aa.png)
   
 ### Footer
   
+The Footer contains social media links (which open in a new tag) providing methods of contacting Release Eritrea. As well as the charity number and company number.
+  
+![Screenshot 2023-01-22 at 14 55 03](https://user-images.githubusercontent.com/103432143/213922433-05ba2140-9515-49ff-9bf3-4a3db5520d29.png)
+  
 ### Info
+  
+The Info page provides information on the profiles (not User profiles) of the Release Eritrea staff and team members with contact details in case users wish to get in touch with them directly. Locations details are also available. 
+  
+This data can be added, edited or deleted from the admin site.
+  
+![Screenshot 2023-01-22 at 14 57 00](https://user-images.githubusercontent.com/103432143/213922529-c847e206-6602-444c-a21a-a34841fbae0f.png)
+
+![Screenshot 2023-01-22 at 14 57 05](https://user-images.githubusercontent.com/103432143/213922532-d4ffa149-4a84-4d37-bf24-0e42767b4eb6.png)
+
+### Django Admin
+  
+Django provides an authentication system that allows users to create accounts, login using their accounts and logout. Those with staff permissions can access the django admin site to make changes to the database. 
+  
+![Screenshot 2023-01-22 at 14 58 01](https://user-images.githubusercontent.com/103432143/213922600-8709738a-ea90-4987-a120-a6facf3aef84.png)
+  
+![Screenshot 2023-01-22 at 14 57 31](https://user-images.githubusercontent.com/103432143/213922607-dbf21a3e-ff41-4816-9f11-f6f5f3cb38dc.png)
+
+![Screenshot 2023-01-22 at 14 59 29](https://user-images.githubusercontent.com/103432143/213922672-17077265-3a0a-4422-bb55-762df0a21c41.png)
 
 ### Error Pages
   

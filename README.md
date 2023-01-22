@@ -24,6 +24,7 @@ Proclaim! Release Eritrea is a human rights charity advocating for the persecute
 * [Gallery](#gallery)
 * [Footer](#footer)
 * [Info](#info)
+* [Error Pages](#error-pages)
 * [Future Features](#future-features)
 
 [Testing](#testing)
@@ -122,9 +123,9 @@ The Press Releases section shows 6 article previews a page and clicking on any o
   
 ERD (courtesy of Visual Paradigm Online)
   
-The Picture, Location and Profile Entities (Profile of Members of Release Eritrea rather than User Profile) do not have relationships with other entities. 
+The Picture, Location and Profile Models (Profile of Members of Release Eritrea rather than User Profile) do not have relationships with other entities. 
   
-The Article ID has One-to-Many relationship with the Comment Entity. The User Entity has a One-to-Many relationship with the Article ID, a One-to-Many relationship with the Comment ID and a Many-to-Many relationship with the favorities attribute within the Article Entity. 
+The Article ID has One-to-Many relationship with the Comment Model. The User Model has a One-to-Many relationship with the Article ID, a One-to-Many relationship with the Comment Model and a Many-to-Many relationship with the favorities attribute within the Article Model. 
   
 ![Screenshot 2023-01-17 at 23 02 49](https://user-images.githubusercontent.com/103432143/213031512-17ce36b8-9297-49c6-bc38-ded22e0ae8d6.png)
 
@@ -168,6 +169,10 @@ The Article ID has One-to-Many relationship with the Comment Entity. The User En
 
 ### Surface 
 
+Noto Serif Oriya and Roboto fonts were imported from google fonts for the headers and main text respectively. The main colour themes for the site use bootstrap backgrounds. text-bg-primary and text-bg-light classes ensure the foreground and background colours do not clash with bg-gradient also used for a gradient effect for the backgrounds. The main text within the site is rgb(0, 95, 161), a colour close to black. 
+
+Other bootstrap classes are used to colour in the buttons, to ensure that they stood out in the page and are still visible against the background. Font awesome icons decorate some of the headings and the buttons to add a touch of decor to the site. 
+  
 ## Features
   
 ### Header and Hero
@@ -181,6 +186,8 @@ The Article ID has One-to-Many relationship with the Comment Entity. The User En
 ### Footer
   
 ### Info
+
+### Error Pages
   
 ### Future Features
 

@@ -24,6 +24,7 @@ Proclaim! Release Eritrea is a human rights charity advocating for the persecute
 * [Gallery](#gallery)
 * [Footer](#footer)
 * [Info](#info)
+* [Error Pages](#error-pages)
 * [Future Features](#future-features)
 
 [Testing](#testing)
@@ -122,6 +123,10 @@ The Press Releases section shows 6 article previews a page and clicking on any o
   
 ERD (courtesy of Visual Paradigm Online)
   
+The Picture, Location and Profile Models (Profile of Members of Release Eritrea rather than User Profile) do not have relationships with other entities. 
+  
+The Article ID has One-to-Many relationship with the Comment Model. The User Model has a One-to-Many relationship with the Article ID, a One-to-Many relationship with the Comment Model and a Many-to-Many relationship with the favorities attribute within the Article Model. 
+  
 ![Screenshot 2023-01-17 at 23 02 49](https://user-images.githubusercontent.com/103432143/213031512-17ce36b8-9297-49c6-bc38-ded22e0ae8d6.png)
 
 ![Screenshot 2023-01-17 at 23 17 37](https://user-images.githubusercontent.com/103432143/213033387-1ab8cf09-1917-47a8-a24a-92fba9ffecbe.png)
@@ -129,9 +134,45 @@ ERD (courtesy of Visual Paradigm Online)
 ### Skeleton
 
 #### Wireframes
+  
+[Home](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/home.png)
+  
+[Home mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/home-mob.png)
+  
+[Article Detail](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-detail.png)
+  
+[Article Detail mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-detail-mob.png)
+
+[Article Filter](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-filter.png)
+  
+[Article Filter mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-filter-mob.png)
+  
+[Info](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/info.png)
+  
+[Info mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/info-mob.png)
+  
+[Article Form](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-form.png)
+  
+[Article Form mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/article-form-mob.png)
+  
+[Favorites](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/favorites.png)
+  
+[Favorites mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/favorities-mob.png)
+  
+[Sign In](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/sign-in.png)
+  
+[Sign In mobile](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/sign-in-mob.png)
+  
+[Logout](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/logout.png)
+  
+[Logout mob](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/wireframes/logout-mob.png)
 
 ### Surface 
 
+Noto Serif Oriya and Roboto fonts were imported from google fonts for the headers and main text respectively. The main colour themes for the site use bootstrap backgrounds. text-bg-primary and text-bg-light classes ensure the foreground and background colours do not clash with bg-gradient also used for a gradient effect for the backgrounds. The main text within the site is rgb(0, 95, 161), a colour close to black. 
+
+Other bootstrap classes are used to colour in the buttons, to ensure that they stood out in the page and are still visible against the background. Font awesome icons decorate some of the headings and the buttons to add a touch of decor to the site. 
+  
 ## Features
   
 ### Header and Hero
@@ -145,6 +186,8 @@ ERD (courtesy of Visual Paradigm Online)
 ### Footer
   
 ### Info
+
+### Error Pages
   
 ### Future Features
 

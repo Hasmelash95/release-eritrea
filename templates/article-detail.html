@@ -26,12 +26,15 @@
    {% if user.is_authenticated %}
    {% if is_fave %}
    <div>
-      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the remove from favorites form">Remove from favorites 
-      <i class="fa-solid fa-star link-primary"></i></a>
+      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the remove from favorites form" class="link-success">
+         Remove from favorites <i class="fa-solid fa-circle-minus"></i>
+      </a>
    </div>
    {% else %}
    <div>
-      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the add to favorites form">Add to favorites <i class="fa-solid fa-star link-primary"></i></a>
+      <a href="{% url 'fave-add' article.slug %}" aria-label="Link to the add to favorites form" class="link-success">
+         Add to favorites <i class="fa-solid fa-heart"></i>
+      </a>
    </div>
    {% endif %}
    {% endif %}

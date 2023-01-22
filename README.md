@@ -264,6 +264,11 @@ Django provides an authentication system that allows users to create accounts, l
 ### Error Pages
   
 ### Future Features
+  
+1. Allow Users to Edit comments, which will then need to be re-approved by the Admin.
+2. Add a Donation feature via debit card and paypal.
+3. Add a Contact Us page to allow users to send direct messages to the organisation from the website. 
+4. Offer a subscription service which will give users alerts when a new article is added to the site.
 
 ## Testing
 

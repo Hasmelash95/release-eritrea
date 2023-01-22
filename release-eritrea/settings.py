@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['release-eritrea.herokuapp.com', 'localhost']
 
@@ -76,6 +76,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SUMMERNOTE_CONFIG = {
+    'width': '100%',
+    
+}
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-secondary',

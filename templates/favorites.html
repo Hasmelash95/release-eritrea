@@ -9,8 +9,7 @@
       {% for article in articles %}
       <article class="col card article-box text-bg-light bg-gradient">
          <a href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
-            <h4 class="card-header">
-            {{ article.title }} </h3>
+            <h4 class="card-header">{{ article.title }} </h4>
             <p class="card-text"> Author: Release Eritrea </p>
             <p class="card-text"> {{ article.excerpt }} </p>
             <p><em>Posted on {{ article.created_on }}</em></p>

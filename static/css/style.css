@@ -249,11 +249,6 @@ div .log-msg {
     margin: 0 75px 75px 50px;
 }
 
-/* Setting the width of the summernote iframe */
-iframe {
-    width: 650px;
-}
-
 /* Styling for the comment section */
 .comment-section {
     padding-top: 50px;
@@ -283,6 +278,11 @@ label {
 input {
     padding: 5px 15px;
 }
+
+.summer-editor {
+    width: 100%;
+}
+
 
 /* Styling the article filter page */
 .filtering {
@@ -363,10 +363,6 @@ footer {
         width: 500px;
     }
 
-   iframe {
-        width: 500px;
-    }
-
     .verse {
         margin: 75px 10px;
     }
@@ -405,10 +401,6 @@ footer {
     }
 
     textarea {
-        width: 400px;
-    }
-
-    iframe {
         width: 400px;
     }
 
@@ -487,10 +479,6 @@ footer {
     }
 
     textarea {
-        width: 280px;
-    }
-
-    iframe {
         width: 280px;
     }
 

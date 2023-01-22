@@ -1,7 +1,6 @@
 from .models import Comment, Article
 from django import forms
-from django_summernote.fields import SummernoteTextField
-from django_summernote.widgets import SummernoteWidget
+from django_summernote.fields import SummernoteWidget, SummernoteTextField
 from django.utils.translation import gettext_lazy as _
 
 
@@ -24,7 +23,7 @@ class ArticleForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
         labels = {
-            'content': 'Content*'
+            'content': 'Content*',
         }
         fields = ['title', 'content', 'excerpt', 'tags']
 

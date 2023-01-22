@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
-from .models import Article, Picture
+from .models import Article, Picture, Comment
 from .forms import CommentForm, ArticleForm
 from .filters import ArticleFilter
 from django.template.defaultfilters import slugify

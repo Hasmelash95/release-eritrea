@@ -7,6 +7,7 @@
 <section class="intro-text fade-in text-bg-light bg-gradient">
    <div class="row">
       <div class="col verse">
+         <h2 class="section-headers text-black">Proclaim 'Release!' for Eritrea</h2>
          <p class="verse-text">
             <em>
             "The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the
@@ -119,8 +120,7 @@
       {% for article in object_list %}
       <article class="col card article-box bg-light bg-gradient">
          <a href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
-            <h4 class="card-header">
-            {{ article.title }} </h3>
+            <h4 class="card-header">{{ article.title }}</h4>
             <p class="card-text"> Author: Release Eritrea </p>
             <p class="card-text"> {{ article.excerpt }} </p>
             <p><em>Posted on {{ article.created_on }}</em></p>
@@ -132,7 +132,7 @@
       </article>
       {% endfor %}
    </div>
-   <span>
+   <div>
       <span class="page-info text-light"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
       <ul class="pagination justify-content-center">
          {% if page_obj.has_previous %}
@@ -157,7 +157,7 @@
             aria-label="Link to the last page of article list" class="page-link">Last</a></li>
       </ul>
       {% endif %}
-   </span>
+   </div>
 </main>
 <hr>
 <!-- Gallery -->

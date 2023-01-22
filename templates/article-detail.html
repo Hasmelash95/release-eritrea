@@ -46,6 +46,7 @@
          <div class="comment-format">
             <div>Written by {{ comment.user }}</div>
             <div>Posted on: {{ comment.created_on }}</div>
+            <div>Subject: {{ comment.subject}}</div>
             <div>{{ comment.content | safe }}</div>
             <br>
          </div>

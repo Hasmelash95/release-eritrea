@@ -3,12 +3,12 @@
 {% block title %} Forbidden {% endblock %}
 {% block content %}
 <!-- Page for error 403 -->
-<section class="text-bg-danger text-center grid gap-3 error-pages">
+<div class="text-bg-danger text-center grid gap-3 error-pages">
     <div class="p-2">
         <i class="fa-solid fa-triangle-exclamation"></i> Sorry, you do not have access to this page.
     </div>
     <div class="p-2">
         <a href="{% url 'home' %}" aria-label="Link to return home" class="btn btn-dark" role="button">Return Home</a>
     </div>
-</section>
+</div>
 {% endblock %}

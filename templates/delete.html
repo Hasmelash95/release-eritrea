@@ -5,6 +5,7 @@
 <!-- Form to delete selected article -->
 <section class="text-bg-dark bg-gradient article-section">
     <div class="article-format">
+        <h2>Delete Article</h2>
         <form method="POST" action="{% url 'delete' article.slug %}">
             {% csrf_token %}
             <p>Are you sure you want to delete "{{ article }}"?</p>

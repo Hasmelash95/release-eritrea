@@ -221,9 +221,9 @@ Admin may click on the edit or delete buttons, or post a new article article fro
 
 ![Screenshot 2023-01-22 at 14 45 17](https://user-images.githubusercontent.com/103432143/213921908-077fcc08-c2e2-4746-bb4e-3bb06b8f772e.png)
   
-![Screenshot 2023-01-22 at 14 46 03](https://user-images.githubusercontent.com/103432143/213921947-b2bc8db3-1582-4b3d-b1ed-480eff4c3b9e.png)
-  
-![Screenshot 2023-01-22 at 14 46 49](https://user-images.githubusercontent.com/103432143/213921981-095f94a2-fb5d-4b86-a5f7-59236a420071.png)
+![Screenshot 2023-01-23 at 15 10 34](https://user-images.githubusercontent.com/103432143/214075282-0581d278-6df1-4ef9-b8ee-88b088f4a4e6.png)
+
+![Screenshot 2023-01-23 at 15 11 06](https://user-images.githubusercontent.com/103432143/214075317-6527a0ef-8ebc-484d-bef8-a240742822c8.png)
   
 The Search Filter page allows users to find the article they need through tags or words or phrases in the title.
   

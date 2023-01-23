@@ -57,8 +57,7 @@
 {% if user.is_authenticated %}
 <!-- Comment form for the above article -->
 <section class="comment-form bg-light bg-gradient">
-   <h5>
-   Leave a comment:</h3>
+   <h4>Leave a comment:</h4>
    <p>Posting as: {{ user.username }}</p>
    <form method="post" style="margin-top: 1.3em;">
       {{ comment_form | crispy }}

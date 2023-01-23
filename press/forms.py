@@ -9,12 +9,15 @@ class ArticleForm(forms.ModelForm):
     Creates a form the staff can fill out on the site to
     post articles.
     """
-    title = forms.CharField(label='Title*:', required=True,
+    title = forms.CharField(label='Title:', required=True,
                             widget=forms.Textarea(attrs={'rows': 1,
                                                   'cols': 80}))
     content = SummernoteTextField()
-    excerpt = forms.CharField(required=False, widget=forms.Textarea(
-                              attrs={'rows': 4, 'cols': 80}))
+    excerpt = forms.CharField(label='Excerpt:', required=False, 
+                              widget=forms.Textarea(attrs={
+                                                    'rows': 4,
+                                                    'cols': 80
+                                                    }))
     slug = forms.TextInput()
 
     class Meta:
@@ -23,7 +26,8 @@ class ArticleForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
         labels = {
-            'content': 'Content*',
+            'content': 'Content:',
+            'tags': 'Tags:'
         }
         fields = ['title', 'content', 'excerpt', 'tags']
 

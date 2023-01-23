@@ -77,7 +77,13 @@ def edit_article(request, slug):
         messages.error(request,
                        'There was a problem submitting the form.'
                        ' Make sure all required fields are filled.')
-    return render(request, 'edit-article.html', {'article_form': article_form})
+    return render(request,
+                  'edit-article.html', 
+                  {
+                    'article_form': article_form,
+                    'article': article
+                  }
+                  )
 
 
 @staff_member_required

@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %} Post Article {% endblock %}
 {% block content %}
+{% load crispy_forms_tags %}
 <!-- Form to post a new article  -->
 <section class="text-bg-dark bg-gradient container article-section">
     {% include 'includes/messages.html' %}
@@ -11,8 +12,8 @@
             <p>Required fields are marked with *</p>
             <form method="POST" action="{% url 'post-article' %}" enctype="multipart/form-data">
                 {% csrf_token %}
+                {{ article_form | crispy }}
                 {{ content|safe }}
-                {{ article_form.as_p }}
                 <button class="btn btn-light submit-btn" type="submit">Post Article</button>
             </form>
     </div>

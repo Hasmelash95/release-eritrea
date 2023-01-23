@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %} Edit Article {% endblock %}
 {% block content %}
+{% load crispy_forms_tags %}
 <!-- Form to edit selected article -->
 <section class="text-bg-dark bg-gradient container article-section">
     {% include 'includes/messages.html' %}
@@ -9,9 +10,9 @@
         <h2>Edit Article:</h2>
         <p>Posting as {{ user.username }}</p>
         <p>Required fields are marked with *</p>
-        <form method="POST" action="" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'edit-article' article.slug %}" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ article_form.as_p }}
+            {{ article_form | crispy }}
             {{ content|safe }}
             <button class="btn btn-light submit-btn" type="submit">Edit Article</button>
         </form>

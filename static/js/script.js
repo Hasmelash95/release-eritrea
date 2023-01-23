@@ -1,6 +1,5 @@
 // To get elements from the templates
 const submit = document.getElementsByClassName('submit-btn')[0];
-const peopleIcon = document.getElementById('people')
 const title = document.getElementById('id_title');
 const content = document.getElementById('id_content');
 const fave = document.getElementById('fave');
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logBtn != undefined) {
         logBtn.addEventListener('click', logClick);
     }
-})
+});
 
 /**
  * On hovering over the favorites button on the 
@@ -127,9 +126,9 @@ let visibleOnScroll = new IntersectionObserver(function(
                 entry.target.classList.add('scrolled');
                 visibleOnScroll.unobserve(entry.target);
             }
-        })
+        });
     }, fadeOptions);
 
 scrollFadeIn.forEach(fade => {
     visibleOnScroll.observe(fade);
-})
+});

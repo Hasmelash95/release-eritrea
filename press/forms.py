@@ -13,7 +13,7 @@ class ArticleForm(forms.ModelForm):
                             widget=forms.Textarea(attrs={'rows': 1,
                                                   'cols': 80}))
     content = SummernoteTextField()
-    excerpt = forms.CharField(label='Excerpt:', required=False, 
+    excerpt = forms.CharField(label='Excerpt:', required=False,
                               widget=forms.Textarea(attrs={
                                                     'rows': 4,
                                                     'cols': 80

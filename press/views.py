@@ -78,7 +78,7 @@ def edit_article(request, slug):
                        'There was a problem submitting the form.'
                        ' Make sure all required fields are filled.')
     return render(request,
-                  'edit-article.html', 
+                  'edit-article.html',
                   {
                     'article_form': article_form,
                     'article': article
@@ -164,7 +164,7 @@ class ArticleDetail(View):
         Gets the article using its unique slug along with
         the user comments and comment form.
         Adds link to add article to favorites if is_fave is False
-        and a link to remove article from favorites if is_fave is 
+        and a link to remove article from favorites if is_fave is
         True.
         """
         article = get_object_or_404(Article, slug=slug)

@@ -86,7 +86,7 @@ class TestingViews(TestCase):
         self.assertTemplateUsed(response, 'includes/messages.html')
 
         # Retrieving edit article page
-        response_two = self.client.get(reverse('edit-article', 
+        response_two = self.client.get(reverse('edit-article',
                                        args=[self.article.slug]))
         self.assertEqual(response_two.status_code, 200)
         self.assertTemplateUsed(response_two, 'base.html')
@@ -94,7 +94,7 @@ class TestingViews(TestCase):
         self.assertTemplateUsed(response, 'includes/messages.html')
 
         # Retrieving delete article page
-        response_three = self.client.get(reverse('delete', 
+        response_three = self.client.get(reverse('delete',
                                          args=[self.article.slug]))
         self.assertEqual(response_three.status_code, 200)
         self.assertTemplateUsed(response_three, 'base.html')

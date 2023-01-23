@@ -291,10 +291,6 @@ input {
     margin-bottom: 100px;
 }
 
-.filtering label {
-    padding: 10px;
-}
-
 /* Styling the form submit buttons */
 .submit-btn {
     margin-top: 10px;
@@ -521,10 +517,13 @@ footer {
         font-size: 2.5rem;
     }
 
-    .submit-btn,
     .page-link,
     .filter-link,
     .post-link {
         margin-bottom: 40px;
+    }
+
+    .submit-btn {
+        margin-top: 30px;
     }
 }

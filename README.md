@@ -279,8 +279,86 @@ Error page for a 404 error:
 ## Testing
 
 ### Validation
+  
+CSS style sheet was run through W3C CSS Validator [Jigsaw](https://jigsaw.w3.org/css-validator/validator) with no errors. 
+  
+![Screenshot 2023-01-23 at 15 26 19](https://user-images.githubusercontent.com/103432143/214079247-159c9e01-e4dc-4d52-a7ca-97f396e3cb37.png)
+
+The Home Page was run through [W3C Markup Validator](https://validator.w3.org/) with no errors.
+
+![Screenshot 2023-01-23 at 15 30 57](https://user-images.githubusercontent.com/103432143/214080111-2791ea55-b067-48d5-8791-cc1b90d4c37c.png)
+
+Info Page 
+  
+![Screenshot 2023-01-23 at 15 32 28](https://user-images.githubusercontent.com/103432143/214080284-3cee95b7-415b-4a81-a09a-a1f1aec9f8de.png)
+  
+Article Detail 
+
+![Screenshot 2023-01-23 at 15 46 22](https://user-images.githubusercontent.com/103432143/214083527-668433dd-e319-4fd4-b4ba-6cfb388ee875.png)
+
+Post and Edit Article were run through the validator and showed no errors in the custom code except:
+
+![Screenshot 2023-01-23 at 15 48 01](https://user-images.githubusercontent.com/103432143/214083892-9d04fa4e-c6c0-484c-ad53-b31e18798817.png)
+
+This is the result of a Django widget. The text area for content is unused as summernote div was used instead so django had marked the content as hidden. This isn't available in the template so could not be adjusted.
+  
+Delete Article
+  
+![Screenshot 2023-01-23 at 15 49 37](https://user-images.githubusercontent.com/103432143/214084314-ef4a37d3-8c1c-4709-a30b-002ae89e0d86.png)
+  
+Add/Remove from Favorites, Favorites, Search Filters, Error Pages, Sign In, Logout and Sign Up pages were all run through the validator with no errors.
 
 ### Performance
+  
+Lighthouse tests were run for each of the pages on the site:
+  
+Home
+  
+![Screenshot 2023-01-23 at 15 58 56](https://user-images.githubusercontent.com/103432143/214089235-e0ac8729-2224-4a33-8952-e1f496141139.png)
+  
+Info
+  
+![Screenshot 2023-01-23 at 15 59 44](https://user-images.githubusercontent.com/103432143/214089275-9be730ea-ba44-49e1-8df8-897229de2314.png)
+  
+Logout
+
+![Screenshot 2023-01-23 at 16 00 20](https://user-images.githubusercontent.com/103432143/214089304-6d5ab95a-675d-4f2c-9913-6dbf914828eb.png)
+
+Sign In
+  
+![Screenshot 2023-01-23 at 16 00 47](https://user-images.githubusercontent.com/103432143/214089325-edea0742-36fc-4557-aaee-38a7950e4066.png)
+  
+Sign Up
+  
+![Screenshot 2023-01-23 at 16 01 22](https://user-images.githubusercontent.com/103432143/214089370-70299a76-b267-4b0c-b49a-71e1e179f982.png)
+  
+Post Article
+  
+![Screenshot 2023-01-23 at 16 02 36](https://user-images.githubusercontent.com/103432143/214089409-9221c00a-3820-4855-87e3-0fed8a04175e.png)
+  
+Edit Article
+  
+![Screenshot 2023-01-23 at 16 04 08](https://user-images.githubusercontent.com/103432143/214089437-b90f5f37-eb0b-47a5-95de-79be433bf0c7.png)
+  
+Article Detail
+  
+![Screenshot 2023-01-23 at 16 03 38](https://user-images.githubusercontent.com/103432143/214089479-02acceed-8f88-4b27-9331-4a5174a57463.png)
+
+Delete Article
+  
+![Screenshot 2023-01-23 at 16 05 07](https://user-images.githubusercontent.com/103432143/214089510-578a55e0-af42-4228-93fb-640059fb4e47.png)
+  
+Add/Remove from favorites
+  
+![Screenshot 2023-01-23 at 16 05 36](https://user-images.githubusercontent.com/103432143/214089538-11156f87-233f-447a-90de-7afee675e62f.png)
+
+Favorites
+  
+![Screenshot 2023-01-23 at 16 06 08](https://user-images.githubusercontent.com/103432143/214089581-debda9da-e74a-4d6e-acde-0aecd35c0b38.png)
+  
+Search Filters
+  
+![Screenshot 2023-01-23 at 16 06 42](https://user-images.githubusercontent.com/103432143/214089621-5dc1940f-2eca-460e-bfa9-38eeea96a77a.png)
 
 ### Functional
 

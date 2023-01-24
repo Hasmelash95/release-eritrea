@@ -280,6 +280,10 @@ Error page for a 404 error:
 
 ### Validation
   
+JavaScript was run on [JSHint](https://jshint.com/) and showed no errors. 
+  
+Python code was run on [PEP8](https://pep8ci.herokuapp.com/) and showed no errors.
+  
 CSS style sheet was run through W3C CSS Validator [Jigsaw](https://jigsaw.w3.org/css-validator/validator) with no errors. 
   
 ![Screenshot 2023-01-23 at 15 26 19](https://user-images.githubusercontent.com/103432143/214079247-159c9e01-e4dc-4d52-a7ca-97f396e3cb37.png)

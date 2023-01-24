@@ -2,10 +2,10 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Article, Comment, Picture
 from django.urls import reverse
-from .forms import CommentForm, ArticleForm
+from .filters import ArticleFilter
 
 
-class TestingViews(TestCase):
+class TestingPressViews(TestCase):
     """
     Testing press views
     """
@@ -76,7 +76,7 @@ class TestingViews(TestCase):
         self.assertTemplateUsed(response, 'favorites.html')
 
     # Retrieving and testing the crud pages which need admin login
-    def test_crud(self):
+    def test_crud_view(self):
         self.client.login(username='super', password='superuserpass')
         # Retrieving post article page
         response = self.client.get(reverse('post-article'))
@@ -108,3 +108,60 @@ class TestingViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'base.html')
         self.assertTemplateUsed(response, 'fave-add.html')
+
+    # Testing whether a user can comment on a post
+    def test_comment_post(self):
+        self.client.login(username='smiletest', password='iliketosmile')
+        response = self.client.post(reverse('article-detail',
+                                            args=[self.article.slug]),
+                                    data={'subject': 'new subject',
+                                          'content': 'new comment body'})
+        self.assertRedirects(response, reverse('article-detail',
+                                               args=[self.article.slug]))
+
+    # Testing whether staff can post an article
+    def test_post_article(self):
+        self.client.login(username='super', password='superuserpass')
+        response = self.client.post(reverse('post-article'),
+                                    data={'title': 'new title',
+                                          'content': 'new content',
+                                          'tags': 0,
+                                          'excerpt': 'new excerpt'})
+        self.assertRedirects(response, reverse('article-detail',
+                                               args=['new-title']))
+
+    # Testing whether staff can edit an article
+    def test_edit_article(self):
+        self.client.login(username='super', password='superuserpass')
+        response = self.client.post(reverse('edit-article',
+                                    args=[self.article.slug]),
+                                    data={'title': 'update title',
+                                          'content': 'update content',
+                                          'tags': 1,
+                                          })
+        self.assertRedirects(response, reverse('article-detail',
+                             args=['update-title']))
+
+    # Testing whether staff can delete an article
+    def test_delete_article(self):
+        self.client.login(username='super', password='superuserpass')
+        response = self.client.post(reverse('delete',
+                                    args=[self.article.slug]))
+        self.assertRedirects(response, '/#press')
+        remaining_article = Article.objects.filter(slug=self.article.slug)
+        self.assertEqual(len(remaining_article), 0)
+
+    # Testing the add or remove from favorites function
+    def test_add_to_favorites(self):
+        self.client.login(username='smiletest', password='iliketosmile')
+        response = self.client.post(reverse('fave-add',
+                                    args=[self.article.slug]))
+        self.assertRedirects(response, reverse('article-detail',
+                             args=[self.article.slug]))
+        num_fave_articles = self.article.favorites.count()
+        self.assertEqual(self.article.favorites.count(), 1)
+        response = self.client.post(reverse('fave-add',
+                                    args=[self.article.slug]))
+        self.assertRedirects(response, reverse('article-detail',
+                             args=[self.article.slug]))
+        self.assertEqual(self.article.favorites.count(), 0)

@@ -132,3 +132,5 @@ let visibleOnScroll = new IntersectionObserver(function(
 scrollFadeIn.forEach(fade => {
     visibleOnScroll.observe(fade);
 });
+
+module.exports = { fave, favehover, faveLeave }

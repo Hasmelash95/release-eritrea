@@ -59,13 +59,15 @@ Theme - Site Layout
   
   2. Social Media - As a Site User I can find social media links on the site so that I can contact release through social media.
   
+  3. Home Page - As a Site User I can peruse the home page so that I can see all the site has to offer.
+  
 * Epic - Site Navigation
   
   1. Navigation Bar - As a Site User I can click on the navigation links so that I can go to whichever section of the page I wish.
   
   2. Visible Navbar - As a Site User I can look at the navigation bar so that I can navigate to different parts of the site at any time.
   
-  3. As a Site User I can click on links on the home page so that I can navigate to different parts of the site.
+  3. Home Page Links - As a Site User I can click on links on the home page so that I can navigate to different parts of the site.
   
 Theme - Authentication System 
 * Epic - Admin Authentication 
@@ -97,13 +99,13 @@ Theme - View and Edit Content
   
  * Gallery and Info
   
-  1. View Gallery - As a Site User I can find the gallery section so that I have a visual idea of what the org does.
+   1. View Gallery - As a Site User I can find the gallery section so that I have a visual idea of what the org does.
   
-  2. Edit Gallery - As a Site Admin I can edit, add and remove pictures so that the gallery section remains up to date.
+   2. Edit Gallery - As a Site Admin I can edit, add and remove pictures so that the gallery section remains up to date.
   
-  3. Add and Edit Info Contents - As a Site Admin I can add and remove content from the info page so that users can be updated on current team members and locations.
+   3. Add and Edit Info Contents - As a Site Admin I can add and remove content from the info page so that users can be updated on current team members and locations.
   
-  4. View Info Page - As a Site User I can can view the info page so that I can know who are the team members, how to contact them and where the offices are.
+   4. View Info Page - As a Site User I can view the info page so that I can know who are the team members, how to contact them and where the offices are.
 
 ### Scope
   
@@ -455,6 +457,8 @@ Website was tested on Safari, Firefox, Google Chrome, Microsoft Edge, iOS and An
 User Stories were tested for whether they fulfilled the acceptance criteria defined within [Issues](https://github.com/Hasmelash95/release-eritrea/issues). They fulfilled the criteria. 
   
 The only exception are those User Stories that were labelled "won't do" as they'll be added in the next iteration.
+  
+[User Stories Test](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/testing/release-user-stories.pdf)
 
 ## Bugs and Fixes
   

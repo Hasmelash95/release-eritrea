@@ -451,6 +451,10 @@ Functional tests were carried out to ensure the features of the site were workin
 Website was tested on Safari, Firefox, Google Chrome, Microsoft Edge, iOS and Android devices and was compatible with all of them. 
   
 ### Testing User Stories
+  
+User Stories were tested for whether they fulfilled the acceptance criteria defined within [Issues](https://github.com/Hasmelash95/release-eritrea/issues). They fulfilled the criteria. 
+  
+The only exception are those User Stories that were labelled "won't do" as they'll be added in the next iteration.
 
 ## Bugs and Fixes
   

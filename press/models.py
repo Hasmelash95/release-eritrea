@@ -58,7 +58,7 @@ class Picture(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    alt = models.TextField(null=True, blank=True)
+    alt = models.TextField(default='Release Eritrea gallery picture')
     image = CloudinaryField('image', default='temporary')
 
     class Meta:

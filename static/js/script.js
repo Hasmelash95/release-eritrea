@@ -1,7 +1,7 @@
 // To get elements from the templates
 const submit = document.getElementsByClassName('submit-btn')[0];
 const title = document.getElementById('id_title');
-const content = document.getElementById('id_content');
+const content = document.getElementById('id_content_iframe');
 const username = document.getElementById('id_login');
 const email = document.getElementById('id_email');
 const password = document.getElementById('id_password');

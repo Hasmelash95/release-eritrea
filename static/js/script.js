@@ -1,7 +1,6 @@
 // To get elements from the templates
 const submit = document.getElementsByClassName('submit-btn')[0];
 const title = document.getElementById('id_title');
-const content = document.getElementById('id_content_iframe');
 const username = document.getElementById('id_login');
 const email = document.getElementById('id_email');
 const password = document.getElementById('id_password');
@@ -87,9 +86,6 @@ function filterLeave() {
 function submitCheck() {
     if (title.value.length == 0) {
         alert('The article needs a title!');
-    }
-    else if (content.value.length == 0) {
-        alert('The article needs content!');
     }
 }
 

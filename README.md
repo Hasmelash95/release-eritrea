@@ -222,8 +222,8 @@ Admin may click on the edit or delete buttons, or post a new article article fro
 ![Screenshot 2023-01-22 at 14 45 17](https://user-images.githubusercontent.com/103432143/213921908-077fcc08-c2e2-4746-bb4e-3bb06b8f772e.png)
   
 ![Screenshot 2023-01-23 at 15 10 34](https://user-images.githubusercontent.com/103432143/214075282-0581d278-6df1-4ef9-b8ee-88b088f4a4e6.png)
-
-![Screenshot 2023-01-23 at 15 11 06](https://user-images.githubusercontent.com/103432143/214075317-6527a0ef-8ebc-484d-bef8-a240742822c8.png)
+  
+![Screenshot 2023-01-25 at 05 27 53](https://user-images.githubusercontent.com/103432143/214487232-ae405d81-d9c5-4fdd-9e8c-c2c30fd81abc.png)
   
 The Search Filter page allows users to find the article they need through tags or words or phrases in the title.
   
@@ -283,7 +283,9 @@ Error page for a 404 error:
 JavaScript was run on [JSHint](https://jshint.com/) and showed no errors. 
   
 Python code was run on [PEP8](https://pep8ci.herokuapp.com/) and showed no errors.
-  
+
+![Screenshot 2023-01-25 at 05 32 35](https://user-images.githubusercontent.com/103432143/214487771-281f2329-94f9-48cf-a8e0-8fc85cf90996.png)
+
 CSS style sheet was run through W3C CSS Validator [Jigsaw](https://jigsaw.w3.org/css-validator/validator) with no errors. 
   
 ![Screenshot 2023-01-23 at 15 26 19](https://user-images.githubusercontent.com/103432143/214079247-159c9e01-e4dc-4d52-a7ca-97f396e3cb37.png)
@@ -310,7 +312,33 @@ Delete Article
   
 ![Screenshot 2023-01-23 at 15 49 37](https://user-images.githubusercontent.com/103432143/214084314-ef4a37d3-8c1c-4709-a30b-002ae89e0d86.png)
   
-Add/Remove from Favorites, Favorites, Search Filters, Error Pages, Sign In, Logout and Sign Up pages were all run through the validator with no errors.
+Add/Remove from Favorites
+  
+![Screenshot 2023-01-25 at 05 35 24](https://user-images.githubusercontent.com/103432143/214488094-f24cbba7-cb67-4339-8d4b-41cdbaf90485.png)
+
+Favorites 
+  
+![Screenshot 2023-01-25 at 05 36 09](https://user-images.githubusercontent.com/103432143/214488159-459ba9ed-e8c9-40ca-8b84-6dc11a8b8a10.png)
+  
+Search Filters
+  
+![Screenshot 2023-01-25 at 05 36 50](https://user-images.githubusercontent.com/103432143/214488238-1dbce5d9-8f89-4430-9d34-cf248fd87f78.png)
+  
+Error 404 
+  
+![Screenshot 2023-01-25 at 05 37 45](https://user-images.githubusercontent.com/103432143/214488403-0879a2ce-7a63-4e57-ba32-ee61424acf14.png)
+  
+Sign In
+
+![Screenshot 2023-01-25 at 05 39 39](https://user-images.githubusercontent.com/103432143/214488616-cd9724b3-b289-4870-a604-a881ee33a0de.png)
+  
+Logout 
+  
+![Screenshot 2023-01-25 at 05 38 43](https://user-images.githubusercontent.com/103432143/214488505-ad3e23d3-195e-4571-a9c8-92e149c0e128.png)
+
+Sign Up 
+  
+![Screenshot 2023-01-25 at 05 41 08](https://user-images.githubusercontent.com/103432143/214488802-9f3a7e39-c2d8-4901-a2bd-fe097b32eb60.png)
 
 ### Performance
   
@@ -369,6 +397,8 @@ Search Filters
 ### Responsive Design
 
 ### Browser Compatibility 
+  
+### Testing User Stories
 
 ## Bugs and Fixes
 

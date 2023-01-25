@@ -232,7 +232,7 @@ Admin may click on the edit or delete buttons, or post a new article article fro
   
 The Search Filter page allows users to find the article they need through tags or words or phrases in the title.
   
-![Screenshot 2023-01-22 at 14 47 13](https://user-images.githubusercontent.com/103432143/213922002-727f4363-016d-441f-ae3f-7b456e9b81a5.png)
+![Screenshot 2023-01-25 at 15 45 00](https://user-images.githubusercontent.com/103432143/214609259-4c2fc7b2-a4d2-469c-b23f-b50eaa1e6965.png)
 
 ### Gallery
   

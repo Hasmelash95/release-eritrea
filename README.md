@@ -341,7 +341,7 @@ Post and Edit Article were run through the validator and showed no errors in the
 
 ![Screenshot 2023-01-23 at 15 48 01](https://user-images.githubusercontent.com/103432143/214083892-9d04fa4e-c6c0-484c-ad53-b31e18798817.png)
 
-This is the result of a Django widget. The text area for content is unused as summernote div was used instead so django had marked the content as hidden. This isn't available in the template so could not be adjusted.
+This is the result of a Django widget. This isn't available in the django-summernote templates so could not be adjusted.
   
 Delete Article
   
@@ -470,7 +470,7 @@ The only exception are those User Stories that were labelled "won't do" as they'
   4. Summernote was creating validation errors due to attributes used in the widget. This was resolved by copying the iframe file (found in the summernote div github) into a template in my directory and manually removing the attributes. 
   
   ### Unfixed Bugs
-  1. There are no unfixed bugs remaining, besides the validation error triggered in the form pages due to the presence of an unsued django widget that could not be adjusted.
+  1. There are no unfixed bugs remaining, besides the validation error triggered in the form pages due to the presence of an django widget that could not be adjusted.
 
 ## Deployment
 

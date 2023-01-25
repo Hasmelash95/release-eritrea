@@ -502,7 +502,7 @@ The only exception are those User Stories that were labelled "won't do" as they'
 
 I would like to thank my mentor Brian Macharia for his help during the project. I am more than grateful for his advice and guidance and he has truly helped me feel more confident in my code. 
   
-A huge thanks to the tutor team at Code Institute for helping with difficulties during the automatic testing process. I'd also like to thank Code Insistute for their resources - such as Hello Django and I Think I Blog walkthroughs. The latter of which was helpful in building my Article and Comment models.
+A huge thanks to the tutor team at Code Institute for helping with difficulties during the automatic testing process. I'd also like to thank Code Insistute for their resources which taught me how to use the Django framework - such as Hello Django and I Think I Blog walkthroughs. The latter of which was helpful in building my Article and Comment models.
   
 I'd like to thank Release Eritrea for the resources they'd given, such as images and articles to use for the website. 
   
@@ -510,4 +510,4 @@ The hero image was from [Unsplash by Eyasu Etsub](https://unsplash.com/photos/5w
   
 [Font Awesome](https://fontawesome.com/icons) was used for the icons used throughout the site. 
   
-Intersection Observer API from MDN[https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API] for fade on scroll effect.
+Intersection Observer API from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for fade on scroll effect.

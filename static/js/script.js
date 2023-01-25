@@ -2,6 +2,10 @@
 const submit = document.getElementsByClassName('submit-btn')[0];
 const title = document.getElementById('id_title');
 const content = document.getElementById('id_content');
+const username = document.getElementById('id_login');
+const email = document.getElementById('id_email');
+const password = document.getElementById('id_password');
+const passwordTwo = document.getElementById('id_password2');
 const fave = document.getElementById('fave');
 const filter = document.getElementById('filter');
 const pressIcon = document.getElementById('press-icon');
@@ -95,7 +99,24 @@ function submitCheck() {
  */
 function logClick() {
     logMsg.classList.remove('visually-hidden');
+
+    if (username != undefined && password != undefined) {
+        if (username.value.length == 0 || password.value.length == 0) {
+            logMsg.classList.add('visually-hidden');
+        }
+    }
+
+    if (passwordTwo != undefined) {
+        if (passwordTwo.value == 0) {
+            logMsg.classList.add('visually-hidden');
+        }
+    }
     
+    if (email != undefined) {
+        if (email.value.length !=0 && !email.value.includes('@')) {
+            logMsg.classList.add('visually-hidden');
+        }
+    }
 }
 
 // Sets the year on the footer to the present year
@@ -132,5 +153,3 @@ let visibleOnScroll = new IntersectionObserver(function(
 scrollFadeIn.forEach(fade => {
     visibleOnScroll.observe(fade);
 });
-
-module.exports = { fave, favehover, faveLeave }

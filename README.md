@@ -393,8 +393,26 @@ Search Filters
 ![Screenshot 2023-01-23 at 16 06 42](https://user-images.githubusercontent.com/103432143/214089621-5dc1940f-2eca-460e-bfa9-38eeea96a77a.png)
 
 ### Functional
+  
+Functional tests were carried out to ensure the features of the site were working correctly. 
+  
+[Manual Functional Tests](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/testing/functional-tests.pdf)
+
+[Press Views Automatic Tests](https://github.com/Hasmelash95/release-eritrea/blob/main/press/tests.py)
+
+[Info Views Automatic Tests](https://github.com/Hasmelash95/release-eritrea/blob/main/info/views.py)
+  
+![Test Screenshot](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/testing/automatic-test-screenshot.png)
 
 ### Responsive Design
+  
+[Home Page Mockups](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/mockups/home-page.png)
+  
+[Info Page Mockups](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/mockups/info-page.png)
+
+[Article Detail Mockups](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/mockups/article-detail.png)
+  
+[Article Filter Mockups](https://github.com/Hasmelash95/release-eritrea/blob/main/README-assets/mockups/article-filter.png)
 
 ### Browser Compatibility 
   

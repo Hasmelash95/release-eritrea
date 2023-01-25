@@ -448,9 +448,20 @@ Functional tests were carried out to ensure the features of the site were workin
 
 ### Browser Compatibility 
   
+Website was tested on Safari, Firefox, Google Chrome, Microsoft Edge, iOS and Android devices and was compatible with all of them. 
+  
 ### Testing User Stories
 
 ## Bugs and Fixes
+  
+  ### Fixed Bugs
+  1. Edit article did not keep the input fields filled in, leading users to an empty form. This was fixed by adding the 'article': article to the context.
+  2. Post article did not keep the input fields when the user's form was invalid triggering a refresh of the page. This was fixed by adding article_form = ArticleForm() at the top of the function. 
+  3. The spinner showed up when the user clicked the sign in/sign up buttons even if the input was empty. If statements were added to ensure the spinner showed up when the required fields were filled in. 
+  4. Summernote was creating validation errors due to attributes used in the widget. This was resolved by copying the iframe file (found in the summernote div github) into a template in my directory and manually removing the attributes. 
+  
+  ### Unfixed Bugs
+  1. There are no unfixed bugs remaining, besides the validation error triggered in the form pages due to the presence of an unsued django widget that could not be adjusted.
 
 ## Deployment
   

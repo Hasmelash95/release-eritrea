@@ -27,6 +27,8 @@ Proclaim! Release Eritrea is a human rights charity advocating for the persecute
 * [Error Pages](#error-pages)
 * [Future Features](#future-features)
 
+[Technologies Used](#technologies-used)
+
 [Testing](#testing)
 * [Validation](#validation)
 * [Performance](#performance)
@@ -207,7 +209,7 @@ In addition, links are provided to give users additional resources, such as link
   
 The main draw of the site is of course the press releases. Previews with links to the detailed pages of the articles allow users to peruse through the many pages and click on whichever article captures their attention. 
   
-![Screenshot 2023-01-22 at 14 44 46](https://user-images.githubusercontent.com/103432143/213921879-b218ea40-397e-46cb-b8b6-4d28f44a5775.png)
+![Screenshot 2023-01-25 at 06 45 18](https://user-images.githubusercontent.com/103432143/214497993-57f38143-0bb3-48dc-9d4e-1b0165aa4db8.png)
   
 Article detail pages have a comment section with a comment form, the latter of which is only visible to logged in users. Comments must be approved by the admin to be visible under the article.
   
@@ -275,6 +277,36 @@ Error page for a 404 error:
 2. Add a Donation feature via debit card and paypal. [In the To Do section](https://github.com/users/Hasmelash95/projects/3).
 3. Add a Contact Us page to allow users to send direct messages to the organisation from the website. 
 4. Offer a subscription service which will give users alerts when a new article is added to the site.
+  
+## Technologies Used 
+  
+HTML5
+  
+CSS3
+  
+Python 
+  
+JavaScript
+  
+Gitpod
+  
+Git
+  
+Heroku
+
+Django
+  
+[Bootstrap v5.3](https://getbootstrap.com/)
+
+[Cloudinary](https://cloudinary.com/)
+
+[django-filter](https://django-filter.readthedocs.io/en/stable/)
+  
+[django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  
+[django-summernote](https://github.com/summernote/django-summernote)
+  
+[Whitenoise](https://whitenoise.evans.io/en/latest/)
 
 ## Testing
 

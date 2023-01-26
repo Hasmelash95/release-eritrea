@@ -310,7 +310,7 @@ Django
 [django-summernote](https://github.com/summernote/django-summernote)
   
 [Whitenoise](https://whitenoise.evans.io/en/latest/)
-
+  
 ## Testing
 
 ### Validation
@@ -511,3 +511,5 @@ The hero image was from [Unsplash by Eyasu Etsub](https://unsplash.com/photos/5w
 [Font Awesome](https://fontawesome.com/icons) was used for the icons used throughout the site. 
   
 Intersection Observer API from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for fade on scroll effect.
+  
+[Favicon Generator](https://favicon.io/)

@@ -10,14 +10,14 @@
          <h2 class="section-headers text-black">Proclaim 'Release!' for Eritrea</h2>
          <p class="verse-text">
             <em>
-            "The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the
-            poor. He has sent me to comfort the brokenhearted and to proclaim that captives will be released and
-            prisoners will be freed."
+               "The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the
+               poor. He has sent me to comfort the brokenhearted and to proclaim that captives will be released and
+               prisoners will be freed."
             </em>
          </p>
          <p>
             <em>
-            - Isaiah 61: 1
+               - Isaiah 61: 1
             </em>
          </p>
       </div>
@@ -29,8 +29,13 @@
 <!-- About section -->
 <section id="about">
    <div class="row what-is fade-in text-bg-dark bg-gradient">
+      <div class="col">
+         <img
+            src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674400847/Release%20Eritrea/ethiopia-shimelba_sgidpy_mdb6gb.jpg"
+            alt="People praying in a church in Ethiopia" id="balloon-img">
+      </div>
       <div class="col what-is-text">
-         <h2>What Is Release Eritrea? <i class="fa-solid fa-globe"></i></h2>
+         <h2 class="what-is-header">What Is Release Eritrea? <i class="fa-solid fa-globe"></i></h2>
          <h3>
             Release Eritrea is a global partnership of Eritrean Evangelicals standing in solidarity with
             the persecuted Eritrean church.
@@ -46,136 +51,155 @@
             to their wish'.
          </p>
          <p>
-            The unitary one-party presidential prepublic is considered by Human Rights Watch to have among
-            the worst human rights record in the world.
+            The unitary one-party presidential republic's human rights record is considered by Human Rights Watch to
+            be among the worst in the world.
          </p>
       </div>
-      <div class="col">
-         <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674400847/Release%20Eritrea/ethiopia-shimelba_sgidpy_mdb6gb.jpg"
-            alt="People praying in a church in Ethiopia" id="balloon-img">
-      </div>
    </div>
-   <div class="what fade-in text-bg-light">
+   <div class="row what fade-in text-bg-light" id="featured-3">
       <h2 class="section-headers what-heading text-black">What We Do <i class="fa-solid fa-hands-praying"></i></h2>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-         <div class="col card border border-dark rounded-pill text-center what-do text-bg-secondary bg-gradient">
-            <i class="fa-solid fa-cross"></i>
-            <p> Leading and coordinating prayer and intercession for human right victims.</p>
+      <div class="row g-3 row-cols-1 row-cols-lg-3">
+         <div class="feature col text-center what-do text-dark">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+               <i class="fa-solid fa-cross"></i>
+            </div>
+            <h4> Leading and coordinating prayer and intercession for human right victims.</h4>
          </div>
-         <div class="col card border border-dark  rounded-pill text-center what-do text-bg-dark bg-gradient">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <p>Advocacy on behalf of victims of abuse.</p>
+         <div class="feature col text-center what-do text-dark">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+               <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <h4>Advocacy on behalf of victims of abuse.</h4>
          </div>
-         <div class="col card rounded-pill text-center what-do text-white bg-black bg-gradient">
-            <i class="fa-solid fa-gift"></i>
-            <p>Providing humanitarian assistance to prisoners, their families and refugees.</p>
+         <div class="feature col text-center what-do text-dark">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+               <i class="fa-solid fa-gift"></i>
+            </div>
+            <h4>Providing humanitarian assistance to prisoners, their families and refugees.</h4>
          </div>
       </div>
    </div>
-   <div class="row text-bg-dark fade-in who bg-gradient">
-      <h2 class="section-headers">Who We Are <i class="fa-solid fa-people-group"></i></h2>
-      <a href="{% url 'info' %}" aria-label="Link to the Team page" class="link-light who-link">
-      Click here to find out more about our members and where we're located. 
-      <i class="fa-solid fa-dove"> </i>
-      </a>
-      <a href="https://releaseinternational.org/" class="link-light who-link" 
-         aria-label="Opens link to the release international site in a new tab" target="_blank">
-      To learn more about our partners in Release International, check out their site.
-      <i class="fa-solid fa-arrow-up-right-from-square"> </i>
-      </a>
-      <a href="https://www.churchinchains.ie/" class="link-light who-link" 
-         aria-label="Opens link to the church in chains site in a new tab" target="_blank">
-      To learn more about our partners in Church in Chains, check out their site.
-      <i class="fa-solid fa-arrow-up-right-from-square"> </i>
-      </a>
+   <div class="row text-bg-dark fade-in who bg-gradient" id="featured-3">
+      <h2 class="section-headers who-header">Who We Are <i class="fa-solid fa-people-group"></i></h2>
+      <div class="row g-3 row-cols-1 row-cols-lg-3">
+         <div class="feature col text-center">
+            <h4>Our Team</h4>
+            <a href="{% url 'info' %}" aria-label="Link to the Team page" class="link-light who-link">
+               Click here to find out more about our members and where we're located.
+               <i class="fa-solid fa-dove"> </i>
+            </a>
+         </div>
+         <div class="feature col text-center">
+            <h4 class="text-center">Our Partners</h4>
+            <a href="https://releaseinternational.org/" class="link-light who-link"
+               aria-label="Opens link to the release international site in a new tab" target="_blank">
+               To learn more about our partners in Release International, check out their site.
+               <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+            </a>
+         </div>
+         <div class="feature col text-center">
+            <h4 class="text-center">Our Partners</h4>
+            <a href="https://www.churchinchains.ie/" class="link-light who-link"
+               aria-label="Opens link to the church in chains site in a new tab" target="_blank">
+               To learn more about our partners in Church in Chains, check out their site.
+               <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+            </a>
+         </div>
+      </div>
    </div>
 </section>
 <hr>
 <!-- Press Releases -->
 <main id="press" class="fade-in">
-   <h2 class="section-headers">Press Releases <i id="press-icon" class="fa-solid fa-bullhorn"></i></h2>
+   <h2 class="press-header section-headers">Press Releases <i id="press-icon" class="fa-solid fa-bullhorn"></i></h2>
    {% include 'includes/messages.html' %}
    <div>
       {% if user.is_staff %}
       <span>
-      <a href="{% url 'post-article' %}" aria-label="Link to the post article form" class="btn btn-dark post-link">
-      Post a new article <i class="fa-solid fa-pen-to-square"></i>
-      </a>
+         <a href="{% url 'post-article' %}" aria-label="Link to the post article form" class="btn btn-dark post-link">
+            Post a new article <i class="fa-solid fa-pen-to-square"></i>
+         </a>
       </span>
       {% endif %}
       {% if user.is_authenticated %}
       <span>
-      <a href="{% url 'favorites' %}" aria-label="Link to the user favorites page" id="fave" class="btn btn-success filter-link">
-      Favorites <i class="fa-solid fa-heart"></i>
-      </a>
+         <a href="{% url 'favorites' %}" aria-label="Link to the user favorites page" id="fave"
+            class="btn btn-success filter-link">
+            Favorites <i class="fa-solid fa-heart"></i>
+         </a>
       </span>
       {% endif %}
       <span>
-      <a href="{% url 'filter' %}" aria-label="Link to the search filters page" id="filter" class="btn btn-secondary filter-link">
-      Search Filters <i class="fa-solid fa-magnifying-glass"></i>
-      </a> 
+         <a href="{% url 'filter' %}" aria-label="Link to the search filters page" id="filter"
+            class="btn btn-secondary filter-link">
+            Search Filters <i class="fa-solid fa-magnifying-glass"></i>
+         </a>
       </span>
    </div>
-   <div class="row row-cols-1 row-cols-md-2 g-4">
+   <div class="row row-cols-1 row-cols-md-3 g-3">
       {% for article in object_list %}
-      <article class="col card article-box bg-light bg-gradient">
-         <a href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
+      <div class="col card article-box bg-light bg-gradient mb-2 mx-auto">
+         <a class="link-body-emphasis link-underline-opacity-0 link-underline-opacity-75-hover" href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page"
+            class="card-body">
             <h4 class="card-header">{{ article.title }}</h4>
             <p class="card-text"> Author: Release Eritrea </p>
             <p class="card-text"> {{ article.excerpt }} </p>
             <p><em>Posted on {{ article.created_on }}</em></p>
          </a>
          {% if user.is_staff %}
-         <a href="{% url 'edit-article' article.slug %}" aria-label="Link to the edit article form" class="link-primary">Edit article</a>
-         <a href="{% url 'delete' article.slug %}" aria-label="Link to the delete article form" class="link-danger">Delete article</a>
+         <a href="{% url 'edit-article' article.slug %}" aria-label="Link to the edit article form"
+            class="link-primary">Edit article</a>
+         <a href="{% url 'delete' article.slug %}" aria-label="Link to the delete article form"
+            class="link-danger">Delete article</a>
          {% endif %}
-      </article>
+      </div>
       {% endfor %}
    </div>
    <div>
       <span class="page-info text-light"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
       <ul class="pagination justify-content-center">
          {% if page_obj.has_previous %}
-         <li class="page-item" p><a href="?page=1#press" aria-label="Link to the first page of article list" 
-            class="page-link">First</a></li>
+         <li class="page-item"><a href="?page=1#press" aria-label="Link to the first page of article list"
+               class="page-link">First</a></li>
          <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}#press"
-            aria-label="Link to the previous page of article list" class="page-link">Previous</a></li>
+               aria-label="Link to the previous page of article list" class="page-link">Previous</a></li>
          {% endif %}
          {% for page in page_obj.paginator.page_range %}
          {% if page_obj.number == page %}
          <li class="page-item"><a class="page-link active" href="?page={{ page }}#press"
-            aria-label="Link to the current page of article list">{{ page }}</a></li>
+               aria-label="Link to the current page of article list">{{ page }}</a></li>
          {% else %}
          <li class="page-item"><a class="page-link" href="?page={{ page }}#press"
-            aria-label="Link to the specified page of article list">{{ page }}</a></li>
+               aria-label="Link to the specified page of article list">{{ page }}</a></li>
          {% endif %}
          {% endfor %}
          {% if page_obj.has_next %}
          <li class="page-item"><a href="?page={{ page_obj.next_page_number }}#press"
-            aria-label="Link to the next page of article list" class="page-link">Next</a></li>
-         <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press" 
-            aria-label="Link to the last page of article list" class="page-link">Last</a></li>
+               aria-label="Link to the next page of article list" class="page-link">Next</a></li>
+         <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}#press"
+               aria-label="Link to the last page of article list" class="page-link">Last</a></li>
       </ul>
       {% endif %}
    </div>
 </main>
 <hr>
 <!-- Gallery -->
-<section id="gallery" class="gallery-section fade-in">
-   <h2 class="section-headers">Gallery <i class="fa-solid fa-camera"></i></h2>
-   <div class="row row-cols-1 row-cols-md-3 g-4">
+<section id="gallery" class="gallery-section text-bg-secondary fade-in">
+   <h2 class="press-header section-headers">Gallery <i class="fa-solid fa-camera"></i></h2>
+   <div class="row row-cols-1 row-cols-md-3 g-3">
       {% for pic in picture %}
       <div class="col text-center">
-         <div class="image-cards card text-bg-dark bg-gradient">
+         <div class="image-cards card text-bg-secondary border-0 mx-auto">
             <h5 class="card-title">{{ pic.title }}</h5>
             {% if "temporary" in pic.image.url %}
-            <a href="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" target="_blank" 
-            aria-label="Opens image link in a new tab">
+            <a href="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" target="_blank"
+               aria-label="Opens image link in a new tab">
             </a>
-            <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg" alt="Temporary image">
+            <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1674065180/temporary_dewiqw.jpg"
+               alt="Temporary image">
             {% else %}
             <a href="{{ pic.image.url }}" target="_blank" aria-label="Opens image link in a new tab">
-            <img src="{{ pic.image.url }}" class="img-fluid" alt="{{ pic.alt }}">
+               <img src="{{ pic.image.url }}" class="img-fluid border border-light" alt="{{ pic.alt }}">
             </a>
             {% endif %}
          </div>

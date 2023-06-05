@@ -44,9 +44,9 @@
       <div class="comments">
          {% for comment in comments %}
          <div class="comment-format">
-            <div>Written by {{ comment.user }}</div>
-            <div><em>Posted on {{ comment.created_on }}</em></div>
-            <div>Subject: {{ comment.subject}}</div>
+            <div class="text-decoration-underline">Written by {{ comment.user }}</div>
+            <div class="text-decoration-underline"><em>Posted on {{ comment.created_on }}</em></div>
+            <div class="text-decoration-underline">Subject: {{ comment.subject}}</div>
             <div>{{ comment.content | safe }}</div>
             <br>
          </div>

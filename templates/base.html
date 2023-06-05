@@ -9,10 +9,10 @@
       <meta name="description" content="Proclaim Release Eritrea website">
       <meta name="keywords" content="release-ertirea, release, eritrea, proclaim">
       <meta name="author" content="Hermon Asmelash">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
       <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,7 +21,7 @@
    <body>
     <!-- Header and Nav -->
       <header>
-         <nav class="row navbar navbar-expand-lg fixed-top bg-light" id="navbarScrolling">
+         <nav class="row navbar navbar-expand-xlg fixed-top bg-light" id="navbarScrolling">
             <span class="col navbar-brand logo">
             <a href="{% url 'home' %}" class="link-dark nav-link" aria-label="Link to the home page">
             <img src="https://res.cloudinary.com/dmdrwfzlx/image/upload/v1669129682/Release_Eritrea-logos_x50ajb.jpg"
@@ -34,23 +34,23 @@
                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarElement">
+            <div class="collapse navbar-collapse bg-light-gradient" id="navbarElement">
                {% with request.resolver_match.url_name as url_name %}
                <ul class="col-6 nav justify-content-end navbar-nav me-auto text-bg-light mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link {% if url_name == 'home' %}active"
+                  <li class="nav-item"><a class="nav-link link-dark {% if url_name == 'home' %}active"
                      aria-current="page{% endif %}" href="{% url 'home' %}" aria-label="Link to home page">
                      <strong>Home</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about" aria-label="Link to about section">
+                  <li class="nav-item"><a class="nav-link link-dark" href="{% url 'home' %}#about" aria-label="Link to about section">
                      <strong>About Us</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#press" aria-label="Link to press releases section">
+                  <li class="nav-item"><a class="nav-link link-dark" href="{% url 'home' %}#press" aria-label="Link to press releases section">
                      <strong>Press Releases</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#gallery" aria-label="Link to gallery section">
+                  <li class="nav-item"><a class="nav-link link-dark" href="{% url 'home' %}#gallery" aria-label="Link to gallery section">
                      <strong>Gallery</strong></a>
                   </li>
-                  <li class="nav-item"><a class="nav-link {% if url_name == 'info' %}active"
+                  <li class="nav-item"><a class="nav-link link-dark {% if url_name == 'info' %}active"
                      aria-current="page{% endif %}" href="{% url 'info' %}" aria-label="Link to info page">
                      <strong>The Team</strong></a>
                   </li>
@@ -58,7 +58,7 @@
                   <li class="nav-item nav-link text-dark"><strong>Hello {{ user }}! </strong><a
                      href="{% url 'account_logout' %}" aria-label="Link to logout page" class="link-primary">Logout</a></li>
                   {% else %}
-                  <li class="nav-item"><a href="{% url 'account_login' %}" aria-label="Link to log in page" class="nav-link link-info">
+                  <li class="nav-item"><a href="{% url 'account_login' %}" aria-label="Link to log in page" class="nav-link link-success">
                      Sign In</a>
                   </li>
                   <li class="nav-item"><a href="{% url 'account_signup' %}" aria-label="Link to sign up page" class="nav-link link-primary">
@@ -74,7 +74,7 @@
       {% block content %}
       {% endblock %}
       <!-- Footer -->
-      <footer class="text-bg-secondary bg-gradient">
+      <footer class="text-bg-light bg-gradient">
          <div class="row container-fluid">
             <span class="col foot-logo logo">
             <a href="{% url 'home' %}" aria-label="Link to the home page">
@@ -82,7 +82,7 @@
                alt="release eritrea logo">
             </a>
             </span>
-            <div class="col copyright">
+            <div class="col fw-bold copyright">
                <div>
                   &copy; Release Eritrea <span id="current-year"></span>
                </div>

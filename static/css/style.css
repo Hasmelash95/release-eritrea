@@ -16,17 +16,16 @@ body {
     max-width: 2000px;
     background-image: var(--bs-gradient);
     font-size: 1rem;
-
+    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-
 /* Navigation bar */
 nav {
     max-width: 2000px;
-    height: 130px;
+    height: 140px;
 }
 
 /* Allow the page to scroll but the bar to remain put */
@@ -43,18 +42,15 @@ hr {
 h1, 
 h2,
 h3,
-h4 {
+h4,
+.image-cards h5 {
     font-family: 'Noto Serif Oriya', serif;
 }
 
 /* Styling for the individual nav links */
 nav li {
-    margin-left: 5px;
+    margin-left: 10px;
 }
-
-.nav-link {
-    color: black;
-} 
 
 .nav-link:hover {
     color: rgb(135, 164, 173);
@@ -86,7 +82,7 @@ span img {
 /* Styling for the section headers */
 .section-headers {
     color:#fff;
-    margin: 50px 0 30px 20px;
+    margin: 50px 0 20px;
 }
 
 /*  Nav links when page is active */
@@ -154,12 +150,16 @@ nav .active {
 
 /* Styling for what is section */
 .what-is {
-    margin-top: 30px;
     padding: 60px 30px;
 }
 
 .what-is-text {
     min-width: 32rem;
+}
+
+.what-is-header {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 /* Image in what is section */
@@ -169,7 +169,7 @@ nav .active {
 
 .who,
 .what {
-    margin-top: 80px;
+    padding-bottom: 3rem;
 }
 
 /* Styling for who section with external links */
@@ -199,17 +199,16 @@ div .log-msg {
 }
 
 /* Styling for article cards and what do cards */
-.article-box,
-.what-do {
-    margin: 30px 5px;
-    max-width: 450px;
-    left: 10px;
+.article-box {
     padding: 20px;
+    width: 450px;
 }
 
 /* Heading of what is section */
-.what-heading {
-    padding-top: 50px;
+.what-heading,
+.who-header,
+.press-header {
+    text-align: center;
 }
 
 /* Styling for article detail and info page */
@@ -218,6 +217,10 @@ div .log-msg {
     margin: 180px 50px 75px;
     padding: 30px;
     max-width: 1300px;
+}
+
+.pagination {
+    margin-top: 20px;
 }
 
 /* Styling for the dates */
@@ -229,7 +232,13 @@ div .log-msg {
 
 /* Styling for pagination button for active page */
 .page-link.active {
+    text-decoration: underline;
     background-color:rgb(33, 37, 42);
+    border-color: rgb(33, 37, 42);
+}
+
+.card-header {
+    min-height: 7rem;
 }
 
 /* Styling for the cards in the info page */
@@ -285,7 +294,6 @@ input {
     width: 100%;
 }
 
-
 /* Styling the article filter page */
 .filtering {
     margin-bottom: 100px;
@@ -308,13 +316,14 @@ input {
 }
 
 .gallery-section {
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 130px;
+    margin-top: 50px;
 }
 
 /* Styling for the footer */
 footer {
     margin-top: auto;
-    
 }
 
 .copyright,
@@ -325,7 +334,7 @@ footer {
 }
 
 .contact i {
-    color: #fff;
+    color: rgb(4, 25, 40);
     font-size: 2rem;
     padding: 0 10px;
 }
@@ -335,7 +344,7 @@ footer {
 }
 
 .contact i:hover {
-    color: rgb(0, 95, 161);
+    color: rgb(17, 106, 170);
 }
 
 /* Media queries for large screens */
@@ -354,7 +363,7 @@ footer {
 @media screen and (max-width: 900px) {
 
     body {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     textarea {
@@ -478,10 +487,6 @@ footer {
 
     textarea {
         width: 280px;
-    }
-
-    .what-do {
-        width: 300px;
     }
 
     .contact i {

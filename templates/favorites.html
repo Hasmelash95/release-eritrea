@@ -4,11 +4,11 @@
 {% block content %}
 <!-- Lists logged in user's favorite articles -->
 <section class="article-section container text-bg-success bg-gradient">
-   <h2>{{ user }}'s Favorite Articles <i class="fa-solid fa-heart"></i></h2>
-   <div class="row row-cols-1 row-cols-md-2 g-6">
+   <h2 class="press-header p-3">{{ user }}'s Favorite Articles <i class="fa-solid fa-heart"></i></h2>
+   <div class="row row-cols-1 row-cols-md-2 g-3">
       {% for article in articles %}
-      <article class="col card article-box text-bg-light bg-gradient">
-         <a href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
+      <div class="col card article-box text-bg-light bg-gradient mb-2 mx-auto">
+         <a class="link-body-emphasis link-underline-opacity-0 link-underline-opacity-75-hover" href="{% url 'article-detail' article.slug %}" aria-label="Link to the article detail page" class="card-body">
             <h4 class="card-header">{{ article.title }} </h4>
             <p class="card-text"> Author: Release Eritrea </p>
             <p class="card-text"> {{ article.excerpt }} </p>
@@ -18,7 +18,7 @@
          <a href="{% url 'edit-article' article.slug %}" aria-label="Link to the edit article form" class="link-primary">Edit article</a>
          <a href="{% url 'delete' article.slug %}" aria-label="Link to the delete article form" class="link-danger">Delete article</a>
          {% endif %}
-      </article>
+      </div>
       {% endfor %}
    </div>
 </section>

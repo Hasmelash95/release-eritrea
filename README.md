@@ -276,8 +276,8 @@ Error page for a 404 error:
 
 ### Future Features
   
-1. Allow Users to Edit comments, which will then need to be re-approved by the Admin. [In the To Do section](https://github.com/users/Hasmelash95/projects/3).
-2. Add a Donation feature via debit card and paypal. [In the To Do section](https://github.com/users/Hasmelash95/projects/3).
+1. Items that were marked won't do in this iteration. Allow Users to Edit comments, which will then need to be re-approved by the Admin. [In the To Do section](https://github.com/users/Hasmelash95/projects/3).
+2. Items that were marked won't do in this iteration. Add a Donation feature via debit card and paypal. [In the To Do section](https://github.com/users/Hasmelash95/projects/3).
 3. Add a Contact Us page to allow users to send direct messages to the organisation from the website. 
 4. Offer a subscription service which will give users alerts when a new article is added to the site.
   
@@ -310,7 +310,7 @@ Django
 [django-summernote](https://github.com/summernote/django-summernote)
   
 [Whitenoise](https://whitenoise.evans.io/en/latest/)
-
+  
 ## Testing
 
 ### Validation
@@ -511,3 +511,5 @@ The hero image was from [Unsplash by Eyasu Etsub](https://unsplash.com/photos/5w
 [Font Awesome](https://fontawesome.com/icons) was used for the icons used throughout the site. 
   
 Intersection Observer API from [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for fade on scroll effect.
+  
+[Favicon Generator](https://favicon.io/)
